@@ -1,0 +1,15 @@
+{
+  "name": "@newcoin-foundation/iosdk-newgraph-client-js",
+  "version": "0.9.833",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-fetch": "^3.0.3",
+    "node-fetch": "^3.0.0"
+  }
+}
