@@ -6,7 +6,7 @@
 `npm i --save @newcoin-foundation/newgraph-client-js`
 
 # Obtaining a key
-Navigate to [newstack.dev](newstack.dev)
+Navigate to [newstack.dev](https://newstack.dev)
 
 # License
 MIT
