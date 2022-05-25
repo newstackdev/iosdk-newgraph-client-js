@@ -742,7 +742,7 @@ export interface PostCreateResponse {
   blurHash?: string;
   newcoinMintTx?: string;
   id?: string;
-  consentEmail?: string;
+  embed?: string;
   updated?: string;
   contentType?: string;
   longitude?: number;
@@ -859,7 +859,7 @@ export interface PostReadResponse {
   blurHash?: string;
   newcoinMintTx?: string;
   id?: string;
-  consentEmail?: string;
+  embed?: string;
   updated?: string;
   contentType?: string;
   longitude?: number;
@@ -872,6 +872,7 @@ export interface PostCreateRequest {
   license?: string;
   doMint?: string;
   description?: string;
+  embed?: string;
   title?: string;
   contentType?: string;
   content?: string;
@@ -1002,7 +1003,7 @@ export interface PostPagedListReadPublicResponse {
     blurHash?: string;
     newcoinMintTx?: string;
     id?: string;
-    consentEmail?: string;
+    embed?: string;
     updated?: string;
     contentType?: string;
     longitude?: number;
@@ -1016,6 +1017,14 @@ export interface PostPagedListReadPublicResponse {
 export interface PostTagsSearchPublicResponse {
   done?: object;
   value?: { created?: string; tag?: string }[];
+}
+
+/**
+ * PostRemoteMetaProxyResponse Model
+ */
+export interface PostRemoteMetaProxyResponse {
+  text?: string;
+  status?: number;
 }
 
 export interface MoodCreateResponse {
@@ -1878,7 +1887,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-20T13:39:48Z
+ * @version 2022-05-25T10:52:54Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -3257,6 +3266,40 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     optionsPost7: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/post/upload`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name UtilsRemoteMetaProxyList
+     * @request GET:/post/utils/remote-meta-proxy
+     * @secure
+     */
+    utilsRemoteMetaProxyList: (query?: { url?: string }, params: RequestParams = {}) =>
+      this.request<PostRemoteMetaProxyResponse, ErrorResponse>({
+        path: `/post/utils/remote-meta-proxy`,
+        method: "GET",
+        query: query,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsPost8
+     * @request OPTIONS:/post/utils/remote-meta-proxy
+     * @originalName optionsPost
+     * @duplicate
+     */
+    optionsPost8: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/post/utils/remote-meta-proxy`,
         method: "OPTIONS",
         type: ContentType.Json,
         ...params,

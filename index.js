@@ -247,7 +247,7 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-20T13:39:48Z
+ * @version 2022-05-25T10:52:54Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 var Api = /** @class */ (function (_super) {
@@ -1188,6 +1188,29 @@ var Api = /** @class */ (function (_super) {
             optionsPost7: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/post/upload", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name UtilsRemoteMetaProxyList
+             * @request GET:/post/utils/remote-meta-proxy
+             * @secure
+             */
+            utilsRemoteMetaProxyList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/post/utils/remote-meta-proxy", method: "GET", query: query, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsPost8
+             * @request OPTIONS:/post/utils/remote-meta-proxy
+             * @originalName optionsPost
+             * @duplicate
+             */
+            optionsPost8: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/post/utils/remote-meta-proxy", method: "OPTIONS", type: ContentType.Json }, params));
             },
         };
         _this.search = {
