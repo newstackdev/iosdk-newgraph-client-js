@@ -200,9 +200,6 @@ export interface UploadRequest {
   contentType: string;
 }
 
-/**
- * UploadRequestGeneric Model
- */
 export interface UploadRequestGeneric {
   filename: string;
   targetId: string;
@@ -615,25 +612,16 @@ export interface RatingUpdateResponse {
   updated?: string;
 }
 
-/**
- * ReportUpdateRequest Model
- */
 export interface ReportUpdateRequest {
   reason: string;
   targetId: string;
   comment?: string;
 }
 
-/**
- * ReportUpdateResponse Model
- */
 export interface ReportUpdateResponse {
   id?: number;
 }
 
-/**
- * PostCreateResponse Model
- */
 export interface PostCreateResponse {
   coverContentUrl?: string;
   moodId?: string;
@@ -748,9 +736,6 @@ export interface PostCreateResponse {
   longitude?: number;
 }
 
-/**
- * PostReadResponse Model
- */
 export interface PostReadResponse {
   coverContentUrl?: string;
   moodId?: string;
@@ -865,9 +850,6 @@ export interface PostReadResponse {
   longitude?: number;
 }
 
-/**
- * PostCreateRequest Model
- */
 export interface PostCreateRequest {
   license?: string;
   doMint?: string;
@@ -878,9 +860,6 @@ export interface PostCreateRequest {
   content?: string;
 }
 
-/**
- * PostUpdateRequest Model
- */
 export interface PostUpdateRequest {
   license?: string;
   latitude?: number;
@@ -891,9 +870,6 @@ export interface PostUpdateRequest {
   longitude?: number;
 }
 
-/**
- * PostPagedListReadPublicResponse Model
- */
 export interface PostPagedListReadPublicResponse {
   value?: {
     coverContentUrl?: string;
@@ -1011,17 +987,11 @@ export interface PostPagedListReadPublicResponse {
   done?: boolean;
 }
 
-/**
- * PostTagsSearchPublicResponse Model
- */
 export interface PostTagsSearchPublicResponse {
   done?: object;
   value?: { created?: string; tag?: string }[];
 }
 
-/**
- * PostRemoteMetaProxyResponse Model
- */
 export interface PostRemoteMetaProxyResponse {
   text?: string;
   status?: number;
@@ -1495,6 +1465,9 @@ export interface PaymentStripePaymentIntentCreateResponse {
   client_secret?: string;
 }
 
+/**
+ * BcCreateDaoRequest Model
+ */
 export interface BcCreateDaoRequest {
   descr?: string;
   authpr_prv_key?: string;
@@ -1502,11 +1475,17 @@ export interface BcCreateDaoRequest {
   token?: string;
 }
 
+/**
+ * BcCreateDaoResponse Model
+ */
 export interface BcCreateDaoResponse {
   TxID_createDao?: string;
   dao_id?: string;
 }
 
+/**
+ * BcCreateDaoProposal Model
+ */
 export interface BcCreateDaoProposal {
   summary?: string;
   vote_start?: string;
@@ -1517,6 +1496,9 @@ export interface BcCreateDaoProposal {
   url?: string;
 }
 
+/**
+ * BcApproveDaoProposalRequest Model
+ */
 export interface BcApproveDaoProposalRequest {
   approver?: string;
   proposal_author?: string;
@@ -1526,6 +1508,9 @@ export interface BcApproveDaoProposalRequest {
   approver_prv_key?: string;
 }
 
+/**
+ * BcListDaoProposalsResponse Model
+ */
 export interface BcListDaoProposalsResponse {
   more?: object;
   dao_id?: string;
@@ -1546,6 +1531,9 @@ export interface BcListDaoProposalsResponse {
   }[];
 }
 
+/**
+ * BcDaoProposalVoteRequest Model
+ */
 export interface BcDaoProposalVoteRequest {
   proposal_type?: string;
   quantity: string;
@@ -1556,6 +1544,9 @@ export interface BcDaoProposalVoteRequest {
   option: string;
 }
 
+/**
+ * BcDaoProposalVoteResponse Model
+ */
 export interface BcDaoProposalVoteResponse {
   daoId?: string;
   more?: object;
@@ -1569,6 +1560,9 @@ export interface BcDaoProposalVoteResponse {
   }[];
 }
 
+/**
+ * BcAuthEthRequest Model
+ */
 export interface BcAuthEthRequest {
   nftIndex: string;
   collectionAddress: string;
@@ -1578,6 +1572,9 @@ export interface BcAuthEthRequest {
   timestamp: string;
 }
 
+/**
+ * BcAuthEthResponse Model
+ */
 export interface BcAuthEthResponse {
   result: boolean;
   signedAddr?: string;
@@ -1585,13 +1582,22 @@ export interface BcAuthEthResponse {
   owningAddr?: string;
 }
 
+/**
+ * BcKeyPairCreateRequest Model
+ */
 export type BcKeyPairCreateRequest = any;
 
+/**
+ * BcKeyPairCreateResponse Model
+ */
 export interface BcKeyPairCreateResponse {
   prv_key: string;
   pub_key: string;
 }
 
+/**
+ * BcAccCreateRequest Model
+ */
 export interface BcAccCreateRequest {
   newacc_pub_active_key: string;
   newacc_pub_owner_key: string;
@@ -1604,6 +1610,9 @@ export interface BcAccCreateRequest {
   stake_net?: string;
 }
 
+/**
+ * BcCollectionCreateRequest Model
+ */
 export interface BcCollectionCreateRequest {
   mkt_fee?: number;
   template_name: string;
@@ -1619,18 +1628,27 @@ export interface BcCollectionCreateRequest {
   collection_name: string;
 }
 
+/**
+ * BcPoolCreateRequest Model
+ */
 export interface BcPoolCreateRequest {
   owner: string;
   owner_prv_active_key?: string;
   payer?: string;
 }
 
+/**
+ * BcStakeMainDAORequest Model
+ */
 export interface BcStakeMainDAORequest {
   payer_prv_key: string;
   amt: string;
   payer: string;
 }
 
+/**
+ * BcStakePoolRequest Model
+ */
 export interface BcStakePoolRequest {
   owner: string;
   payer_prv_key: string;
@@ -1638,6 +1656,9 @@ export interface BcStakePoolRequest {
   payer: string;
 }
 
+/**
+ * BcMintAssetRequest Model
+ */
 export interface BcMintAssetRequest {
   immutable_data?: { value: string[]; key: string }[];
   tpl_name?: string;
@@ -1650,6 +1671,9 @@ export interface BcMintAssetRequest {
   payer_public_key: string;
 }
 
+/**
+ * BcTxResponse Model
+ */
 export interface BcTxResponse {
   TxID_createTpl?: string;
   TxID_createPool?: string;
@@ -1660,22 +1684,25 @@ export interface BcTxResponse {
   TxID_mintAsset?: string;
 }
 
+/**
+ * BcGetAccountInfo Model
+ */
 export interface BcGetAccountInfo {
   owner: string;
   contract?: string;
 }
 
+/**
+ * BcGetPoolInfo Model
+ */
 export interface BcGetPoolInfo {
   owner: string;
 }
 
+/**
+ * BcGetInfoResp Model
+ */
 export type BcGetInfoResp = any;
-
-export interface Undefined {
-  errorMessage?: string;
-  errorCode?: string;
-  statusCode?: number;
-}
 
 export type QueryParamsType = Record<string | number, any>;
 export type ResponseFormat = keyof Omit<Body, "body" | "bodyUsed">;
@@ -1887,7 +1914,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-25T10:52:54Z
+ * @version 2022-05-25T20:29:32Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -1899,7 +1926,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/auth/callback/{path+}
      */
     callbackPathList: (path: string, params: RequestParams = {}) =>
-      this.request<void, Undefined>({
+      this.request<void, ErrorResponse>({
         path: `/auth/callback/{path+}`,
         method: "GET",
         ...params,
@@ -1926,7 +1953,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/auth/provider/{path+}
      */
     providerPathList: (path: string, params: RequestParams = {}) =>
-      this.request<void, Undefined>({
+      this.request<void, ErrorResponse>({
         path: `/auth/provider/{path+}`,
         method: "GET",
         ...params,
@@ -2755,6 +2782,39 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
+     * @name DaoProposalWhitelistCreate
+     * @request POST:/newcoin/dao/proposal-whitelist
+     * @secure
+     */
+    daoProposalWhitelistCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params: RequestParams = {}) =>
+      this.request<void, ErrorResponse>({
+        path: `/newcoin/dao/proposal-whitelist`,
+        method: "POST",
+        body: BcCreateDaoProposal,
+        secure: true,
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsNewcoin12
+     * @request OPTIONS:/newcoin/dao/proposal-whitelist
+     * @originalName optionsNewcoin
+     * @duplicate
+     */
+    optionsNewcoin12: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/newcoin/dao/proposal-whitelist`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
      * @name DaoProposalApproveCreate
      * @request POST:/newcoin/dao/proposal/approve
      * @secure
@@ -2772,12 +2832,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsNewcoin12
+     * @name OptionsNewcoin13
      * @request OPTIONS:/newcoin/dao/proposal/approve
      * @originalName optionsNewcoin
      * @duplicate
      */
-    optionsNewcoin12: (params: RequestParams = {}) =>
+    optionsNewcoin13: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/newcoin/dao/proposal/approve`,
         method: "OPTIONS",
@@ -2809,12 +2869,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsNewcoin13
+     * @name OptionsNewcoin14
      * @request OPTIONS:/newcoin/dao/proposal/list
      * @originalName optionsNewcoin
      * @duplicate
      */
-    optionsNewcoin13: (params: RequestParams = {}) =>
+    optionsNewcoin14: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/newcoin/dao/proposal/list`,
         method: "OPTIONS",
@@ -2843,12 +2903,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsNewcoin14
+     * @name OptionsNewcoin15
      * @request OPTIONS:/newcoin/dao/proposal/vote
      * @originalName optionsNewcoin
      * @duplicate
      */
-    optionsNewcoin14: (params: RequestParams = {}) =>
+    optionsNewcoin15: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/newcoin/dao/proposal/vote`,
         method: "OPTIONS",
@@ -2877,12 +2937,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsNewcoin15
+     * @name OptionsNewcoin16
      * @request OPTIONS:/newcoin/dao/proposal/votes
      * @originalName optionsNewcoin
      * @duplicate
      */
-    optionsNewcoin15: (params: RequestParams = {}) =>
+    optionsNewcoin16: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/newcoin/dao/proposal/votes`,
         method: "OPTIONS",

@@ -247,7 +247,7 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-25T10:52:54Z
+ * @version 2022-05-25T20:29:32Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 var Api = /** @class */ (function (_super) {
@@ -849,6 +849,29 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name DaoProposalWhitelistCreate
+             * @request POST:/newcoin/dao/proposal-whitelist
+             * @secure
+             */
+            daoProposalWhitelistCreate: function (BcCreateDaoProposal, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist", method: "POST", body: BcCreateDaoProposal, secure: true, type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin12
+             * @request OPTIONS:/newcoin/dao/proposal-whitelist
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin12: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
              * @name DaoProposalApproveCreate
              * @request POST:/newcoin/dao/proposal/approve
              * @secure
@@ -860,12 +883,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin12
+             * @name OptionsNewcoin13
              * @request OPTIONS:/newcoin/dao/proposal/approve
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin12: function (params) {
+            optionsNewcoin13: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/approve", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -883,12 +906,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin13
+             * @name OptionsNewcoin14
              * @request OPTIONS:/newcoin/dao/proposal/list
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin13: function (params) {
+            optionsNewcoin14: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/list", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -906,12 +929,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin14
+             * @name OptionsNewcoin15
              * @request OPTIONS:/newcoin/dao/proposal/vote
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin14: function (params) {
+            optionsNewcoin15: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/vote", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -929,12 +952,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin15
+             * @name OptionsNewcoin16
              * @request OPTIONS:/newcoin/dao/proposal/votes
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin15: function (params) {
+            optionsNewcoin16: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/votes", method: "OPTIONS", type: ContentType.Json }, params));
             },
