@@ -1,6 +1,6 @@
 {
   "name": "@newcoin-foundation/iosdk-newgraph-client-js",
-  "version": "0.9.9",
+  "version": "0.9.911",
   "description": "JS/TS variant of Newgraph Client - Part of iOSDK by the Newcoin Foundation",
   "main": "index.js",
   "scripts": {
