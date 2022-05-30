@@ -1497,6 +1497,20 @@ export interface BcCreateDaoProposal {
 }
 
 /**
+ * BcCreateWhitelistDaoProposal Model
+ */
+export interface BcCreateWhitelistDaoProposal {
+  quantity?: string;
+  proposer?: string;
+  vote_start?: string;
+  dao_id?: string;
+  dao_owner?: string;
+  vote_end?: string;
+  user?: string;
+  proposer_prv_key?: string;
+}
+
+/**
  * BcApproveDaoProposalRequest Model
  */
 export interface BcApproveDaoProposalRequest {
@@ -1507,6 +1521,11 @@ export interface BcApproveDaoProposalRequest {
   dao_owner?: string;
   approver_prv_key?: string;
 }
+
+/**
+ * BcListDaoWhitelistResponse Model
+ */
+export type BcListDaoWhitelistResponse = any;
 
 /**
  * BcListDaoProposalsResponse Model
@@ -1914,7 +1933,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-25T20:29:32Z
+ * @version 2022-05-30T13:56:30Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -2786,11 +2805,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request POST:/newcoin/dao/proposal-whitelist
      * @secure
      */
-    daoProposalWhitelistCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params: RequestParams = {}) =>
+    daoProposalWhitelistCreate: (
+      BcCreateWhitelistDaoProposal: BcCreateWhitelistDaoProposal,
+      params: RequestParams = {},
+    ) =>
       this.request<void, ErrorResponse>({
         path: `/newcoin/dao/proposal-whitelist`,
         method: "POST",
-        body: BcCreateDaoProposal,
+        body: BcCreateWhitelistDaoProposal,
         secure: true,
         type: ContentType.Json,
         ...params,
@@ -2945,6 +2967,40 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     optionsNewcoin16: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/newcoin/dao/proposal/votes`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name DaoWhitelistList
+     * @request GET:/newcoin/dao/whitelist
+     * @secure
+     */
+    daoWhitelistList: (query?: { dao_owner?: string; dao_id?: string }, params: RequestParams = {}) =>
+      this.request<BcListDaoWhitelistResponse, ErrorResponse>({
+        path: `/newcoin/dao/whitelist`,
+        method: "GET",
+        query: query,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsNewcoin17
+     * @request OPTIONS:/newcoin/dao/whitelist
+     * @originalName optionsNewcoin
+     * @duplicate
+     */
+    optionsNewcoin17: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/newcoin/dao/whitelist`,
         method: "OPTIONS",
         type: ContentType.Json,
         ...params,

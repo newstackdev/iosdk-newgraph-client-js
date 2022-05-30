@@ -1600,6 +1600,19 @@ export interface BcCreateDaoProposal {
     url?: string;
 }
 /**
+ * BcCreateWhitelistDaoProposal Model
+ */
+export interface BcCreateWhitelistDaoProposal {
+    quantity?: string;
+    proposer?: string;
+    vote_start?: string;
+    dao_id?: string;
+    dao_owner?: string;
+    vote_end?: string;
+    user?: string;
+    proposer_prv_key?: string;
+}
+/**
  * BcApproveDaoProposalRequest Model
  */
 export interface BcApproveDaoProposalRequest {
@@ -1610,6 +1623,10 @@ export interface BcApproveDaoProposalRequest {
     dao_owner?: string;
     approver_prv_key?: string;
 }
+/**
+ * BcListDaoWhitelistResponse Model
+ */
+export declare type BcListDaoWhitelistResponse = any;
 /**
  * BcListDaoProposalsResponse Model
  */
@@ -1869,7 +1886,7 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-25T20:29:32Z
+ * @version 2022-05-30T13:56:30Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -2328,7 +2345,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @request POST:/newcoin/dao/proposal-whitelist
          * @secure
          */
-        daoProposalWhitelistCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        daoProposalWhitelistCreate: (BcCreateWhitelistDaoProposal: BcCreateWhitelistDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
         /**
          * No description
          *
@@ -2414,6 +2431,26 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @duplicate
          */
         optionsNewcoin16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name DaoWhitelistList
+         * @request GET:/newcoin/dao/whitelist
+         * @secure
+         */
+        daoWhitelistList: (query?: {
+            dao_owner?: string | undefined;
+            dao_id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin17
+         * @request OPTIONS:/newcoin/dao/whitelist
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     payment: {
         /**
