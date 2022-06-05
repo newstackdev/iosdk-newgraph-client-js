@@ -247,7 +247,7 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-30T13:56:30Z
+ * @version 2022-06-05T07:21:10Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 var Api = /** @class */ (function (_super) {
@@ -298,73 +298,27 @@ var Api = /** @class */ (function (_super) {
                 return _this.request(__assign({ path: "/auth/provider/{path+}", method: "OPTIONS", type: ContentType.Json }, params));
             },
         };
-        _this.bcmaindaodldunstake = {
+        _this.dao = {
             /**
              * No description
              *
-             * @name BcmaindaodldunstakeCreate
-             * @request POST:/bcmaindaodldunstake
+             * @name ProposalCreate
+             * @request POST:/dao/proposal
              * @secure
              */
-            bcmaindaodldunstakeCreate: function (BcStakeMainDAORequest, params) {
+            proposalCreate: function (BcCreateDaoProposal, params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaodldunstake", method: "POST", body: BcStakeMainDAORequest, secure: true, type: ContentType.Json, format: "json" }, params));
+                return _this.request(__assign({ path: "/dao/proposal", method: "POST", body: BcCreateDaoProposal, secure: true, type: ContentType.Json }, params));
             },
             /**
              * No description
              *
-             * @name OptionsBcmaindaodldunstake
-             * @request OPTIONS:/bcmaindaodldunstake
+             * @name OptionsDao
+             * @request OPTIONS:/dao/proposal
              */
-            optionsBcmaindaodldunstake: function (params) {
+            optionsDao: function (params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaodldunstake", method: "OPTIONS", type: ContentType.Json }, params));
-            },
-        };
-        _this.bcmaindaoinstunstake = {
-            /**
-             * No description
-             *
-             * @name BcmaindaoinstunstakeCreate
-             * @request POST:/bcmaindaoinstunstake
-             * @secure
-             */
-            bcmaindaoinstunstakeCreate: function (BcStakePoolRequest, params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaoinstunstake", method: "POST", body: BcStakePoolRequest, secure: true, type: ContentType.Json, format: "json" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsBcmaindaoinstunstake
-             * @request OPTIONS:/bcmaindaoinstunstake
-             */
-            optionsBcmaindaoinstunstake: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaoinstunstake", method: "OPTIONS", type: ContentType.Json }, params));
-            },
-        };
-        _this.bcmaindaostake = {
-            /**
-             * No description
-             *
-             * @name BcmaindaostakeCreate
-             * @request POST:/bcmaindaostake
-             * @secure
-             */
-            bcmaindaostakeCreate: function (BcStakeMainDAORequest, params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaostake", method: "POST", body: BcStakeMainDAORequest, secure: true, type: ContentType.Json, format: "json" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsBcmaindaostake
-             * @request OPTIONS:/bcmaindaostake
-             */
-            optionsBcmaindaostake: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/bcmaindaostake", method: "OPTIONS", type: ContentType.Json }, params));
+                return _this.request(__assign({ path: "/dao/proposal", method: "OPTIONS", type: ContentType.Json }, params));
             },
         };
         _this.folder = {
@@ -734,6 +688,75 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name BcmaindaodldunstakeCreate
+             * @request POST:/newcoin/bcmaindaodldunstake
+             * @secure
+             */
+            bcmaindaodldunstakeCreate: function (BcStakeMainDAORequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaodldunstake", method: "POST", body: BcStakeMainDAORequest, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin7
+             * @request OPTIONS:/newcoin/bcmaindaodldunstake
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin7: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaodldunstake", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name BcmaindaoinstunstakeCreate
+             * @request POST:/newcoin/bcmaindaoinstunstake
+             * @secure
+             */
+            bcmaindaoinstunstakeCreate: function (BcStakePoolRequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaoinstunstake", method: "POST", body: BcStakePoolRequest, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin8
+             * @request OPTIONS:/newcoin/bcmaindaoinstunstake
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin8: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaoinstunstake", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name BcmaindaostakeCreate
+             * @request POST:/newcoin/bcmaindaostake
+             * @secure
+             */
+            bcmaindaostakeCreate: function (BcStakeMainDAORequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaostake", method: "POST", body: BcStakeMainDAORequest, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin9
+             * @request OPTIONS:/newcoin/bcmaindaostake
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin9: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/bcmaindaostake", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
              * @name BcmintassetCreate
              * @request POST:/newcoin/bcmintasset
              * @secure
@@ -745,12 +768,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin7
+             * @name OptionsNewcoin10
              * @request OPTIONS:/newcoin/bcmintasset
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin7: function (params) {
+            optionsNewcoin10: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/bcmintasset", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -768,12 +791,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin8
+             * @name OptionsNewcoin11
              * @request OPTIONS:/newcoin/bcpoolcreate
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin8: function (params) {
+            optionsNewcoin11: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/bcpoolcreate", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -791,12 +814,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin9
+             * @name OptionsNewcoin12
              * @request OPTIONS:/newcoin/bcpoolstake
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin9: function (params) {
+            optionsNewcoin12: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/bcpoolstake", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -814,12 +837,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin10
+             * @name OptionsNewcoin13
              * @request OPTIONS:/newcoin/dao/create
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin10: function (params) {
+            optionsNewcoin13: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/create", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -837,12 +860,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin11
+             * @name OptionsNewcoin14
              * @request OPTIONS:/newcoin/dao/proposal
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin11: function (params) {
+            optionsNewcoin14: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -860,14 +883,83 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin12
+             * @name OptionsNewcoin15
              * @request OPTIONS:/newcoin/dao/proposal-whitelist
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin12: function (params) {
+            optionsNewcoin15: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name DaoProposalWhitelistApproveCreate
+             * @request POST:/newcoin/dao/proposal-whitelist/approve
+             * @secure
+             */
+            daoProposalWhitelistApproveCreate: function (BcApproveDaoProposalRequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/approve", method: "POST", body: BcApproveDaoProposalRequest, secure: true, type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin16
+             * @request OPTIONS:/newcoin/dao/proposal-whitelist/approve
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin16: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/approve", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name DaoProposalWhitelistExecuteCreate
+             * @request POST:/newcoin/dao/proposal-whitelist/execute
+             * @secure
+             */
+            daoProposalWhitelistExecuteCreate: function (BcDaoProposalExecuteRequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/execute", method: "POST", body: BcDaoProposalExecuteRequest, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin17
+             * @request OPTIONS:/newcoin/dao/proposal-whitelist/execute
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin17: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/execute", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name DaoProposalWhitelistListList
+             * @request GET:/newcoin/dao/proposal-whitelist/list
+             * @secure
+             */
+            daoProposalWhitelistListList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/list", method: "GET", query: query, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsNewcoin18
+             * @request OPTIONS:/newcoin/dao/proposal-whitelist/list
+             * @originalName optionsNewcoin
+             * @duplicate
+             */
+            optionsNewcoin18: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/newcoin/dao/proposal-whitelist/list", method: "OPTIONS", type: ContentType.Json }, params));
             },
             /**
              * No description
@@ -883,12 +975,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin13
+             * @name OptionsNewcoin19
              * @request OPTIONS:/newcoin/dao/proposal/approve
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin13: function (params) {
+            optionsNewcoin19: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/approve", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -906,12 +998,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin14
+             * @name OptionsNewcoin20
              * @request OPTIONS:/newcoin/dao/proposal/list
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin14: function (params) {
+            optionsNewcoin20: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/list", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -929,12 +1021,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin15
+             * @name OptionsNewcoin21
              * @request OPTIONS:/newcoin/dao/proposal/vote
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin15: function (params) {
+            optionsNewcoin21: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/vote", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -952,12 +1044,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin16
+             * @name OptionsNewcoin22
              * @request OPTIONS:/newcoin/dao/proposal/votes
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin16: function (params) {
+            optionsNewcoin22: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/proposal/votes", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -975,12 +1067,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsNewcoin17
+             * @name OptionsNewcoin23
              * @request OPTIONS:/newcoin/dao/whitelist
              * @originalName optionsNewcoin
              * @duplicate
              */
-            optionsNewcoin17: function (params) {
+            optionsNewcoin23: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/newcoin/dao/whitelist", method: "OPTIONS", type: ContentType.Json }, params));
             },

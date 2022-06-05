@@ -1571,6 +1571,106 @@ export interface PaymentStripeWebhookRequest {
 export interface PaymentStripePaymentIntentCreateResponse {
     client_secret?: string;
 }
+export interface BcAuthEthRequest {
+    nftIndex: string;
+    collectionAddress: string;
+    address: string;
+    signature: string;
+    nonce?: string;
+    timestamp: string;
+}
+export interface BcAuthEthResponse {
+    result: boolean;
+    signedAddr?: string;
+    comment?: string;
+    owningAddr?: string;
+}
+export declare type BcKeyPairCreateRequest = any;
+export interface BcKeyPairCreateResponse {
+    prv_key: string;
+    pub_key: string;
+}
+export interface BcAccCreateRequest {
+    newacc_pub_active_key: string;
+    newacc_pub_owner_key: string;
+    payer_prv_key: string;
+    xfer?: boolean;
+    stake_cpu?: string;
+    newUser: string;
+    stake_ram?: number;
+    payer: string;
+    stake_net?: string;
+}
+export interface BcCollectionCreateRequest {
+    mkt_fee?: number;
+    template_name: string;
+    template_fields: {
+        name: string;
+        type: string;
+    }[];
+    xferable?: boolean;
+    max_supply?: number;
+    allow_notify?: boolean;
+    burnable?: boolean;
+    schema_name: string;
+    schema_fields: {
+        name: string;
+        type: string;
+    }[];
+    user: string;
+    user_prv_active_key: string;
+    collection_name: string;
+}
+export interface BcPoolCreateRequest {
+    owner: string;
+    owner_prv_active_key?: string;
+    payer?: string;
+}
+export interface BcStakeMainDAORequest {
+    payer_prv_key: string;
+    amt: string;
+    payer: string;
+}
+export interface BcStakePoolRequest {
+    owner: string;
+    payer_prv_key: string;
+    amt: string;
+    payer: string;
+}
+export interface BcMintAssetRequest {
+    immutable_data?: {
+        value: string[];
+        key: string;
+    }[];
+    tpl_name?: string;
+    payer_prv_key: string;
+    creator: string;
+    sch_name?: string;
+    mutable_data?: {
+        value: string[];
+        key: string;
+    }[];
+    col_name?: string;
+    payer: string;
+    payer_public_key: string;
+}
+export interface BcTxResponse {
+    TxID_createTpl?: string;
+    TxID_createPool?: string;
+    TxID_createAcc?: string;
+    TxID_createCol?: string;
+    TxID_createSch?: string;
+    TxID_stakeToPool?: string;
+    TxID_mintAsset?: string;
+}
+export interface BcGetAccountInfo {
+    owner: string;
+    contract?: string;
+}
+export interface BcGetPoolInfo {
+    owner: string;
+}
+export declare type BcGetInfoResp = any;
 /**
  * BcCreateDaoRequest Model
  */
@@ -1668,6 +1768,17 @@ export interface BcDaoProposalVoteRequest {
     option: string;
 }
 /**
+ * BcDaoProposalExecuteRequest Model
+ */
+export interface BcDaoProposalExecuteRequest {
+    proposal_author?: string;
+    proposal_id?: number;
+    dao_id?: string;
+    dao_owner?: string;
+    exec?: string;
+    exec_prv_key?: string;
+}
+/**
  * BcDaoProposalVoteResponse Model
  */
 export interface BcDaoProposalVoteResponse {
@@ -1685,148 +1796,6 @@ export interface BcDaoProposalVoteResponse {
         id?: string;
     }[];
 }
-/**
- * BcAuthEthRequest Model
- */
-export interface BcAuthEthRequest {
-    nftIndex: string;
-    collectionAddress: string;
-    address: string;
-    signature: string;
-    nonce?: string;
-    timestamp: string;
-}
-/**
- * BcAuthEthResponse Model
- */
-export interface BcAuthEthResponse {
-    result: boolean;
-    signedAddr?: string;
-    comment?: string;
-    owningAddr?: string;
-}
-/**
- * BcKeyPairCreateRequest Model
- */
-export declare type BcKeyPairCreateRequest = any;
-/**
- * BcKeyPairCreateResponse Model
- */
-export interface BcKeyPairCreateResponse {
-    prv_key: string;
-    pub_key: string;
-}
-/**
- * BcAccCreateRequest Model
- */
-export interface BcAccCreateRequest {
-    newacc_pub_active_key: string;
-    newacc_pub_owner_key: string;
-    payer_prv_key: string;
-    xfer?: boolean;
-    stake_cpu?: string;
-    newUser: string;
-    stake_ram?: number;
-    payer: string;
-    stake_net?: string;
-}
-/**
- * BcCollectionCreateRequest Model
- */
-export interface BcCollectionCreateRequest {
-    mkt_fee?: number;
-    template_name: string;
-    template_fields: {
-        name: string;
-        type: string;
-    }[];
-    xferable?: boolean;
-    max_supply?: number;
-    allow_notify?: boolean;
-    burnable?: boolean;
-    schema_name: string;
-    schema_fields: {
-        name: string;
-        type: string;
-    }[];
-    user: string;
-    user_prv_active_key: string;
-    collection_name: string;
-}
-/**
- * BcPoolCreateRequest Model
- */
-export interface BcPoolCreateRequest {
-    owner: string;
-    owner_prv_active_key?: string;
-    payer?: string;
-}
-/**
- * BcStakeMainDAORequest Model
- */
-export interface BcStakeMainDAORequest {
-    payer_prv_key: string;
-    amt: string;
-    payer: string;
-}
-/**
- * BcStakePoolRequest Model
- */
-export interface BcStakePoolRequest {
-    owner: string;
-    payer_prv_key: string;
-    amt: string;
-    payer: string;
-}
-/**
- * BcMintAssetRequest Model
- */
-export interface BcMintAssetRequest {
-    immutable_data?: {
-        value: string[];
-        key: string;
-    }[];
-    tpl_name?: string;
-    payer_prv_key: string;
-    creator: string;
-    sch_name?: string;
-    mutable_data?: {
-        value: string[];
-        key: string;
-    }[];
-    col_name?: string;
-    payer: string;
-    payer_public_key: string;
-}
-/**
- * BcTxResponse Model
- */
-export interface BcTxResponse {
-    TxID_createTpl?: string;
-    TxID_createPool?: string;
-    TxID_createAcc?: string;
-    TxID_createCol?: string;
-    TxID_createSch?: string;
-    TxID_stakeToPool?: string;
-    TxID_mintAsset?: string;
-}
-/**
- * BcGetAccountInfo Model
- */
-export interface BcGetAccountInfo {
-    owner: string;
-    contract?: string;
-}
-/**
- * BcGetPoolInfo Model
- */
-export interface BcGetPoolInfo {
-    owner: string;
-}
-/**
- * BcGetInfoResp Model
- */
-export declare type BcGetInfoResp = any;
 export declare type QueryParamsType = Record<string | number, any>;
 export declare type ResponseFormat = keyof Omit<Body, "body" | "bodyUsed">;
 export interface FullRequestParams extends Omit<RequestInit, "body"> {
@@ -1886,7 +1855,7 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-05-30T13:56:30Z
+ * @version 2022-06-05T07:21:10Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -1922,56 +1891,22 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          */
         optionsAuth2: (path: string, params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
-    bcmaindaodldunstake: {
+    dao: {
         /**
          * No description
          *
-         * @name BcmaindaodldunstakeCreate
-         * @request POST:/bcmaindaodldunstake
+         * @name ProposalCreate
+         * @request POST:/dao/proposal
          * @secure
          */
-        bcmaindaodldunstakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
+        proposalCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsBcmaindaodldunstake
-         * @request OPTIONS:/bcmaindaodldunstake
+         * @name OptionsDao
+         * @request OPTIONS:/dao/proposal
          */
-        optionsBcmaindaodldunstake: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    bcmaindaoinstunstake: {
-        /**
-         * No description
-         *
-         * @name BcmaindaoinstunstakeCreate
-         * @request POST:/bcmaindaoinstunstake
-         * @secure
-         */
-        bcmaindaoinstunstakeCreate: (BcStakePoolRequest: BcStakePoolRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsBcmaindaoinstunstake
-         * @request OPTIONS:/bcmaindaoinstunstake
-         */
-        optionsBcmaindaoinstunstake: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    bcmaindaostake: {
-        /**
-         * No description
-         *
-         * @name BcmaindaostakeCreate
-         * @request POST:/bcmaindaostake
-         * @secure
-         */
-        bcmaindaostakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsBcmaindaostake
-         * @request OPTIONS:/bcmaindaostake
-         */
-        optionsBcmaindaostake: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsDao: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     folder: {
         /**
@@ -2256,6 +2191,57 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name BcmaindaodldunstakeCreate
+         * @request POST:/newcoin/bcmaindaodldunstake
+         * @secure
+         */
+        bcmaindaodldunstakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin7
+         * @request OPTIONS:/newcoin/bcmaindaodldunstake
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name BcmaindaoinstunstakeCreate
+         * @request POST:/newcoin/bcmaindaoinstunstake
+         * @secure
+         */
+        bcmaindaoinstunstakeCreate: (BcStakePoolRequest: BcStakePoolRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin8
+         * @request OPTIONS:/newcoin/bcmaindaoinstunstake
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name BcmaindaostakeCreate
+         * @request POST:/newcoin/bcmaindaostake
+         * @secure
+         */
+        bcmaindaostakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin9
+         * @request OPTIONS:/newcoin/bcmaindaostake
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name BcmintassetCreate
          * @request POST:/newcoin/bcmintasset
          * @secure
@@ -2264,12 +2250,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin7
+         * @name OptionsNewcoin10
          * @request OPTIONS:/newcoin/bcmintasset
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2281,12 +2267,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin8
+         * @name OptionsNewcoin11
          * @request OPTIONS:/newcoin/bcpoolcreate
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2298,12 +2284,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin9
+         * @name OptionsNewcoin12
          * @request OPTIONS:/newcoin/bcpoolstake
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2315,12 +2301,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin10
+         * @name OptionsNewcoin13
          * @request OPTIONS:/newcoin/dao/create
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2332,12 +2318,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin11
+         * @name OptionsNewcoin14
          * @request OPTIONS:/newcoin/dao/proposal
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2349,12 +2335,68 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin12
+         * @name OptionsNewcoin15
          * @request OPTIONS:/newcoin/dao/proposal-whitelist
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name DaoProposalWhitelistApproveCreate
+         * @request POST:/newcoin/dao/proposal-whitelist/approve
+         * @secure
+         */
+        daoProposalWhitelistApproveCreate: (BcApproveDaoProposalRequest: BcApproveDaoProposalRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin16
+         * @request OPTIONS:/newcoin/dao/proposal-whitelist/approve
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name DaoProposalWhitelistExecuteCreate
+         * @request POST:/newcoin/dao/proposal-whitelist/execute
+         * @secure
+         */
+        daoProposalWhitelistExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalVoteResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin17
+         * @request OPTIONS:/newcoin/dao/proposal-whitelist/execute
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name DaoProposalWhitelistListList
+         * @request GET:/newcoin/dao/proposal-whitelist/list
+         * @secure
+         */
+        daoProposalWhitelistListList: (query?: {
+            proposalAuthor?: string | undefined;
+            dao_owner?: string | undefined;
+            dao_id?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin18
+         * @request OPTIONS:/newcoin/dao/proposal-whitelist/list
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2366,12 +2408,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin13
+         * @name OptionsNewcoin19
          * @request OPTIONS:/newcoin/dao/proposal/approve
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2388,12 +2430,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin14
+         * @name OptionsNewcoin20
          * @request OPTIONS:/newcoin/dao/proposal/list
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2405,12 +2447,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin15
+         * @name OptionsNewcoin21
          * @request OPTIONS:/newcoin/dao/proposal/vote
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2425,12 +2467,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin16
+         * @name OptionsNewcoin22
          * @request OPTIONS:/newcoin/dao/proposal/votes
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2445,12 +2487,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin17
+         * @name OptionsNewcoin23
          * @request OPTIONS:/newcoin/dao/whitelist
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     payment: {
         /**
