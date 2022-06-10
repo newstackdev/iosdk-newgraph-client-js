@@ -12,33 +12,46 @@ export interface MoodPagedListReadPublicResponse {
         created?: string;
         author?: {
             newcoinTicker?: string;
+            youtube?: string;
             powered?: number;
             displayName?: string;
             newcoinAccTx?: string;
             latitude?: number;
-            tumblr?: string;
             description?: string;
             newcoinPoolId?: string;
+            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            soundcloud?: string;
+            medium?: string;
             newcoinActivePublicKey?: string;
+            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
+            snapchat?: string;
+            apple?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
+            reddit?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
+            signal?: string;
             longitude?: number;
             newcoinPublisherPublicKey?: string;
             website?: string;
             created?: string;
+            spotify?: string;
+            facebook?: string;
+            confirmedSocials?: string;
             fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
             contentUrl?: string;
+            discord?: string;
             blurHash?: string;
             consentEmail?: string;
             updated?: string;
@@ -54,33 +67,46 @@ export interface MoodPagedListReadPublicResponse {
             created?: string;
             author?: {
                 newcoinTicker?: string;
+                youtube?: string;
                 powered?: number;
                 displayName?: string;
                 newcoinAccTx?: string;
                 latitude?: number;
-                tumblr?: string;
                 description?: string;
                 newcoinPoolId?: string;
+                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                soundcloud?: string;
+                medium?: string;
                 newcoinActivePublicKey?: string;
+                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
+                snapchat?: string;
+                apple?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
+                reddit?: string;
                 id?: string;
                 newcoinPoolStake?: number;
                 contentType?: string;
+                signal?: string;
                 longitude?: number;
                 newcoinPublisherPublicKey?: string;
                 website?: string;
                 created?: string;
+                spotify?: string;
+                facebook?: string;
+                confirmedSocials?: string;
                 fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
                 contentUrl?: string;
+                discord?: string;
                 blurHash?: string;
                 consentEmail?: string;
                 updated?: string;
@@ -91,33 +117,46 @@ export interface MoodPagedListReadPublicResponse {
                 created?: string;
                 author?: {
                     newcoinTicker?: string;
+                    youtube?: string;
                     powered?: number;
                     displayName?: string;
                     newcoinAccTx?: string;
                     latitude?: number;
-                    tumblr?: string;
                     description?: string;
                     newcoinPoolId?: string;
+                    tumblr?: string;
                     aspectRatio?: number;
                     instagram?: string;
-                    soundcloud?: string;
+                    medium?: string;
                     newcoinActivePublicKey?: string;
+                    soundcloud?: string;
                     newcoinPublicKey?: string;
                     powering?: number;
+                    snapchat?: string;
+                    apple?: string;
                     twitter?: string;
                     newcoinOwnerPublicKey?: string;
                     tiktok?: string;
+                    reddit?: string;
                     id?: string;
                     newcoinPoolStake?: number;
                     contentType?: string;
+                    signal?: string;
                     longitude?: number;
                     newcoinPublisherPublicKey?: string;
                     website?: string;
                     created?: string;
+                    spotify?: string;
+                    facebook?: string;
+                    confirmedSocials?: string;
                     fullName?: string;
+                    telegram?: string;
+                    pinterest?: string;
+                    verifiedSocialIds?: string[];
                     newcoinPoolTx?: string;
                     license?: string;
                     contentUrl?: string;
+                    discord?: string;
                     blurHash?: string;
                     consentEmail?: string;
                     updated?: string;
@@ -168,7 +207,7 @@ export interface MoodPagedListReadPublicResponse {
             blurHash?: string;
             newcoinMintTx?: string;
             id?: string;
-            consentEmail?: string;
+            embed?: string;
             updated?: string;
             contentType?: string;
             longitude?: number;
@@ -202,6 +241,9 @@ export interface UploadRequest {
     targetModel: string;
     contentType: string;
 }
+/**
+ * UploadRequestGeneric Model
+ */
 export interface UploadRequestGeneric {
     filename: string;
     targetId: string;
@@ -214,82 +256,107 @@ export interface UploadResponse {
 }
 export interface UserReadPublicResponse {
     newcoinTicker?: string;
+    youtube?: string;
     powered?: number;
     displayName?: string;
     newcoinAccTx?: string;
     latitude?: number;
-    tumblr?: string;
     description?: string;
     newcoinPoolId?: string;
+    tumblr?: string;
     aspectRatio?: number;
     instagram?: string;
-    soundcloud?: string;
+    medium?: string;
     newcoinActivePublicKey?: string;
+    soundcloud?: string;
     newcoinPublicKey?: string;
     powering?: number;
+    snapchat?: string;
+    apple?: string;
     twitter?: string;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
+    reddit?: string;
     id?: string;
     newcoinPoolStake?: number;
     contentType?: string;
+    signal?: string;
     longitude?: number;
     newcoinPublisherPublicKey?: string;
     website?: string;
     created?: string;
+    spotify?: string;
+    facebook?: string;
+    confirmedSocials?: string;
     fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    verifiedSocialIds?: string[];
     newcoinPoolTx?: string;
     license?: string;
     contentUrl?: string;
+    discord?: string;
     blurHash?: string;
     consentEmail?: string;
     updated?: string;
     username?: string;
 }
 export interface UserReadPrivateResponse {
-    lastName?: string;
-    consentPrivacyPolicy?: string;
     powered?: number;
-    displayName?: string;
     newcoinAccTx?: string;
-    latitude?: number;
-    tumblr?: string;
-    description?: string;
     newcoinPoolId?: string;
     aspectRatio?: number;
     instagram?: string;
-    soundcloud?: string;
     newcoinActivePublicKey?: string;
     newcoinPublicKey?: string;
     powering?: number;
     stripeUid?: string;
     twitter?: string;
-    consentTestgroup?: string;
-    newcoinPrivateKey?: string;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
-    subscriptionStatus?: string;
-    newcoinPublisherPrivateKey?: string;
+    reddit?: string;
     id?: string;
-    newcoinPoolStake?: number;
     contentType?: string;
-    email?: string;
+    signal?: string;
     longitude?: number;
-    newcoinPublisherPublicKey?: string;
-    website?: string;
     subscriptionExpiry?: string;
     created?: string;
-    fullName?: string;
     newcoinPoolTx?: string;
+    verifiedSocialIds?: string[];
     firstName?: string;
     license?: string;
-    contentUrl?: string;
+    discord?: string;
     phone?: string;
+    updated?: string;
+    status?: string;
+    youtube?: string;
+    lastName?: string;
+    consentPrivacyPolicy?: string;
+    displayName?: string;
+    latitude?: number;
+    description?: string;
+    tumblr?: string;
+    medium?: string;
+    soundcloud?: string;
+    snapchat?: string;
+    apple?: string;
+    consentTestgroup?: string;
+    newcoinPrivateKey?: string;
+    subscriptionStatus?: string;
+    newcoinPublisherPrivateKey?: string;
+    newcoinPoolStake?: number;
+    email?: string;
+    newcoinPublisherPublicKey?: string;
+    website?: string;
+    spotify?: string;
+    facebook?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    contentUrl?: string;
     blurHash?: string;
     consentEmail?: string;
-    updated?: string;
     username?: string;
-    status?: string;
 }
 export interface UserStakeRequest {
     amount: string;
@@ -298,25 +365,36 @@ export interface UserStakeRequest {
 }
 export interface UserCreateRequest {
     newcoinTicker?: string;
+    youtube?: string;
     lastName?: string;
-    website?: string;
     consentPrivacyPolicy?: string;
     displayName?: string;
     latitude?: number;
-    fullName?: string;
-    tumblr?: string;
     description?: string;
+    tumblr?: string;
     instagram?: string;
+    medium?: string;
     soundcloud?: string;
-    firstName?: string;
-    twitter?: string;
+    snapchat?: string;
+    apple?: string;
     consentTestgroup?: string;
-    phone: string;
-    tiktok?: string;
+    twitter?: string;
     legacyToken?: string;
-    consentEmail?: string;
+    tiktok?: string;
+    reddit?: string;
+    signal?: string;
     email?: string;
     longitude?: number;
+    website?: string;
+    spotify?: string;
+    facebook?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    firstName?: string;
+    discord?: string;
+    phone: string;
+    consentEmail?: string;
     /** @pattern ^[a-z0-5\.]{2,9}\.io$ */
     username: string;
 }
@@ -332,23 +410,34 @@ export interface UserAvailabilityResponse {
     available?: boolean;
 }
 export interface UserUpdateRequest {
+    youtube?: string;
     lastName?: string;
-    website?: string;
     consentPrivacyPolicy?: string;
     displayName?: string;
     latitude?: number;
     newcoinCreateAccount?: string;
-    fullName?: string;
-    tumblr?: string;
     description?: string;
+    tumblr?: string;
     instagram?: string;
+    medium?: string;
     soundcloud?: string;
-    firstName?: string;
+    snapchat?: string;
+    apple?: string;
     twitter?: string;
     tiktok?: string;
+    reddit?: string;
     id: string;
-    consentEmail?: string;
+    signal?: string;
     longitude?: number;
+    website?: string;
+    spotify?: string;
+    facebook?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    firstName?: string;
+    discord?: string;
+    consentEmail?: string;
 }
 export interface SyncContactsRequest {
     contacts?: {
@@ -392,33 +481,46 @@ export interface UserUploadRequest {
 export interface UserPagedListReadPublicResponse {
     value?: {
         newcoinTicker?: string;
+        youtube?: string;
         powered?: number;
         displayName?: string;
         newcoinAccTx?: string;
         latitude?: number;
-        tumblr?: string;
         description?: string;
         newcoinPoolId?: string;
+        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        soundcloud?: string;
+        medium?: string;
         newcoinActivePublicKey?: string;
+        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
+        snapchat?: string;
+        apple?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
+        reddit?: string;
         id?: string;
         newcoinPoolStake?: number;
         contentType?: string;
+        signal?: string;
         longitude?: number;
         newcoinPublisherPublicKey?: string;
         website?: string;
         created?: string;
+        spotify?: string;
+        facebook?: string;
+        confirmedSocials?: string;
         fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
         contentUrl?: string;
+        discord?: string;
         blurHash?: string;
         consentEmail?: string;
         updated?: string;
@@ -622,47 +724,69 @@ export interface RatingUpdateResponse {
     value?: number;
     updated?: string;
 }
+/**
+ * ReportUpdateRequest Model
+ */
 export interface ReportUpdateRequest {
     reason: string;
     targetId: string;
     comment?: string;
 }
+/**
+ * ReportUpdateResponse Model
+ */
 export interface ReportUpdateResponse {
     id?: number;
 }
+/**
+ * PostCreateResponse Model
+ */
 export interface PostCreateResponse {
     coverContentUrl?: string;
     moodId?: string;
     created?: string;
     author?: {
         newcoinTicker?: string;
+        youtube?: string;
         powered?: number;
         displayName?: string;
         newcoinAccTx?: string;
         latitude?: number;
-        tumblr?: string;
         description?: string;
         newcoinPoolId?: string;
+        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        soundcloud?: string;
+        medium?: string;
         newcoinActivePublicKey?: string;
+        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
+        snapchat?: string;
+        apple?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
+        reddit?: string;
         id?: string;
         newcoinPoolStake?: number;
         contentType?: string;
+        signal?: string;
         longitude?: number;
         newcoinPublisherPublicKey?: string;
         website?: string;
         created?: string;
+        spotify?: string;
+        facebook?: string;
+        confirmedSocials?: string;
         fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
         contentUrl?: string;
+        discord?: string;
         blurHash?: string;
         consentEmail?: string;
         updated?: string;
@@ -673,33 +797,46 @@ export interface PostCreateResponse {
         created?: string;
         author?: {
             newcoinTicker?: string;
+            youtube?: string;
             powered?: number;
             displayName?: string;
             newcoinAccTx?: string;
             latitude?: number;
-            tumblr?: string;
             description?: string;
             newcoinPoolId?: string;
+            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            soundcloud?: string;
+            medium?: string;
             newcoinActivePublicKey?: string;
+            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
+            snapchat?: string;
+            apple?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
+            reddit?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
+            signal?: string;
             longitude?: number;
             newcoinPublisherPublicKey?: string;
             website?: string;
             created?: string;
+            spotify?: string;
+            facebook?: string;
+            confirmedSocials?: string;
             fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
             contentUrl?: string;
+            discord?: string;
             blurHash?: string;
             consentEmail?: string;
             updated?: string;
@@ -755,39 +892,55 @@ export interface PostCreateResponse {
     contentType?: string;
     longitude?: number;
 }
+/**
+ * PostReadResponse Model
+ */
 export interface PostReadResponse {
     coverContentUrl?: string;
     moodId?: string;
     created?: string;
     author?: {
         newcoinTicker?: string;
+        youtube?: string;
         powered?: number;
         displayName?: string;
         newcoinAccTx?: string;
         latitude?: number;
-        tumblr?: string;
         description?: string;
         newcoinPoolId?: string;
+        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        soundcloud?: string;
+        medium?: string;
         newcoinActivePublicKey?: string;
+        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
+        snapchat?: string;
+        apple?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
+        reddit?: string;
         id?: string;
         newcoinPoolStake?: number;
         contentType?: string;
+        signal?: string;
         longitude?: number;
         newcoinPublisherPublicKey?: string;
         website?: string;
         created?: string;
+        spotify?: string;
+        facebook?: string;
+        confirmedSocials?: string;
         fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
         contentUrl?: string;
+        discord?: string;
         blurHash?: string;
         consentEmail?: string;
         updated?: string;
@@ -798,33 +951,46 @@ export interface PostReadResponse {
         created?: string;
         author?: {
             newcoinTicker?: string;
+            youtube?: string;
             powered?: number;
             displayName?: string;
             newcoinAccTx?: string;
             latitude?: number;
-            tumblr?: string;
             description?: string;
             newcoinPoolId?: string;
+            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            soundcloud?: string;
+            medium?: string;
             newcoinActivePublicKey?: string;
+            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
+            snapchat?: string;
+            apple?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
+            reddit?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
+            signal?: string;
             longitude?: number;
             newcoinPublisherPublicKey?: string;
             website?: string;
             created?: string;
+            spotify?: string;
+            facebook?: string;
+            confirmedSocials?: string;
             fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
             contentUrl?: string;
+            discord?: string;
             blurHash?: string;
             consentEmail?: string;
             updated?: string;
@@ -880,6 +1046,9 @@ export interface PostReadResponse {
     contentType?: string;
     longitude?: number;
 }
+/**
+ * PostCreateRequest Model
+ */
 export interface PostCreateRequest {
     license?: string;
     doMint?: string;
@@ -889,6 +1058,9 @@ export interface PostCreateRequest {
     contentType?: string;
     content?: string;
 }
+/**
+ * PostUpdateRequest Model
+ */
 export interface PostUpdateRequest {
     license?: string;
     latitude?: number;
@@ -898,6 +1070,9 @@ export interface PostUpdateRequest {
     title?: string;
     longitude?: number;
 }
+/**
+ * PostPagedListReadPublicResponse Model
+ */
 export interface PostPagedListReadPublicResponse {
     value?: {
         coverContentUrl?: string;
@@ -905,33 +1080,46 @@ export interface PostPagedListReadPublicResponse {
         created?: string;
         author?: {
             newcoinTicker?: string;
+            youtube?: string;
             powered?: number;
             displayName?: string;
             newcoinAccTx?: string;
             latitude?: number;
-            tumblr?: string;
             description?: string;
             newcoinPoolId?: string;
+            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            soundcloud?: string;
+            medium?: string;
             newcoinActivePublicKey?: string;
+            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
+            snapchat?: string;
+            apple?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
+            reddit?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
+            signal?: string;
             longitude?: number;
             newcoinPublisherPublicKey?: string;
             website?: string;
             created?: string;
+            spotify?: string;
+            facebook?: string;
+            confirmedSocials?: string;
             fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
             contentUrl?: string;
+            discord?: string;
             blurHash?: string;
             consentEmail?: string;
             updated?: string;
@@ -942,33 +1130,46 @@ export interface PostPagedListReadPublicResponse {
             created?: string;
             author?: {
                 newcoinTicker?: string;
+                youtube?: string;
                 powered?: number;
                 displayName?: string;
                 newcoinAccTx?: string;
                 latitude?: number;
-                tumblr?: string;
                 description?: string;
                 newcoinPoolId?: string;
+                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                soundcloud?: string;
+                medium?: string;
                 newcoinActivePublicKey?: string;
+                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
+                snapchat?: string;
+                apple?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
+                reddit?: string;
                 id?: string;
                 newcoinPoolStake?: number;
                 contentType?: string;
+                signal?: string;
                 longitude?: number;
                 newcoinPublisherPublicKey?: string;
                 website?: string;
                 created?: string;
+                spotify?: string;
+                facebook?: string;
+                confirmedSocials?: string;
                 fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
                 contentUrl?: string;
+                discord?: string;
                 blurHash?: string;
                 consentEmail?: string;
                 updated?: string;
@@ -1026,6 +1227,9 @@ export interface PostPagedListReadPublicResponse {
     }[];
     done?: boolean;
 }
+/**
+ * PostTagsSearchPublicResponse Model
+ */
 export interface PostTagsSearchPublicResponse {
     done?: object;
     value?: {
@@ -1033,6 +1237,9 @@ export interface PostTagsSearchPublicResponse {
         tag?: string;
     }[];
 }
+/**
+ * PostRemoteMetaProxyResponse Model
+ */
 export interface PostRemoteMetaProxyResponse {
     text?: string;
     status?: number;
@@ -1671,25 +1878,16 @@ export interface BcGetPoolInfo {
     owner: string;
 }
 export declare type BcGetInfoResp = any;
-/**
- * BcCreateDaoRequest Model
- */
 export interface BcCreateDaoRequest {
     descr?: string;
     authpr_prv_key?: string;
     author?: string;
     token?: string;
 }
-/**
- * BcCreateDaoResponse Model
- */
 export interface BcCreateDaoResponse {
     TxID_createDao?: string;
     dao_id?: string;
 }
-/**
- * BcCreateDaoProposal Model
- */
 export interface BcCreateDaoProposal {
     summary?: string;
     vote_start?: string;
@@ -1699,9 +1897,6 @@ export interface BcCreateDaoProposal {
     title?: string;
     url?: string;
 }
-/**
- * BcCreateWhitelistDaoProposal Model
- */
 export interface BcCreateWhitelistDaoProposal {
     quantity?: string;
     proposer?: string;
@@ -1712,9 +1907,6 @@ export interface BcCreateWhitelistDaoProposal {
     user?: string;
     proposer_prv_key?: string;
 }
-/**
- * BcApproveDaoProposalRequest Model
- */
 export interface BcApproveDaoProposalRequest {
     approver?: string;
     proposal_author?: string;
@@ -1723,13 +1915,7 @@ export interface BcApproveDaoProposalRequest {
     dao_owner?: string;
     approver_prv_key?: string;
 }
-/**
- * BcListDaoWhitelistResponse Model
- */
 export declare type BcListDaoWhitelistResponse = any;
-/**
- * BcListDaoProposalsResponse Model
- */
 export interface BcListDaoProposalsResponse {
     more?: object;
     dao_id?: string;
@@ -1755,9 +1941,6 @@ export interface BcListDaoProposalsResponse {
         status?: string;
     }[];
 }
-/**
- * BcDaoProposalVoteRequest Model
- */
 export interface BcDaoProposalVoteRequest {
     proposal_type?: string;
     quantity: string;
@@ -1767,9 +1950,6 @@ export interface BcDaoProposalVoteRequest {
     voter: string;
     option: string;
 }
-/**
- * BcDaoProposalExecuteRequest Model
- */
 export interface BcDaoProposalExecuteRequest {
     proposal_author?: string;
     proposal_id?: number;
@@ -1778,9 +1958,15 @@ export interface BcDaoProposalExecuteRequest {
     exec?: string;
     exec_prv_key?: string;
 }
-/**
- * BcDaoProposalVoteResponse Model
- */
+export interface BcDaoProposalExecuteResponse {
+    TxID_executeDaoProposal?: string;
+}
+export interface BcDaoWidthdrawVoteDepositRequest {
+    vote_id?: string;
+}
+export interface BcDaoWidthdrawVoteDepositResponse {
+    TxID_WithdrawVoteDeposit?: string;
+}
 export interface BcDaoProposalVoteResponse {
     daoId?: string;
     more?: object;
@@ -1855,7 +2041,7 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-06-05T07:21:10Z
+ * @version 2022-06-10T11:48:04Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -1890,23 +2076,6 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @duplicate
          */
         optionsAuth2: (path: string, params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    dao: {
-        /**
-         * No description
-         *
-         * @name ProposalCreate
-         * @request POST:/dao/proposal
-         * @secure
-         */
-        proposalCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsDao
-         * @request OPTIONS:/dao/proposal
-         */
-        optionsDao: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     folder: {
         /**
@@ -2365,7 +2534,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @request POST:/newcoin/dao/proposal-whitelist/execute
          * @secure
          */
-        daoProposalWhitelistExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalVoteResponse, ErrorResponse>>;
+        daoProposalWhitelistExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalExecuteResponse, ErrorResponse>>;
         /**
          * No description
          *
@@ -2383,9 +2552,13 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @secure
          */
         daoProposalWhitelistListList: (query?: {
+            reverse?: string | undefined;
             proposalAuthor?: string | undefined;
             dao_owner?: string | undefined;
             dao_id?: string | undefined;
+            limit?: string | undefined;
+            lower_bound?: string | undefined;
+            upper_bound?: string | undefined;
             id?: string | undefined;
         } | undefined, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
         /**
@@ -2417,25 +2590,46 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name DaoProposalExecuteCreate
+         * @request POST:/newcoin/dao/proposal/execute
+         * @secure
+         */
+        daoProposalExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalExecuteResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin20
+         * @request OPTIONS:/newcoin/dao/proposal/execute
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name DaoProposalListList
          * @request GET:/newcoin/dao/proposal/list
          * @secure
          */
         daoProposalListList: (query?: {
+            reverse?: string | undefined;
             proposalAuthor?: string | undefined;
             dao_owner?: string | undefined;
             dao_id?: string | undefined;
+            limit?: string | undefined;
+            lower_bound?: string | undefined;
+            upper_bound?: string | undefined;
             id?: string | undefined;
         } | undefined, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsNewcoin20
+         * @name OptionsNewcoin21
          * @request OPTIONS:/newcoin/dao/proposal/list
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2447,12 +2641,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsNewcoin21
+         * @name OptionsNewcoin22
          * @request OPTIONS:/newcoin/dao/proposal/vote
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2461,18 +2655,22 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @secure
          */
         daoProposalVotesList: (query?: {
+            reverse?: string | undefined;
+            limit?: string | undefined;
+            upper_bound?: string | undefined;
             voter?: string | undefined;
+            lower_bound?: string | undefined;
             voteId?: string | undefined;
         } | undefined, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalVoteResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsNewcoin22
+         * @name OptionsNewcoin23
          * @request OPTIONS:/newcoin/dao/proposal/votes
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2481,18 +2679,39 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @secure
          */
         daoWhitelistList: (query?: {
+            reverse?: string | undefined;
             dao_owner?: string | undefined;
             dao_id?: string | undefined;
+            limit?: string | undefined;
+            upper_bound?: string | undefined;
+            lower_bound?: string | undefined;
         } | undefined, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsNewcoin23
+         * @name OptionsNewcoin24
          * @request OPTIONS:/newcoin/dao/whitelist
          * @originalName optionsNewcoin
          * @duplicate
          */
-        optionsNewcoin23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsNewcoin24: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name DaoWithdrawVoteDepositCreate
+         * @request POST:/newcoin/dao/withdrawVoteDeposit
+         * @secure
+         */
+        daoWithdrawVoteDepositCreate: (BcDaoWidthdrawVoteDepositRequest: BcDaoWidthdrawVoteDepositRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoWidthdrawVoteDepositResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsNewcoin25
+         * @request OPTIONS:/newcoin/dao/withdrawVoteDeposit
+         * @originalName optionsNewcoin
+         * @duplicate
+         */
+        optionsNewcoin25: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     payment: {
         /**
