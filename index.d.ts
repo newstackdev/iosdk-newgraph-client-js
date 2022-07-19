@@ -33,6 +33,7 @@ export interface MoodPagedListReadPublicResponse {
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
+            youtubeId?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
@@ -43,7 +44,7 @@ export interface MoodPagedListReadPublicResponse {
             created?: string;
             spotify?: string;
             facebook?: string;
-            confirmedSocials?: string;
+            facebookId?: string;
             fullName?: string;
             telegram?: string;
             pinterest?: string;
@@ -88,6 +89,7 @@ export interface MoodPagedListReadPublicResponse {
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
+                youtubeId?: string;
                 id?: string;
                 newcoinPoolStake?: number;
                 contentType?: string;
@@ -98,7 +100,7 @@ export interface MoodPagedListReadPublicResponse {
                 created?: string;
                 spotify?: string;
                 facebook?: string;
-                confirmedSocials?: string;
+                facebookId?: string;
                 fullName?: string;
                 telegram?: string;
                 pinterest?: string;
@@ -138,6 +140,7 @@ export interface MoodPagedListReadPublicResponse {
                     newcoinOwnerPublicKey?: string;
                     tiktok?: string;
                     reddit?: string;
+                    youtubeId?: string;
                     id?: string;
                     newcoinPoolStake?: number;
                     contentType?: string;
@@ -148,7 +151,7 @@ export interface MoodPagedListReadPublicResponse {
                     created?: string;
                     spotify?: string;
                     facebook?: string;
-                    confirmedSocials?: string;
+                    facebookId?: string;
                     fullName?: string;
                     telegram?: string;
                     pinterest?: string;
@@ -241,9 +244,6 @@ export interface UploadRequest {
     targetModel: string;
     contentType: string;
 }
-/**
- * UploadRequestGeneric Model
- */
 export interface UploadRequestGeneric {
     filename: string;
     targetId: string;
@@ -277,6 +277,7 @@ export interface UserReadPublicResponse {
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
+    youtubeId?: string;
     id?: string;
     newcoinPoolStake?: number;
     contentType?: string;
@@ -287,7 +288,7 @@ export interface UserReadPublicResponse {
     created?: string;
     spotify?: string;
     facebook?: string;
-    confirmedSocials?: string;
+    facebookId?: string;
     fullName?: string;
     telegram?: string;
     pinterest?: string;
@@ -321,6 +322,8 @@ export interface UserReadPrivateResponse {
     longitude?: number;
     subscriptionExpiry?: string;
     created?: string;
+    availableInvites?: number;
+    facebookId?: string;
     newcoinPoolTx?: string;
     verifiedSocialIds?: string[];
     firstName?: string;
@@ -329,6 +332,7 @@ export interface UserReadPrivateResponse {
     phone?: string;
     updated?: string;
     status?: string;
+    newcoinTicker?: string;
     youtube?: string;
     lastName?: string;
     consentPrivacyPolicy?: string;
@@ -344,6 +348,7 @@ export interface UserReadPrivateResponse {
     newcoinPrivateKey?: string;
     subscriptionStatus?: string;
     newcoinPublisherPrivateKey?: string;
+    youtubeId?: string;
     newcoinPoolStake?: number;
     email?: string;
     newcoinPublisherPublicKey?: string;
@@ -502,6 +507,7 @@ export interface UserPagedListReadPublicResponse {
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
+        youtubeId?: string;
         id?: string;
         newcoinPoolStake?: number;
         contentType?: string;
@@ -512,7 +518,7 @@ export interface UserPagedListReadPublicResponse {
         created?: string;
         spotify?: string;
         facebook?: string;
-        confirmedSocials?: string;
+        facebookId?: string;
         fullName?: string;
         telegram?: string;
         pinterest?: string;
@@ -549,6 +555,8 @@ export interface RatingUpdateRequest {
 }
 export interface PagedRatedResponseUser {
     value?: {
+        newcoinTicker?: string;
+        youtube?: string;
         powered?: number;
         displayName?: string;
         newcoinAccTx?: string;
@@ -558,29 +566,42 @@ export interface PagedRatedResponseUser {
             value?: number;
             updated?: string;
         };
-        tumblr?: string;
         description?: string;
         newcoinPoolId?: string;
+        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        soundcloud?: string;
+        medium?: string;
         newcoinActivePublicKey?: string;
+        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
+        snapchat?: string;
+        apple?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
         id?: string;
         newcoinPoolStake?: number;
         contentType?: string;
+        signal?: string;
         longitude?: number;
         newcoinPublisherPublicKey?: string;
         website?: string;
         created?: string;
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
         fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
         contentUrl?: string;
+        discord?: string;
         blurHash?: string;
         consentEmail?: string;
         updated?: string;
@@ -594,208 +615,6 @@ export interface PagedRatedResponsePost {
         moodId?: string;
         created?: string;
         author?: {
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            tumblr?: string;
-            description?: string;
-            newcoinPoolId?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            soundcloud?: string;
-            newcoinActivePublicKey?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            fullName?: string;
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        moods?: {
-            created?: string;
-            author?: {
-                powered?: number;
-                displayName?: string;
-                newcoinAccTx?: string;
-                latitude?: number;
-                tumblr?: string;
-                description?: string;
-                newcoinPoolId?: string;
-                aspectRatio?: number;
-                instagram?: string;
-                soundcloud?: string;
-                newcoinActivePublicKey?: string;
-                newcoinPublicKey?: string;
-                powering?: number;
-                twitter?: string;
-                newcoinOwnerPublicKey?: string;
-                tiktok?: string;
-                id?: string;
-                newcoinPoolStake?: number;
-                contentType?: string;
-                longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
-                created?: string;
-                fullName?: string;
-                newcoinPoolTx?: string;
-                license?: string;
-                contentUrl?: string;
-                blurHash?: string;
-                consentEmail?: string;
-                updated?: string;
-                username?: string;
-            };
-            latitude?: number;
-            description?: string;
-            aspectRatio?: number;
-            title?: string;
-            content?: string;
-            stakeToAccess?: number;
-            tags?: {
-                _rel?: {
-                    score?: number;
-                    source?: string;
-                    category?: string;
-                }[];
-                id?: string;
-                value?: string;
-            }[];
-            contentUrl?: string;
-            postsCount?: number;
-            blurHash?: string;
-            id?: string;
-            updated?: string;
-            contentType?: string;
-            longitude?: number;
-        }[];
-        rating?: {
-            created?: string;
-            value?: number;
-            updated?: string;
-        };
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        tags?: {
-            _rel?: {
-                score?: number;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        newcoinMintTx?: string;
-        id?: string;
-        consentEmail?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    done?: boolean;
-}
-export interface RatingUpdateResponse {
-    created?: string;
-    /**
-     * @min 0
-     * @max 100
-     */
-    value?: number;
-    updated?: string;
-}
-/**
- * ReportUpdateRequest Model
- */
-export interface ReportUpdateRequest {
-    reason: string;
-    targetId: string;
-    comment?: string;
-}
-/**
- * ReportUpdateResponse Model
- */
-export interface ReportUpdateResponse {
-    id?: number;
-}
-/**
- * PostCreateResponse Model
- */
-export interface PostCreateResponse {
-    coverContentUrl?: string;
-    moodId?: string;
-    created?: string;
-    author?: {
-        newcoinTicker?: string;
-        youtube?: string;
-        powered?: number;
-        displayName?: string;
-        newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
-        newcoinPoolId?: string;
-        tumblr?: string;
-        aspectRatio?: number;
-        instagram?: string;
-        medium?: string;
-        newcoinActivePublicKey?: string;
-        soundcloud?: string;
-        newcoinPublicKey?: string;
-        powering?: number;
-        snapchat?: string;
-        apple?: string;
-        twitter?: string;
-        newcoinOwnerPublicKey?: string;
-        tiktok?: string;
-        reddit?: string;
-        id?: string;
-        newcoinPoolStake?: number;
-        contentType?: string;
-        signal?: string;
-        longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
-        created?: string;
-        spotify?: string;
-        facebook?: string;
-        confirmedSocials?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
-        verifiedSocialIds?: string[];
-        newcoinPoolTx?: string;
-        license?: string;
-        contentUrl?: string;
-        discord?: string;
-        blurHash?: string;
-        consentEmail?: string;
-        updated?: string;
-        username?: string;
-    };
-    latitude?: number;
-    moods?: {
-        created?: string;
-        author?: {
             newcoinTicker?: string;
             youtube?: string;
             powered?: number;
@@ -818,6 +637,7 @@ export interface PostCreateResponse {
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
+            youtubeId?: string;
             id?: string;
             newcoinPoolStake?: number;
             contentType?: string;
@@ -828,290 +648,7 @@ export interface PostCreateResponse {
             created?: string;
             spotify?: string;
             facebook?: string;
-            confirmedSocials?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
-            verifiedSocialIds?: string[];
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            discord?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        stakeToAccess?: number;
-        tags?: {
-            _rel?: {
-                displayValue?: string;
-                score?: number;
-                polygons?: string;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        contentUrl?: string;
-        postsCount?: number;
-        blurHash?: string;
-        id?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    description?: string;
-    aspectRatio?: number;
-    title?: string;
-    content?: string;
-    tags?: {
-        _rel?: {
-            displayValue?: string;
-            score?: number;
-            polygons?: string;
-            source?: string;
-            category?: string;
-        }[];
-        id?: string;
-        value?: string;
-    }[];
-    license?: string;
-    contentUrl?: string;
-    blurHash?: string;
-    newcoinMintTx?: string;
-    id?: string;
-    embed?: string;
-    updated?: string;
-    contentType?: string;
-    longitude?: number;
-}
-/**
- * PostReadResponse Model
- */
-export interface PostReadResponse {
-    coverContentUrl?: string;
-    moodId?: string;
-    created?: string;
-    author?: {
-        newcoinTicker?: string;
-        youtube?: string;
-        powered?: number;
-        displayName?: string;
-        newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
-        newcoinPoolId?: string;
-        tumblr?: string;
-        aspectRatio?: number;
-        instagram?: string;
-        medium?: string;
-        newcoinActivePublicKey?: string;
-        soundcloud?: string;
-        newcoinPublicKey?: string;
-        powering?: number;
-        snapchat?: string;
-        apple?: string;
-        twitter?: string;
-        newcoinOwnerPublicKey?: string;
-        tiktok?: string;
-        reddit?: string;
-        id?: string;
-        newcoinPoolStake?: number;
-        contentType?: string;
-        signal?: string;
-        longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
-        created?: string;
-        spotify?: string;
-        facebook?: string;
-        confirmedSocials?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
-        verifiedSocialIds?: string[];
-        newcoinPoolTx?: string;
-        license?: string;
-        contentUrl?: string;
-        discord?: string;
-        blurHash?: string;
-        consentEmail?: string;
-        updated?: string;
-        username?: string;
-    };
-    latitude?: number;
-    moods?: {
-        created?: string;
-        author?: {
-            newcoinTicker?: string;
-            youtube?: string;
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
-            newcoinPoolId?: string;
-            tumblr?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            medium?: string;
-            newcoinActivePublicKey?: string;
-            soundcloud?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            snapchat?: string;
-            apple?: string;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            reddit?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            signal?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            spotify?: string;
-            facebook?: string;
-            confirmedSocials?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
-            verifiedSocialIds?: string[];
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            discord?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        stakeToAccess?: number;
-        tags?: {
-            _rel?: {
-                displayValue?: string;
-                score?: number;
-                polygons?: string;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        contentUrl?: string;
-        postsCount?: number;
-        blurHash?: string;
-        id?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    description?: string;
-    aspectRatio?: number;
-    title?: string;
-    content?: string;
-    tags?: {
-        _rel?: {
-            displayValue?: string;
-            score?: number;
-            polygons?: string;
-            source?: string;
-            category?: string;
-        }[];
-        id?: string;
-        value?: string;
-    }[];
-    license?: string;
-    contentUrl?: string;
-    blurHash?: string;
-    newcoinMintTx?: string;
-    id?: string;
-    embed?: string;
-    updated?: string;
-    contentType?: string;
-    longitude?: number;
-}
-/**
- * PostCreateRequest Model
- */
-export interface PostCreateRequest {
-    license?: string;
-    doMint?: string;
-    description?: string;
-    embed?: string;
-    title?: string;
-    contentType?: string;
-    content?: string;
-}
-/**
- * PostUpdateRequest Model
- */
-export interface PostUpdateRequest {
-    license?: string;
-    latitude?: number;
-    doMint?: boolean;
-    description?: string;
-    id: string;
-    title?: string;
-    longitude?: number;
-}
-/**
- * PostPagedListReadPublicResponse Model
- */
-export interface PostPagedListReadPublicResponse {
-    value?: {
-        coverContentUrl?: string;
-        moodId?: string;
-        created?: string;
-        author?: {
-            newcoinTicker?: string;
-            youtube?: string;
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
-            newcoinPoolId?: string;
-            tumblr?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            medium?: string;
-            newcoinActivePublicKey?: string;
-            soundcloud?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            snapchat?: string;
-            apple?: string;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            reddit?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            signal?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            spotify?: string;
-            facebook?: string;
-            confirmedSocials?: string;
+            facebookId?: string;
             fullName?: string;
             telegram?: string;
             pinterest?: string;
@@ -1151,6 +688,7 @@ export interface PostPagedListReadPublicResponse {
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
+                youtubeId?: string;
                 id?: string;
                 newcoinPoolStake?: number;
                 contentType?: string;
@@ -1161,7 +699,1141 @@ export interface PostPagedListReadPublicResponse {
                 created?: string;
                 spotify?: string;
                 facebook?: string;
-                confirmedSocials?: string;
+                facebookId?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                contentUrl?: string;
+                discord?: string;
+                blurHash?: string;
+                consentEmail?: string;
+                updated?: string;
+                username?: string;
+            };
+            latitude?: number;
+            description?: string;
+            aspectRatio?: number;
+            title?: string;
+            content?: string;
+            stakeToAccess?: number;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            contentUrl?: string;
+            postsCount?: number;
+            blurHash?: string;
+            id?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        rating?: {
+            created?: string;
+            value?: number;
+            updated?: string;
+        };
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        license?: string;
+        contentUrl?: string;
+        blurHash?: string;
+        newcoinMintTx?: string;
+        id?: string;
+        embed?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    done?: boolean;
+}
+export interface RatingUpdateResponse {
+    created?: string;
+    /**
+     * @min 0
+     * @max 100
+     */
+    value?: number;
+    updated?: string;
+}
+export interface ReportUpdateRequest {
+    reason: string;
+    targetId: string;
+    comment?: string;
+}
+export interface ReportUpdateResponse {
+    id?: number;
+}
+export interface PostCreateResponse {
+    coverContentUrl?: string;
+    moodId?: string;
+    created?: string;
+    author?: {
+        newcoinTicker?: string;
+        youtube?: string;
+        powered?: number;
+        displayName?: string;
+        newcoinAccTx?: string;
+        latitude?: number;
+        description?: string;
+        newcoinPoolId?: string;
+        tumblr?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        medium?: string;
+        newcoinActivePublicKey?: string;
+        soundcloud?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
+        id?: string;
+        newcoinPoolStake?: number;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        created?: string;
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        contentUrl?: string;
+        discord?: string;
+        blurHash?: string;
+        consentEmail?: string;
+        updated?: string;
+        username?: string;
+    };
+    latitude?: number;
+    moods?: {
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        stakeToAccess?: number;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        contentUrl?: string;
+        postsCount?: number;
+        blurHash?: string;
+        id?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    description?: string;
+    aspectRatio?: number;
+    title?: string;
+    content?: string;
+    tags?: {
+        _rel?: {
+            displayValue?: string;
+            score?: number;
+            polygons?: string;
+            source?: string;
+            category?: string;
+        }[];
+        id?: string;
+        value?: string;
+    }[];
+    license?: string;
+    contentUrl?: string;
+    blurHash?: string;
+    newcoinMintTx?: string;
+    id?: string;
+    embed?: string;
+    updated?: string;
+    contentType?: string;
+    longitude?: number;
+}
+export interface PostReadResponse {
+    coverContentUrl?: string;
+    moodId?: string;
+    created?: string;
+    author?: {
+        newcoinTicker?: string;
+        youtube?: string;
+        powered?: number;
+        displayName?: string;
+        newcoinAccTx?: string;
+        latitude?: number;
+        description?: string;
+        newcoinPoolId?: string;
+        tumblr?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        medium?: string;
+        newcoinActivePublicKey?: string;
+        soundcloud?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
+        id?: string;
+        newcoinPoolStake?: number;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        created?: string;
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        contentUrl?: string;
+        discord?: string;
+        blurHash?: string;
+        consentEmail?: string;
+        updated?: string;
+        username?: string;
+    };
+    latitude?: number;
+    moods?: {
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        stakeToAccess?: number;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        contentUrl?: string;
+        postsCount?: number;
+        blurHash?: string;
+        id?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    description?: string;
+    aspectRatio?: number;
+    title?: string;
+    content?: string;
+    tags?: {
+        _rel?: {
+            displayValue?: string;
+            score?: number;
+            polygons?: string;
+            source?: string;
+            category?: string;
+        }[];
+        id?: string;
+        value?: string;
+    }[];
+    license?: string;
+    contentUrl?: string;
+    blurHash?: string;
+    newcoinMintTx?: string;
+    id?: string;
+    embed?: string;
+    updated?: string;
+    contentType?: string;
+    longitude?: number;
+}
+export interface PostCreateRequest {
+    license?: string;
+    doMint?: string;
+    description?: string;
+    embed?: string;
+    title?: string;
+    contentType?: string;
+    content?: string;
+}
+export interface PostUpdateRequest {
+    license?: string;
+    latitude?: number;
+    doMint?: boolean;
+    description?: string;
+    id: string;
+    title?: string;
+    longitude?: number;
+}
+export interface PostPagedListReadPublicResponse {
+    value?: {
+        coverContentUrl?: string;
+        moodId?: string;
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        moods?: {
+            created?: string;
+            author?: {
+                newcoinTicker?: string;
+                youtube?: string;
+                powered?: number;
+                displayName?: string;
+                newcoinAccTx?: string;
+                latitude?: number;
+                description?: string;
+                newcoinPoolId?: string;
+                tumblr?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                medium?: string;
+                newcoinActivePublicKey?: string;
+                soundcloud?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                snapchat?: string;
+                apple?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                youtubeId?: string;
+                id?: string;
+                newcoinPoolStake?: number;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                created?: string;
+                spotify?: string;
+                facebook?: string;
+                facebookId?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                contentUrl?: string;
+                discord?: string;
+                blurHash?: string;
+                consentEmail?: string;
+                updated?: string;
+                username?: string;
+            };
+            latitude?: number;
+            description?: string;
+            aspectRatio?: number;
+            title?: string;
+            content?: string;
+            stakeToAccess?: number;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            contentUrl?: string;
+            postsCount?: number;
+            blurHash?: string;
+            id?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        license?: string;
+        contentUrl?: string;
+        blurHash?: string;
+        newcoinMintTx?: string;
+        id?: string;
+        embed?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    done?: boolean;
+}
+export interface PostTagsSearchPublicResponse {
+    done?: object;
+    value?: {
+        created?: string;
+        tag?: string;
+    }[];
+}
+export interface PostRemoteMetaProxyResponse {
+    text?: string;
+    status?: number;
+}
+/**
+ * MoodCreateResponse Model
+ */
+export interface MoodCreateResponse {
+    created?: string;
+    author?: {
+        newcoinTicker?: string;
+        youtube?: string;
+        powered?: number;
+        displayName?: string;
+        newcoinAccTx?: string;
+        latitude?: number;
+        description?: string;
+        newcoinPoolId?: string;
+        tumblr?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        medium?: string;
+        newcoinActivePublicKey?: string;
+        soundcloud?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
+        id?: string;
+        newcoinPoolStake?: number;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        created?: string;
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        contentUrl?: string;
+        discord?: string;
+        blurHash?: string;
+        consentEmail?: string;
+        updated?: string;
+        username?: string;
+    };
+    latitude?: number;
+    description?: string;
+    aspectRatio?: number;
+    title?: string;
+    posts?: {
+        coverContentUrl?: string;
+        moodId?: string;
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        moods?: {
+            created?: string;
+            author?: {
+                newcoinTicker?: string;
+                youtube?: string;
+                powered?: number;
+                displayName?: string;
+                newcoinAccTx?: string;
+                latitude?: number;
+                description?: string;
+                newcoinPoolId?: string;
+                tumblr?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                medium?: string;
+                newcoinActivePublicKey?: string;
+                soundcloud?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                snapchat?: string;
+                apple?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                youtubeId?: string;
+                id?: string;
+                newcoinPoolStake?: number;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                created?: string;
+                spotify?: string;
+                facebook?: string;
+                facebookId?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                contentUrl?: string;
+                discord?: string;
+                blurHash?: string;
+                consentEmail?: string;
+                updated?: string;
+                username?: string;
+            };
+            latitude?: number;
+            description?: string;
+            aspectRatio?: number;
+            title?: string;
+            content?: string;
+            stakeToAccess?: number;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            contentUrl?: string;
+            postsCount?: number;
+            blurHash?: string;
+            id?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        license?: string;
+        contentUrl?: string;
+        blurHash?: string;
+        newcoinMintTx?: string;
+        id?: string;
+        embed?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    content?: string;
+    stakeToAccess?: number;
+    tags?: {
+        _rel?: {
+            displayValue?: string;
+            score?: number;
+            polygons?: string;
+            source?: string;
+            category?: string;
+        }[];
+        id?: string;
+        value?: string;
+    }[];
+    contentUrl?: string;
+    postsCount?: number;
+    blurHash?: string;
+    id?: string;
+    updated?: string;
+    contentType?: string;
+    longitude?: number;
+}
+/**
+ * MoodReadResponse Model
+ */
+export interface MoodReadResponse {
+    created?: string;
+    author?: {
+        newcoinTicker?: string;
+        youtube?: string;
+        powered?: number;
+        displayName?: string;
+        newcoinAccTx?: string;
+        latitude?: number;
+        description?: string;
+        newcoinPoolId?: string;
+        tumblr?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        medium?: string;
+        newcoinActivePublicKey?: string;
+        soundcloud?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
+        id?: string;
+        newcoinPoolStake?: number;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        created?: string;
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        contentUrl?: string;
+        discord?: string;
+        blurHash?: string;
+        consentEmail?: string;
+        updated?: string;
+        username?: string;
+    };
+    latitude?: number;
+    description?: string;
+    aspectRatio?: number;
+    title?: string;
+    posts?: {
+        coverContentUrl?: string;
+        moodId?: string;
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        moods?: {
+            created?: string;
+            author?: {
+                newcoinTicker?: string;
+                youtube?: string;
+                powered?: number;
+                displayName?: string;
+                newcoinAccTx?: string;
+                latitude?: number;
+                description?: string;
+                newcoinPoolId?: string;
+                tumblr?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                medium?: string;
+                newcoinActivePublicKey?: string;
+                soundcloud?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                snapchat?: string;
+                apple?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                youtubeId?: string;
+                id?: string;
+                newcoinPoolStake?: number;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                created?: string;
+                spotify?: string;
+                facebook?: string;
+                facebookId?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                contentUrl?: string;
+                discord?: string;
+                blurHash?: string;
+                consentEmail?: string;
+                updated?: string;
+                username?: string;
+            };
+            latitude?: number;
+            description?: string;
+            aspectRatio?: number;
+            title?: string;
+            content?: string;
+            stakeToAccess?: number;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            contentUrl?: string;
+            postsCount?: number;
+            blurHash?: string;
+            id?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        description?: string;
+        aspectRatio?: number;
+        title?: string;
+        content?: string;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        license?: string;
+        contentUrl?: string;
+        blurHash?: string;
+        newcoinMintTx?: string;
+        id?: string;
+        embed?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    content?: string;
+    stakeToAccess?: number;
+    tags?: {
+        _rel?: {
+            displayValue?: string;
+            score?: number;
+            polygons?: string;
+            source?: string;
+            category?: string;
+        }[];
+        id?: string;
+        value?: string;
+    }[];
+    contentUrl?: string;
+    postsCount?: number;
+    blurHash?: string;
+    id?: string;
+    updated?: string;
+    contentType?: string;
+    longitude?: number;
+}
+/**
+ * MoodListAttachedPostsResponse Model
+ */
+export interface MoodListAttachedPostsResponse {
+    value?: {
+        coverContentUrl?: string;
+        moodId?: string;
+        created?: string;
+        author?: {
+            newcoinTicker?: string;
+            youtube?: string;
+            powered?: number;
+            displayName?: string;
+            newcoinAccTx?: string;
+            latitude?: number;
+            description?: string;
+            newcoinPoolId?: string;
+            tumblr?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            medium?: string;
+            newcoinActivePublicKey?: string;
+            soundcloud?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            youtubeId?: string;
+            id?: string;
+            newcoinPoolStake?: number;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            created?: string;
+            spotify?: string;
+            facebook?: string;
+            facebookId?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            contentUrl?: string;
+            discord?: string;
+            blurHash?: string;
+            consentEmail?: string;
+            updated?: string;
+            username?: string;
+        };
+        latitude?: number;
+        moods?: {
+            created?: string;
+            author?: {
+                newcoinTicker?: string;
+                youtube?: string;
+                powered?: number;
+                displayName?: string;
+                newcoinAccTx?: string;
+                latitude?: number;
+                description?: string;
+                newcoinPoolId?: string;
+                tumblr?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                medium?: string;
+                newcoinActivePublicKey?: string;
+                soundcloud?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                snapchat?: string;
+                apple?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                youtubeId?: string;
+                id?: string;
+                newcoinPoolStake?: number;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                created?: string;
+                spotify?: string;
+                facebook?: string;
+                facebookId?: string;
                 fullName?: string;
                 telegram?: string;
                 pinterest?: string;
@@ -1228,504 +1900,17 @@ export interface PostPagedListReadPublicResponse {
     done?: boolean;
 }
 /**
- * PostTagsSearchPublicResponse Model
+ * MoodCreateRequest Model
  */
-export interface PostTagsSearchPublicResponse {
-    done?: object;
-    value?: {
-        created?: string;
-        tag?: string;
-    }[];
-}
-/**
- * PostRemoteMetaProxyResponse Model
- */
-export interface PostRemoteMetaProxyResponse {
-    text?: string;
-    status?: number;
-}
-export interface MoodCreateResponse {
-    created?: string;
-    author?: {
-        powered?: number;
-        displayName?: string;
-        newcoinAccTx?: string;
-        latitude?: number;
-        tumblr?: string;
-        description?: string;
-        newcoinPoolId?: string;
-        aspectRatio?: number;
-        instagram?: string;
-        soundcloud?: string;
-        newcoinActivePublicKey?: string;
-        newcoinPublicKey?: string;
-        powering?: number;
-        twitter?: string;
-        newcoinOwnerPublicKey?: string;
-        tiktok?: string;
-        id?: string;
-        newcoinPoolStake?: number;
-        contentType?: string;
-        longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
-        created?: string;
-        fullName?: string;
-        newcoinPoolTx?: string;
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        consentEmail?: string;
-        updated?: string;
-        username?: string;
-    };
-    latitude?: number;
-    description?: string;
-    aspectRatio?: number;
-    title?: string;
-    posts?: {
-        coverContentUrl?: string;
-        moodId?: string;
-        created?: string;
-        author?: {
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            tumblr?: string;
-            description?: string;
-            newcoinPoolId?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            soundcloud?: string;
-            newcoinActivePublicKey?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            fullName?: string;
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        moods?: {
-            created?: string;
-            author?: {
-                powered?: number;
-                displayName?: string;
-                newcoinAccTx?: string;
-                latitude?: number;
-                tumblr?: string;
-                description?: string;
-                newcoinPoolId?: string;
-                aspectRatio?: number;
-                instagram?: string;
-                soundcloud?: string;
-                newcoinActivePublicKey?: string;
-                newcoinPublicKey?: string;
-                powering?: number;
-                twitter?: string;
-                newcoinOwnerPublicKey?: string;
-                tiktok?: string;
-                id?: string;
-                newcoinPoolStake?: number;
-                contentType?: string;
-                longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
-                created?: string;
-                fullName?: string;
-                newcoinPoolTx?: string;
-                license?: string;
-                contentUrl?: string;
-                blurHash?: string;
-                consentEmail?: string;
-                updated?: string;
-                username?: string;
-            };
-            latitude?: number;
-            description?: string;
-            aspectRatio?: number;
-            title?: string;
-            content?: string;
-            stakeToAccess?: number;
-            tags?: {
-                _rel?: {
-                    score?: number;
-                    source?: string;
-                    category?: string;
-                }[];
-                id?: string;
-                value?: string;
-            }[];
-            contentUrl?: string;
-            postsCount?: number;
-            blurHash?: string;
-            id?: string;
-            updated?: string;
-            contentType?: string;
-            longitude?: number;
-        }[];
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        tags?: {
-            _rel?: {
-                score?: number;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        newcoinMintTx?: string;
-        id?: string;
-        consentEmail?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    content?: string;
-    stakeToAccess?: number;
-    tags?: {
-        _rel?: {
-            score?: number;
-            source?: string;
-            category?: string;
-        }[];
-        id?: string;
-        value?: string;
-    }[];
-    contentUrl?: string;
-    postsCount?: number;
-    blurHash?: string;
-    id?: string;
-    updated?: string;
-    contentType?: string;
-    longitude?: number;
-}
-export interface MoodReadResponse {
-    created?: string;
-    author?: {
-        powered?: number;
-        displayName?: string;
-        newcoinAccTx?: string;
-        latitude?: number;
-        tumblr?: string;
-        description?: string;
-        newcoinPoolId?: string;
-        aspectRatio?: number;
-        instagram?: string;
-        soundcloud?: string;
-        newcoinActivePublicKey?: string;
-        newcoinPublicKey?: string;
-        powering?: number;
-        twitter?: string;
-        newcoinOwnerPublicKey?: string;
-        tiktok?: string;
-        id?: string;
-        newcoinPoolStake?: number;
-        contentType?: string;
-        longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
-        created?: string;
-        fullName?: string;
-        newcoinPoolTx?: string;
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        consentEmail?: string;
-        updated?: string;
-        username?: string;
-    };
-    latitude?: number;
-    description?: string;
-    aspectRatio?: number;
-    title?: string;
-    posts?: {
-        coverContentUrl?: string;
-        moodId?: string;
-        created?: string;
-        author?: {
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            tumblr?: string;
-            description?: string;
-            newcoinPoolId?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            soundcloud?: string;
-            newcoinActivePublicKey?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            fullName?: string;
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        moods?: {
-            created?: string;
-            author?: {
-                powered?: number;
-                displayName?: string;
-                newcoinAccTx?: string;
-                latitude?: number;
-                tumblr?: string;
-                description?: string;
-                newcoinPoolId?: string;
-                aspectRatio?: number;
-                instagram?: string;
-                soundcloud?: string;
-                newcoinActivePublicKey?: string;
-                newcoinPublicKey?: string;
-                powering?: number;
-                twitter?: string;
-                newcoinOwnerPublicKey?: string;
-                tiktok?: string;
-                id?: string;
-                newcoinPoolStake?: number;
-                contentType?: string;
-                longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
-                created?: string;
-                fullName?: string;
-                newcoinPoolTx?: string;
-                license?: string;
-                contentUrl?: string;
-                blurHash?: string;
-                consentEmail?: string;
-                updated?: string;
-                username?: string;
-            };
-            latitude?: number;
-            description?: string;
-            aspectRatio?: number;
-            title?: string;
-            content?: string;
-            stakeToAccess?: number;
-            tags?: {
-                _rel?: {
-                    score?: number;
-                    source?: string;
-                    category?: string;
-                }[];
-                id?: string;
-                value?: string;
-            }[];
-            contentUrl?: string;
-            postsCount?: number;
-            blurHash?: string;
-            id?: string;
-            updated?: string;
-            contentType?: string;
-            longitude?: number;
-        }[];
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        tags?: {
-            _rel?: {
-                score?: number;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        newcoinMintTx?: string;
-        id?: string;
-        consentEmail?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    content?: string;
-    stakeToAccess?: number;
-    tags?: {
-        _rel?: {
-            score?: number;
-            source?: string;
-            category?: string;
-        }[];
-        id?: string;
-        value?: string;
-    }[];
-    contentUrl?: string;
-    postsCount?: number;
-    blurHash?: string;
-    id?: string;
-    updated?: string;
-    contentType?: string;
-    longitude?: number;
-}
-export interface MoodListAttachedPostsResponse {
-    value?: {
-        coverContentUrl?: string;
-        moodId?: string;
-        created?: string;
-        author?: {
-            powered?: number;
-            displayName?: string;
-            newcoinAccTx?: string;
-            latitude?: number;
-            tumblr?: string;
-            description?: string;
-            newcoinPoolId?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            soundcloud?: string;
-            newcoinActivePublicKey?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            id?: string;
-            newcoinPoolStake?: number;
-            contentType?: string;
-            longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            created?: string;
-            fullName?: string;
-            newcoinPoolTx?: string;
-            license?: string;
-            contentUrl?: string;
-            blurHash?: string;
-            consentEmail?: string;
-            updated?: string;
-            username?: string;
-        };
-        latitude?: number;
-        moods?: {
-            created?: string;
-            author?: {
-                powered?: number;
-                displayName?: string;
-                newcoinAccTx?: string;
-                latitude?: number;
-                tumblr?: string;
-                description?: string;
-                newcoinPoolId?: string;
-                aspectRatio?: number;
-                instagram?: string;
-                soundcloud?: string;
-                newcoinActivePublicKey?: string;
-                newcoinPublicKey?: string;
-                powering?: number;
-                twitter?: string;
-                newcoinOwnerPublicKey?: string;
-                tiktok?: string;
-                id?: string;
-                newcoinPoolStake?: number;
-                contentType?: string;
-                longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
-                created?: string;
-                fullName?: string;
-                newcoinPoolTx?: string;
-                license?: string;
-                contentUrl?: string;
-                blurHash?: string;
-                consentEmail?: string;
-                updated?: string;
-                username?: string;
-            };
-            latitude?: number;
-            description?: string;
-            aspectRatio?: number;
-            title?: string;
-            content?: string;
-            stakeToAccess?: number;
-            tags?: {
-                _rel?: {
-                    score?: number;
-                    source?: string;
-                    category?: string;
-                }[];
-                id?: string;
-                value?: string;
-            }[];
-            contentUrl?: string;
-            postsCount?: number;
-            blurHash?: string;
-            id?: string;
-            updated?: string;
-            contentType?: string;
-            longitude?: number;
-        }[];
-        description?: string;
-        aspectRatio?: number;
-        title?: string;
-        content?: string;
-        tags?: {
-            _rel?: {
-                score?: number;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        license?: string;
-        contentUrl?: string;
-        blurHash?: string;
-        newcoinMintTx?: string;
-        id?: string;
-        consentEmail?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    done?: boolean;
-}
 export interface MoodCreateRequest {
     latitude?: number;
     description: string;
     title: string;
     longitude?: number;
 }
+/**
+ * MoodUpdateRequest Model
+ */
 export interface MoodUpdateRequest {
     latitude?: number;
     description?: string;
@@ -1733,6 +1918,9 @@ export interface MoodUpdateRequest {
     title?: string;
     longitude?: number;
 }
+/**
+ * MoodAttachRequest Model
+ */
 export interface MoodAttachRequest {
     targetId: string;
     id: string;
@@ -1980,6 +2168,7 @@ export interface BcDaoProposalVoteResponse {
         proposal_id?: number;
         dao_id?: number;
         id?: string;
+        lock_end_date?: string;
     }[];
 }
 export declare type QueryParamsType = Record<string | number, any>;
@@ -2041,7 +2230,7 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-06-10T11:48:04Z
+ * @version 2022-07-13T15:51:11Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -2660,7 +2849,6 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
             upper_bound?: string | undefined;
             voter?: string | undefined;
             lower_bound?: string | undefined;
-            voteId?: string | undefined;
         } | undefined, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalVoteResponse, ErrorResponse>>;
         /**
          * No description

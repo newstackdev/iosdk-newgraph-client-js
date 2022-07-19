@@ -247,7 +247,7 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-06-10T11:48:04Z
+ * @version 2022-07-13T15:51:11Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 var Api = /** @class */ (function (_super) {
