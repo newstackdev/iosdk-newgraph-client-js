@@ -371,6 +371,11 @@ export interface UserStakeRequest {
   username: string;
 }
 
+export interface UserTransferRequest {
+  encryptedPayload?: string;
+  payload?: string;
+}
+
 export interface UserCreateRequest {
   newcoinTicker?: string;
   youtube?: string;
@@ -405,7 +410,7 @@ export interface UserCreateRequest {
   consentEmail?: string;
 
   /** @pattern ^[a-z0-5\.]{2,9}\.io$ */
-  username: string;
+  username?: string;
 }
 
 export interface UserPreRegisterRequest {
@@ -418,6 +423,7 @@ export interface UserPreRegisterRequest {
 }
 
 export interface UserAvailabilityResponse {
+  offer?: string;
   available?: boolean;
 }
 
@@ -540,9 +546,162 @@ export interface UserPagedListReadPublicResponse {
   done?: boolean;
 }
 
+export interface UserInvitationPagedListReadPublicResponse {
+  value?: {
+    newcoinTicker?: string;
+    youtube?: string;
+    powered?: number;
+    displayName?: string;
+    newcoinAccTx?: string;
+    latitude?: number;
+    description?: string;
+    newcoinPoolId?: string;
+    tumblr?: string;
+    aspectRatio?: number;
+    instagram?: string;
+    medium?: string;
+    newcoinActivePublicKey?: string;
+    soundcloud?: string;
+    newcoinPublicKey?: string;
+    powering?: number;
+    snapchat?: string;
+    apple?: string;
+    twitter?: string;
+    newcoinOwnerPublicKey?: string;
+    tiktok?: string;
+    reddit?: string;
+    youtubeId?: string;
+    id?: string;
+    newcoinPoolStake?: number;
+    contentType?: string;
+    signal?: string;
+    longitude?: number;
+    newcoinPublisherPublicKey?: string;
+    website?: string;
+    created?: string;
+    invitation?: {
+      youtube?: string;
+      spotify?: string;
+      facebook?: string;
+      tumblr?: string;
+      telegram?: string;
+      pinterest?: string;
+      instagram?: string;
+      medium?: string;
+      soundcloud?: string;
+      snapchat?: string;
+      apple?: string;
+      twitter?: string;
+      discord?: string;
+      tiktok?: string;
+      reddit?: string;
+      signal?: string;
+    };
+    spotify?: string;
+    facebook?: string;
+    facebookId?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    verifiedSocialIds?: string[];
+    newcoinPoolTx?: string;
+    license?: string;
+    contentUrl?: string;
+    discord?: string;
+    blurHash?: string;
+    consentEmail?: string;
+    updated?: string;
+    username?: string;
+  }[];
+  done?: boolean;
+}
+
+export interface UserInvitationReadPublicResponse {
+  newcoinTicker?: string;
+  youtube?: string;
+  powered?: number;
+  displayName?: string;
+  newcoinAccTx?: string;
+  latitude?: number;
+  description?: string;
+  newcoinPoolId?: string;
+  tumblr?: string;
+  aspectRatio?: number;
+  instagram?: string;
+  medium?: string;
+  newcoinActivePublicKey?: string;
+  soundcloud?: string;
+  newcoinPublicKey?: string;
+  powering?: number;
+  snapchat?: string;
+  apple?: string;
+  twitter?: string;
+  newcoinOwnerPublicKey?: string;
+  tiktok?: string;
+  reddit?: string;
+  youtubeId?: string;
+  id?: string;
+  newcoinPoolStake?: number;
+  contentType?: string;
+  signal?: string;
+  longitude?: number;
+  newcoinPublisherPublicKey?: string;
+  website?: string;
+  created?: string;
+  invitation?: {
+    youtube?: string;
+    spotify?: string;
+    facebook?: string;
+    tumblr?: string;
+    telegram?: string;
+    pinterest?: string;
+    instagram?: string;
+    medium?: string;
+    soundcloud?: string;
+    snapchat?: string;
+    apple?: string;
+    twitter?: string;
+    discord?: string;
+    tiktok?: string;
+    reddit?: string;
+    signal?: string;
+  };
+  spotify?: string;
+  facebook?: string;
+  facebookId?: string;
+  fullName?: string;
+  telegram?: string;
+  pinterest?: string;
+  verifiedSocialIds?: string[];
+  newcoinPoolTx?: string;
+  license?: string;
+  contentUrl?: string;
+  discord?: string;
+  blurHash?: string;
+  consentEmail?: string;
+  updated?: string;
+  username?: string;
+}
+
 export interface UserInviteRequest {
-  phone: string;
+  youtube?: string;
+  spotify?: string;
+  facebook?: string;
   fullName: string;
+  tumblr?: string;
+  telegram?: string;
+  pinterest?: string;
+  instagram?: string;
+  medium?: string;
+  soundcloud?: string;
+  snapchat?: string;
+  apple?: string;
+  twitter?: string;
+  discord?: string;
+  phone: string;
+  tiktok?: string;
+  reddit?: string;
+  signal?: string;
   email?: string;
 }
 
@@ -1242,9 +1401,6 @@ export interface PostRemoteMetaProxyResponse {
   status?: number;
 }
 
-/**
- * MoodCreateResponse Model
- */
 export interface MoodCreateResponse {
   created?: string;
   author?: {
@@ -1456,9 +1612,6 @@ export interface MoodCreateResponse {
   longitude?: number;
 }
 
-/**
- * MoodReadResponse Model
- */
 export interface MoodReadResponse {
   created?: string;
   author?: {
@@ -1670,9 +1823,6 @@ export interface MoodReadResponse {
   longitude?: number;
 }
 
-/**
- * MoodListAttachedPostsResponse Model
- */
 export interface MoodListAttachedPostsResponse {
   value?: {
     coverContentUrl?: string;
@@ -1818,9 +1968,6 @@ export interface MoodListAttachedPostsResponse {
   done?: boolean;
 }
 
-/**
- * MoodCreateRequest Model
- */
 export interface MoodCreateRequest {
   latitude?: number;
   description: string;
@@ -1828,9 +1975,6 @@ export interface MoodCreateRequest {
   longitude?: number;
 }
 
-/**
- * MoodUpdateRequest Model
- */
 export interface MoodUpdateRequest {
   latitude?: number;
   description?: string;
@@ -1839,9 +1983,6 @@ export interface MoodUpdateRequest {
   longitude?: number;
 }
 
-/**
- * MoodAttachRequest Model
- */
 export interface MoodAttachRequest {
   targetId: string;
   id: string;
@@ -1880,15 +2021,17 @@ export interface PaymentStripePaymentIntentCreateResponse {
   client_secret?: string;
 }
 
+/**
+ * BcAuthEthRequest Model
+ */
 export interface BcAuthEthRequest {
-  nftIndex: string;
-  collectionAddress: string;
-  address: string;
-  signature: string;
-  nonce?: string;
-  timestamp: string;
+  encryptedPayload: string;
+  payload: string;
 }
 
+/**
+ * BcAuthEthResponse Model
+ */
 export interface BcAuthEthResponse {
   result: boolean;
   signedAddr?: string;
@@ -1896,13 +2039,22 @@ export interface BcAuthEthResponse {
   owningAddr?: string;
 }
 
+/**
+ * BcKeyPairCreateRequest Model
+ */
 export type BcKeyPairCreateRequest = any;
 
+/**
+ * BcKeyPairCreateResponse Model
+ */
 export interface BcKeyPairCreateResponse {
   prv_key: string;
   pub_key: string;
 }
 
+/**
+ * BcAccCreateRequest Model
+ */
 export interface BcAccCreateRequest {
   newacc_pub_active_key: string;
   newacc_pub_owner_key: string;
@@ -1915,6 +2067,9 @@ export interface BcAccCreateRequest {
   stake_net?: string;
 }
 
+/**
+ * BcCollectionCreateRequest Model
+ */
 export interface BcCollectionCreateRequest {
   mkt_fee?: number;
   template_name: string;
@@ -1930,18 +2085,27 @@ export interface BcCollectionCreateRequest {
   collection_name: string;
 }
 
+/**
+ * BcPoolCreateRequest Model
+ */
 export interface BcPoolCreateRequest {
   owner: string;
   owner_prv_active_key?: string;
   payer?: string;
 }
 
+/**
+ * BcStakeMainDAORequest Model
+ */
 export interface BcStakeMainDAORequest {
   payer_prv_key: string;
   amt: string;
   payer: string;
 }
 
+/**
+ * BcStakePoolRequest Model
+ */
 export interface BcStakePoolRequest {
   owner: string;
   payer_prv_key: string;
@@ -1949,6 +2113,9 @@ export interface BcStakePoolRequest {
   payer: string;
 }
 
+/**
+ * BcMintAssetRequest Model
+ */
 export interface BcMintAssetRequest {
   immutable_data?: { value: string[]; key: string }[];
   tpl_name?: string;
@@ -1961,6 +2128,9 @@ export interface BcMintAssetRequest {
   payer_public_key: string;
 }
 
+/**
+ * BcTxResponse Model
+ */
 export interface BcTxResponse {
   TxID_createTpl?: string;
   TxID_createPool?: string;
@@ -1971,15 +2141,24 @@ export interface BcTxResponse {
   TxID_mintAsset?: string;
 }
 
+/**
+ * BcGetAccountInfo Model
+ */
 export interface BcGetAccountInfo {
   owner: string;
   contract?: string;
 }
 
+/**
+ * BcGetPoolInfo Model
+ */
 export interface BcGetPoolInfo {
   owner: string;
 }
 
+/**
+ * BcGetInfoResp Model
+ */
 export type BcGetInfoResp = any;
 
 export interface BcCreateDaoRequest {
@@ -2301,7 +2480,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-07-13T15:51:11Z
+ * @version 2022-08-15T13:39:44Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -4293,6 +4472,112 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
+     * @name InviteHashList
+     * @request GET:/user/invite/hash
+     */
+    inviteHashList: (query?: { hash?: string }, params: RequestParams = {}) =>
+      this.request<UserInvitationReadPublicResponse, ErrorResponse>({
+        path: `/user/invite/hash`,
+        method: "GET",
+        query: query,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsUser6
+     * @request OPTIONS:/user/invite/hash
+     * @originalName optionsUser
+     * @duplicate
+     */
+    optionsUser6: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/user/invite/hash`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name InviteesList
+     * @request GET:/user/invitees
+     * @secure
+     */
+    inviteesList: (
+      query?: { direction?: string; contentType?: string; page?: string; orderBy?: string },
+      params: RequestParams = {},
+    ) =>
+      this.request<UserInvitationPagedListReadPublicResponse, ErrorResponse>({
+        path: `/user/invitees`,
+        method: "GET",
+        query: query,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsUser7
+     * @request OPTIONS:/user/invitees
+     * @originalName optionsUser
+     * @duplicate
+     */
+    optionsUser7: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/user/invitees`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name InvitorList
+     * @request GET:/user/invitor
+     * @secure
+     */
+    invitorList: (
+      query?: { direction?: string; contentType?: string; page?: string; orderBy?: string },
+      params: RequestParams = {},
+    ) =>
+      this.request<UserInvitationPagedListReadPublicResponse, ErrorResponse>({
+        path: `/user/invitor`,
+        method: "GET",
+        query: query,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsUser8
+     * @request OPTIONS:/user/invitor
+     * @originalName optionsUser
+     * @duplicate
+     */
+    optionsUser8: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/user/invitor`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
      * @name ListSearchList
      * @request GET:/user/list/search
      * @secure
@@ -4314,12 +4599,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser6
+     * @name OptionsUser9
      * @request OPTIONS:/user/list/search
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser6: (params: RequestParams = {}) =>
+    optionsUser9: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/list/search`,
         method: "OPTIONS",
@@ -4351,12 +4636,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser7
+     * @name OptionsUser10
      * @request OPTIONS:/user/list/top
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser7: (params: RequestParams = {}) =>
+    optionsUser10: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/list/top`,
         method: "OPTIONS",
@@ -4385,12 +4670,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser8
+     * @name OptionsUser11
      * @request OPTIONS:/user/moods
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser8: (params: RequestParams = {}) =>
+    optionsUser11: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/moods`,
         method: "OPTIONS",
@@ -4419,12 +4704,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser9
+     * @name OptionsUser12
      * @request OPTIONS:/user/preregister
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser9: (params: RequestParams = {}) =>
+    optionsUser12: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/preregister`,
         method: "OPTIONS",
@@ -4453,12 +4738,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser10
+     * @name OptionsUser13
      * @request OPTIONS:/user/rated/in
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser10: (params: RequestParams = {}) =>
+    optionsUser13: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/rated/in`,
         method: "OPTIONS",
@@ -4487,12 +4772,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser11
+     * @name OptionsUser14
      * @request OPTIONS:/user/rated/out/posts
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser11: (params: RequestParams = {}) =>
+    optionsUser14: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/rated/out/posts`,
         method: "OPTIONS",
@@ -4521,12 +4806,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser12
+     * @name OptionsUser15
      * @request OPTIONS:/user/rated/out/users
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser12: (params: RequestParams = {}) =>
+    optionsUser15: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/rated/out/users`,
         method: "OPTIONS",
@@ -4555,12 +4840,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser13
+     * @name OptionsUser16
      * @request OPTIONS:/user/stake
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser13: (params: RequestParams = {}) =>
+    optionsUser16: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/stake`,
         method: "OPTIONS",
@@ -4589,14 +4874,48 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser14
+     * @name OptionsUser17
      * @request OPTIONS:/user/syncContacts
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser14: (params: RequestParams = {}) =>
+    optionsUser17: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/syncContacts`,
+        method: "OPTIONS",
+        type: ContentType.Json,
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name TransferCreate
+     * @request POST:/user/transfer
+     * @secure
+     */
+    transferCreate: (UserTransferRequest: UserTransferRequest, params: RequestParams = {}) =>
+      this.request<UserReadPrivateResponse, ErrorResponse>({
+        path: `/user/transfer`,
+        method: "POST",
+        body: UserTransferRequest,
+        secure: true,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @name OptionsUser18
+     * @request OPTIONS:/user/transfer
+     * @originalName optionsUser
+     * @duplicate
+     */
+    optionsUser18: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/user/transfer`,
         method: "OPTIONS",
         type: ContentType.Json,
         ...params,
@@ -4623,12 +4942,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser15
+     * @name OptionsUser19
      * @request OPTIONS:/user/upload
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser15: (params: RequestParams = {}) =>
+    optionsUser19: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/upload`,
         method: "OPTIONS",
@@ -4657,12 +4976,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
-     * @name OptionsUser16
+     * @name OptionsUser20
      * @request OPTIONS:/user/userRate
      * @originalName optionsUser
      * @duplicate
      */
-    optionsUser16: (params: RequestParams = {}) =>
+    optionsUser20: (params: RequestParams = {}) =>
       this.request<void, any>({
         path: `/user/userRate`,
         method: "OPTIONS",

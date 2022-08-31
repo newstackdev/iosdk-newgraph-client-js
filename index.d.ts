@@ -368,6 +368,10 @@ export interface UserStakeRequest {
     key?: string;
     username: string;
 }
+export interface UserTransferRequest {
+    encryptedPayload?: string;
+    payload?: string;
+}
 export interface UserCreateRequest {
     newcoinTicker?: string;
     youtube?: string;
@@ -401,7 +405,7 @@ export interface UserCreateRequest {
     phone: string;
     consentEmail?: string;
     /** @pattern ^[a-z0-5\.]{2,9}\.io$ */
-    username: string;
+    username?: string;
 }
 export interface UserPreRegisterRequest {
     consentTestgroup?: string;
@@ -412,6 +416,7 @@ export interface UserPreRegisterRequest {
     email?: string;
 }
 export interface UserAvailabilityResponse {
+    offer?: string;
     available?: boolean;
 }
 export interface UserUpdateRequest {
@@ -534,9 +539,160 @@ export interface UserPagedListReadPublicResponse {
     }[];
     done?: boolean;
 }
+export interface UserInvitationPagedListReadPublicResponse {
+    value?: {
+        newcoinTicker?: string;
+        youtube?: string;
+        powered?: number;
+        displayName?: string;
+        newcoinAccTx?: string;
+        latitude?: number;
+        description?: string;
+        newcoinPoolId?: string;
+        tumblr?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        medium?: string;
+        newcoinActivePublicKey?: string;
+        soundcloud?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        youtubeId?: string;
+        id?: string;
+        newcoinPoolStake?: number;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        created?: string;
+        invitation?: {
+            youtube?: string;
+            spotify?: string;
+            facebook?: string;
+            tumblr?: string;
+            telegram?: string;
+            pinterest?: string;
+            instagram?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            twitter?: string;
+            discord?: string;
+            tiktok?: string;
+            reddit?: string;
+            signal?: string;
+        };
+        spotify?: string;
+        facebook?: string;
+        facebookId?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        contentUrl?: string;
+        discord?: string;
+        blurHash?: string;
+        consentEmail?: string;
+        updated?: string;
+        username?: string;
+    }[];
+    done?: boolean;
+}
+export interface UserInvitationReadPublicResponse {
+    newcoinTicker?: string;
+    youtube?: string;
+    powered?: number;
+    displayName?: string;
+    newcoinAccTx?: string;
+    latitude?: number;
+    description?: string;
+    newcoinPoolId?: string;
+    tumblr?: string;
+    aspectRatio?: number;
+    instagram?: string;
+    medium?: string;
+    newcoinActivePublicKey?: string;
+    soundcloud?: string;
+    newcoinPublicKey?: string;
+    powering?: number;
+    snapchat?: string;
+    apple?: string;
+    twitter?: string;
+    newcoinOwnerPublicKey?: string;
+    tiktok?: string;
+    reddit?: string;
+    youtubeId?: string;
+    id?: string;
+    newcoinPoolStake?: number;
+    contentType?: string;
+    signal?: string;
+    longitude?: number;
+    newcoinPublisherPublicKey?: string;
+    website?: string;
+    created?: string;
+    invitation?: {
+        youtube?: string;
+        spotify?: string;
+        facebook?: string;
+        tumblr?: string;
+        telegram?: string;
+        pinterest?: string;
+        instagram?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        twitter?: string;
+        discord?: string;
+        tiktok?: string;
+        reddit?: string;
+        signal?: string;
+    };
+    spotify?: string;
+    facebook?: string;
+    facebookId?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    verifiedSocialIds?: string[];
+    newcoinPoolTx?: string;
+    license?: string;
+    contentUrl?: string;
+    discord?: string;
+    blurHash?: string;
+    consentEmail?: string;
+    updated?: string;
+    username?: string;
+}
 export interface UserInviteRequest {
-    phone: string;
+    youtube?: string;
+    spotify?: string;
+    facebook?: string;
     fullName: string;
+    tumblr?: string;
+    telegram?: string;
+    pinterest?: string;
+    instagram?: string;
+    medium?: string;
+    soundcloud?: string;
+    snapchat?: string;
+    apple?: string;
+    twitter?: string;
+    discord?: string;
+    phone: string;
+    tiktok?: string;
+    reddit?: string;
+    signal?: string;
     email?: string;
 }
 export interface UserDeleteRequest {
@@ -1278,9 +1434,6 @@ export interface PostRemoteMetaProxyResponse {
     text?: string;
     status?: number;
 }
-/**
- * MoodCreateResponse Model
- */
 export interface MoodCreateResponse {
     created?: string;
     author?: {
@@ -1509,9 +1662,6 @@ export interface MoodCreateResponse {
     contentType?: string;
     longitude?: number;
 }
-/**
- * MoodReadResponse Model
- */
 export interface MoodReadResponse {
     created?: string;
     author?: {
@@ -1740,9 +1890,6 @@ export interface MoodReadResponse {
     contentType?: string;
     longitude?: number;
 }
-/**
- * MoodListAttachedPostsResponse Model
- */
 export interface MoodListAttachedPostsResponse {
     value?: {
         coverContentUrl?: string;
@@ -1899,18 +2046,12 @@ export interface MoodListAttachedPostsResponse {
     }[];
     done?: boolean;
 }
-/**
- * MoodCreateRequest Model
- */
 export interface MoodCreateRequest {
     latitude?: number;
     description: string;
     title: string;
     longitude?: number;
 }
-/**
- * MoodUpdateRequest Model
- */
 export interface MoodUpdateRequest {
     latitude?: number;
     description?: string;
@@ -1918,9 +2059,6 @@ export interface MoodUpdateRequest {
     title?: string;
     longitude?: number;
 }
-/**
- * MoodAttachRequest Model
- */
 export interface MoodAttachRequest {
     targetId: string;
     id: string;
@@ -1966,25 +2104,36 @@ export interface PaymentStripeWebhookRequest {
 export interface PaymentStripePaymentIntentCreateResponse {
     client_secret?: string;
 }
+/**
+ * BcAuthEthRequest Model
+ */
 export interface BcAuthEthRequest {
-    nftIndex: string;
-    collectionAddress: string;
-    address: string;
-    signature: string;
-    nonce?: string;
-    timestamp: string;
+    encryptedPayload: string;
+    payload: string;
 }
+/**
+ * BcAuthEthResponse Model
+ */
 export interface BcAuthEthResponse {
     result: boolean;
     signedAddr?: string;
     comment?: string;
     owningAddr?: string;
 }
+/**
+ * BcKeyPairCreateRequest Model
+ */
 export declare type BcKeyPairCreateRequest = any;
+/**
+ * BcKeyPairCreateResponse Model
+ */
 export interface BcKeyPairCreateResponse {
     prv_key: string;
     pub_key: string;
 }
+/**
+ * BcAccCreateRequest Model
+ */
 export interface BcAccCreateRequest {
     newacc_pub_active_key: string;
     newacc_pub_owner_key: string;
@@ -1996,6 +2145,9 @@ export interface BcAccCreateRequest {
     payer: string;
     stake_net?: string;
 }
+/**
+ * BcCollectionCreateRequest Model
+ */
 export interface BcCollectionCreateRequest {
     mkt_fee?: number;
     template_name: string;
@@ -2016,22 +2168,34 @@ export interface BcCollectionCreateRequest {
     user_prv_active_key: string;
     collection_name: string;
 }
+/**
+ * BcPoolCreateRequest Model
+ */
 export interface BcPoolCreateRequest {
     owner: string;
     owner_prv_active_key?: string;
     payer?: string;
 }
+/**
+ * BcStakeMainDAORequest Model
+ */
 export interface BcStakeMainDAORequest {
     payer_prv_key: string;
     amt: string;
     payer: string;
 }
+/**
+ * BcStakePoolRequest Model
+ */
 export interface BcStakePoolRequest {
     owner: string;
     payer_prv_key: string;
     amt: string;
     payer: string;
 }
+/**
+ * BcMintAssetRequest Model
+ */
 export interface BcMintAssetRequest {
     immutable_data?: {
         value: string[];
@@ -2049,6 +2213,9 @@ export interface BcMintAssetRequest {
     payer: string;
     payer_public_key: string;
 }
+/**
+ * BcTxResponse Model
+ */
 export interface BcTxResponse {
     TxID_createTpl?: string;
     TxID_createPool?: string;
@@ -2058,13 +2225,22 @@ export interface BcTxResponse {
     TxID_stakeToPool?: string;
     TxID_mintAsset?: string;
 }
+/**
+ * BcGetAccountInfo Model
+ */
 export interface BcGetAccountInfo {
     owner: string;
     contract?: string;
 }
+/**
+ * BcGetPoolInfo Model
+ */
 export interface BcGetPoolInfo {
     owner: string;
 }
+/**
+ * BcGetInfoResp Model
+ */
 export declare type BcGetInfoResp = any;
 export interface BcCreateDaoRequest {
     descr?: string;
@@ -2230,7 +2406,7 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-07-13T15:51:11Z
+ * @version 2022-08-15T13:39:44Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
@@ -3280,6 +3456,68 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name InviteHashList
+         * @request GET:/user/invite/hash
+         */
+        inviteHashList: (query?: {
+            hash?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser6
+         * @request OPTIONS:/user/invite/hash
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InviteesList
+         * @request GET:/user/invitees
+         * @secure
+         */
+        inviteesList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser7
+         * @request OPTIONS:/user/invitees
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InvitorList
+         * @request GET:/user/invitor
+         * @secure
+         */
+        invitorList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser8
+         * @request OPTIONS:/user/invitor
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name ListSearchList
          * @request GET:/user/list/search
          * @secure
@@ -3294,12 +3532,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser6
+         * @name OptionsUser9
          * @request OPTIONS:/user/list/search
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3316,12 +3554,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser7
+         * @name OptionsUser10
          * @request OPTIONS:/user/list/top
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3336,12 +3574,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser8
+         * @name OptionsUser11
          * @request OPTIONS:/user/moods
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3353,12 +3591,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser9
+         * @name OptionsUser12
          * @request OPTIONS:/user/preregister
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3373,12 +3611,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser10
+         * @name OptionsUser13
          * @request OPTIONS:/user/rated/in
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3393,12 +3631,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser11
+         * @name OptionsUser14
          * @request OPTIONS:/user/rated/out/posts
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3413,12 +3651,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser12
+         * @name OptionsUser15
          * @request OPTIONS:/user/rated/out/users
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3430,12 +3668,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser13
+         * @name OptionsUser16
          * @request OPTIONS:/user/stake
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3447,12 +3685,29 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser14
+         * @name OptionsUser17
          * @request OPTIONS:/user/syncContacts
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name TransferCreate
+         * @request POST:/user/transfer
+         * @secure
+         */
+        transferCreate: (UserTransferRequest: UserTransferRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser18
+         * @request OPTIONS:/user/transfer
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3464,12 +3719,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser15
+         * @name OptionsUser19
          * @request OPTIONS:/user/upload
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3481,12 +3736,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser16
+         * @name OptionsUser20
          * @request OPTIONS:/user/userRate
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
 }
 export {};

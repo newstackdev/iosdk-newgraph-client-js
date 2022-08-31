@@ -247,7 +247,7 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newlife-creator-api-eu-dev
- * @version 2022-07-13T15:51:11Z
+ * @version 2022-08-15T13:39:44Z
  * @baseUrl https://api-eu-dev.newlife.io/creator
  */
 var Api = /** @class */ (function (_super) {
@@ -1569,6 +1569,74 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name InviteHashList
+             * @request GET:/user/invite/hash
+             */
+            inviteHashList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invite/hash", method: "GET", query: query, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser6
+             * @request OPTIONS:/user/invite/hash
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser6: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invite/hash", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name InviteesList
+             * @request GET:/user/invitees
+             * @secure
+             */
+            inviteesList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invitees", method: "GET", query: query, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser7
+             * @request OPTIONS:/user/invitees
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser7: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invitees", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name InvitorList
+             * @request GET:/user/invitor
+             * @secure
+             */
+            invitorList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invitor", method: "GET", query: query, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser8
+             * @request OPTIONS:/user/invitor
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser8: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/invitor", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
              * @name ListSearchList
              * @request GET:/user/list/search
              * @secure
@@ -1580,12 +1648,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser6
+             * @name OptionsUser9
              * @request OPTIONS:/user/list/search
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser6: function (params) {
+            optionsUser9: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/list/search", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1603,12 +1671,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser7
+             * @name OptionsUser10
              * @request OPTIONS:/user/list/top
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser7: function (params) {
+            optionsUser10: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/list/top", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1626,12 +1694,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser8
+             * @name OptionsUser11
              * @request OPTIONS:/user/moods
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser8: function (params) {
+            optionsUser11: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/moods", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1649,12 +1717,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser9
+             * @name OptionsUser12
              * @request OPTIONS:/user/preregister
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser9: function (params) {
+            optionsUser12: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/preregister", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1672,12 +1740,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser10
+             * @name OptionsUser13
              * @request OPTIONS:/user/rated/in
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser10: function (params) {
+            optionsUser13: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/in", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1695,12 +1763,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser11
+             * @name OptionsUser14
              * @request OPTIONS:/user/rated/out/posts
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser11: function (params) {
+            optionsUser14: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/out/posts", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1718,12 +1786,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser12
+             * @name OptionsUser15
              * @request OPTIONS:/user/rated/out/users
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser12: function (params) {
+            optionsUser15: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/out/users", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1741,12 +1809,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser13
+             * @name OptionsUser16
              * @request OPTIONS:/user/stake
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser13: function (params) {
+            optionsUser16: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/stake", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1764,14 +1832,37 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser14
+             * @name OptionsUser17
              * @request OPTIONS:/user/syncContacts
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser14: function (params) {
+            optionsUser17: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/syncContacts", method: "OPTIONS", type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name TransferCreate
+             * @request POST:/user/transfer
+             * @secure
+             */
+            transferCreate: function (UserTransferRequest, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/transfer", method: "POST", body: UserTransferRequest, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser18
+             * @request OPTIONS:/user/transfer
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser18: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/transfer", method: "OPTIONS", type: ContentType.Json }, params));
             },
             /**
              * No description
@@ -1787,12 +1878,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser15
+             * @name OptionsUser19
              * @request OPTIONS:/user/upload
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser15: function (params) {
+            optionsUser19: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/upload", method: "OPTIONS", type: ContentType.Json }, params));
             },
@@ -1810,12 +1901,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser16
+             * @name OptionsUser20
              * @request OPTIONS:/user/userRate
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser16: function (params) {
+            optionsUser20: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/userRate", method: "OPTIONS", type: ContentType.Json }, params));
             },
