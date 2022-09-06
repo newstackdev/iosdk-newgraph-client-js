@@ -574,6 +574,7 @@ export interface UserInvitationPagedListReadPublicResponse {
         created?: string;
         invitation?: {
             youtube?: string;
+            created?: string;
             spotify?: string;
             facebook?: string;
             tumblr?: string;
@@ -589,6 +590,7 @@ export interface UserInvitationPagedListReadPublicResponse {
             tiktok?: string;
             reddit?: string;
             signal?: string;
+            hash?: string;
         };
         spotify?: string;
         facebook?: string;
@@ -642,6 +644,7 @@ export interface UserInvitationReadPublicResponse {
     created?: string;
     invitation?: {
         youtube?: string;
+        created?: string;
         spotify?: string;
         facebook?: string;
         tumblr?: string;
@@ -657,6 +660,7 @@ export interface UserInvitationReadPublicResponse {
         tiktok?: string;
         reddit?: string;
         signal?: string;
+        hash?: string;
     };
     spotify?: string;
     facebook?: string;
@@ -2108,8 +2112,8 @@ export interface PaymentStripePaymentIntentCreateResponse {
  * BcAuthEthRequest Model
  */
 export interface BcAuthEthRequest {
-    encryptedPayload: string;
-    payload: string;
+    encryptedPayload?: string;
+    payload?: string;
 }
 /**
  * BcAuthEthResponse Model
@@ -2242,111 +2246,6 @@ export interface BcGetPoolInfo {
  * BcGetInfoResp Model
  */
 export declare type BcGetInfoResp = any;
-export interface BcCreateDaoRequest {
-    descr?: string;
-    authpr_prv_key?: string;
-    author?: string;
-    token?: string;
-}
-export interface BcCreateDaoResponse {
-    TxID_createDao?: string;
-    dao_id?: string;
-}
-export interface BcCreateDaoProposal {
-    summary?: string;
-    vote_start?: string;
-    dao_id?: string;
-    dao_owner?: string;
-    vote_end?: string;
-    title?: string;
-    url?: string;
-}
-export interface BcCreateWhitelistDaoProposal {
-    quantity?: string;
-    proposer?: string;
-    vote_start?: string;
-    dao_id?: string;
-    dao_owner?: string;
-    vote_end?: string;
-    user?: string;
-    proposer_prv_key?: string;
-}
-export interface BcApproveDaoProposalRequest {
-    approver?: string;
-    proposal_author?: string;
-    proposal_id?: string;
-    dao_id?: number;
-    dao_owner?: string;
-    approver_prv_key?: string;
-}
-export declare type BcListDaoWhitelistResponse = any;
-export interface BcListDaoProposalsResponse {
-    more?: object;
-    dao_id?: string;
-    next_key?: string;
-    rows?: {
-        summary?: string;
-        proposer?: string;
-        vote_start?: string;
-        more?: object;
-        next_key?: string;
-        vote_end?: string;
-        id?: number;
-        title?: string;
-        vote_no?: {
-            quantity?: string;
-            contract?: string;
-        };
-        url?: string;
-        vote_yes?: {
-            quantity?: string;
-            contract?: string;
-        };
-        status?: string;
-    }[];
-}
-export interface BcDaoProposalVoteRequest {
-    proposal_type?: string;
-    quantity: string;
-    proposal_id: string;
-    dao_id?: string;
-    dao_owner?: string;
-    voter: string;
-    option: string;
-}
-export interface BcDaoProposalExecuteRequest {
-    proposal_author?: string;
-    proposal_id?: number;
-    dao_id?: string;
-    dao_owner?: string;
-    exec?: string;
-    exec_prv_key?: string;
-}
-export interface BcDaoProposalExecuteResponse {
-    TxID_executeDaoProposal?: string;
-}
-export interface BcDaoWidthdrawVoteDepositRequest {
-    vote_id?: string;
-}
-export interface BcDaoWidthdrawVoteDepositResponse {
-    TxID_WithdrawVoteDeposit?: string;
-}
-export interface BcDaoProposalVoteResponse {
-    daoId?: string;
-    more?: object;
-    next_key?: string;
-    rows?: {
-        proposal_type?: string;
-        quantity?: {
-            quantity?: string;
-            contract?: string;
-        };
-        proposal_id?: number;
-        dao_id?: number;
-        id?: string;
-        lock_end_date?: string;
-    }[];
-}
 export declare type QueryParamsType = Record<string | number, any>;
 export declare type ResponseFormat = keyof Omit<Body, "body" | "bodyUsed">;
 export interface FullRequestParams extends Omit<RequestInit, "body"> {
@@ -2405,9 +2304,9 @@ export declare class HttpClient<SecurityDataType = unknown> {
     request: <T = any, E = any>({ body, secure, path, type, query, format, baseUrl, cancelToken, ...params }: FullRequestParams) => Promise<HttpResponse<T, E>>;
 }
 /**
- * @title newlife-creator-api-eu-dev
- * @version 2022-08-15T13:39:44Z
- * @baseUrl https://api-eu-dev.newlife.io/creator
+ * @title newgraph-api-eu-dev
+ * @version 2022-09-05T16:40:08Z
+ * @baseUrl https://api-eu-dev.newgra.ph
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
     auth: {
@@ -2824,258 +2723,6 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @duplicate
          */
         optionsNewcoin12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoCreateCreate
-         * @request POST:/newcoin/dao/create
-         * @secure
-         */
-        daoCreateCreate: (BcCreateDaoRequest: BcCreateDaoRequest, params?: RequestParams) => Promise<HttpResponse<BcCreateDaoResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin13
-         * @request OPTIONS:/newcoin/dao/create
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalCreate
-         * @request POST:/newcoin/dao/proposal
-         * @secure
-         */
-        daoProposalCreate: (BcCreateDaoProposal: BcCreateDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin14
-         * @request OPTIONS:/newcoin/dao/proposal
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalWhitelistCreate
-         * @request POST:/newcoin/dao/proposal-whitelist
-         * @secure
-         */
-        daoProposalWhitelistCreate: (BcCreateWhitelistDaoProposal: BcCreateWhitelistDaoProposal, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin15
-         * @request OPTIONS:/newcoin/dao/proposal-whitelist
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalWhitelistApproveCreate
-         * @request POST:/newcoin/dao/proposal-whitelist/approve
-         * @secure
-         */
-        daoProposalWhitelistApproveCreate: (BcApproveDaoProposalRequest: BcApproveDaoProposalRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin16
-         * @request OPTIONS:/newcoin/dao/proposal-whitelist/approve
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalWhitelistExecuteCreate
-         * @request POST:/newcoin/dao/proposal-whitelist/execute
-         * @secure
-         */
-        daoProposalWhitelistExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalExecuteResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin17
-         * @request OPTIONS:/newcoin/dao/proposal-whitelist/execute
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalWhitelistListList
-         * @request GET:/newcoin/dao/proposal-whitelist/list
-         * @secure
-         */
-        daoProposalWhitelistListList: (query?: {
-            reverse?: string | undefined;
-            proposalAuthor?: string | undefined;
-            dao_owner?: string | undefined;
-            dao_id?: string | undefined;
-            limit?: string | undefined;
-            lower_bound?: string | undefined;
-            upper_bound?: string | undefined;
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin18
-         * @request OPTIONS:/newcoin/dao/proposal-whitelist/list
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalApproveCreate
-         * @request POST:/newcoin/dao/proposal/approve
-         * @secure
-         */
-        daoProposalApproveCreate: (BcApproveDaoProposalRequest: BcApproveDaoProposalRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin19
-         * @request OPTIONS:/newcoin/dao/proposal/approve
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalExecuteCreate
-         * @request POST:/newcoin/dao/proposal/execute
-         * @secure
-         */
-        daoProposalExecuteCreate: (BcDaoProposalExecuteRequest: BcDaoProposalExecuteRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalExecuteResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin20
-         * @request OPTIONS:/newcoin/dao/proposal/execute
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalListList
-         * @request GET:/newcoin/dao/proposal/list
-         * @secure
-         */
-        daoProposalListList: (query?: {
-            reverse?: string | undefined;
-            proposalAuthor?: string | undefined;
-            dao_owner?: string | undefined;
-            dao_id?: string | undefined;
-            limit?: string | undefined;
-            lower_bound?: string | undefined;
-            upper_bound?: string | undefined;
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin21
-         * @request OPTIONS:/newcoin/dao/proposal/list
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalVoteCreate
-         * @request POST:/newcoin/dao/proposal/vote
-         * @secure
-         */
-        daoProposalVoteCreate: (BcDaoProposalVoteRequest: BcDaoProposalVoteRequest, params?: RequestParams) => Promise<HttpResponse<BcListDaoProposalsResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin22
-         * @request OPTIONS:/newcoin/dao/proposal/vote
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoProposalVotesList
-         * @request GET:/newcoin/dao/proposal/votes
-         * @secure
-         */
-        daoProposalVotesList: (query?: {
-            reverse?: string | undefined;
-            limit?: string | undefined;
-            upper_bound?: string | undefined;
-            voter?: string | undefined;
-            lower_bound?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<BcDaoProposalVoteResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin23
-         * @request OPTIONS:/newcoin/dao/proposal/votes
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoWhitelistList
-         * @request GET:/newcoin/dao/whitelist
-         * @secure
-         */
-        daoWhitelistList: (query?: {
-            reverse?: string | undefined;
-            dao_owner?: string | undefined;
-            dao_id?: string | undefined;
-            limit?: string | undefined;
-            upper_bound?: string | undefined;
-            lower_bound?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin24
-         * @request OPTIONS:/newcoin/dao/whitelist
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin24: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name DaoWithdrawVoteDepositCreate
-         * @request POST:/newcoin/dao/withdrawVoteDeposit
-         * @secure
-         */
-        daoWithdrawVoteDepositCreate: (BcDaoWidthdrawVoteDepositRequest: BcDaoWidthdrawVoteDepositRequest, params?: RequestParams) => Promise<HttpResponse<BcDaoWidthdrawVoteDepositResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin25
-         * @request OPTIONS:/newcoin/dao/withdrawVoteDeposit
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin25: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     payment: {
         /**
@@ -3443,7 +3090,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @request POST:/user/invite
          * @secure
          */
-        inviteCreate: (UserInviteRequest: UserInviteRequest, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
+        inviteCreate: (UserInviteRequest: UserInviteRequest, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
         /**
          * No description
          *
