@@ -14,7 +14,7 @@ A temporary solution is to use the client token from the browser:
 2. open developer tools (cmd/ctrl + shift + i)
 3. navigate to developer tools -> local storage -> newsafe-auth-token
 
-The token eventually get invalidated and replaced with api keys
+These tokens will eventually get invalidated and replaced with api keys
 
 ## Getting started
 ```
