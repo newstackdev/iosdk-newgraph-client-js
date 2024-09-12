@@ -30,10 +30,10 @@ newgraph.setSecurityData({ token });
 ```
 
 ## Reference
-[API (Wip)](./api.md)
+[API (Wip)](https://github.com/newstackdev/iosdk-newgraph-client-js/blob/main/api.md)
 
 ## Examples
-See [examples](./examples/). To be continued.
+See [examples](https://github.com/newstackdev/iosdk-newgraph-client-js/tree/main/examples). To be continued.
 
 ## Why folders are called moods?
 It's a technical term. We call them folders in all other contexts.
