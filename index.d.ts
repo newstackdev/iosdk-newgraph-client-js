@@ -1,3 +1,10 @@
+export declare type ChainAddressRequest = object;
+export interface NodeRequestPost {
+    id?: string;
+}
+export interface ValueResponse {
+    value?: string;
+}
 export declare type AnyResponse = object;
 export interface OkResponse {
     ok?: boolean;
@@ -7,167 +14,199 @@ export interface ErrorResponse {
     errorCode?: string;
     statusCode?: number;
 }
+/**
+ * MoodPagedListReadPublicResponse Model
+ */
 export interface MoodPagedListReadPublicResponse {
     value?: {
+        coverContentUrl?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
+        flags?: string;
         description?: string;
         aspectRatio?: number;
+        label?: "mood";
+        isPrivate?: boolean;
         title?: string;
         posts?: {
             coverContentUrl?: string;
             moodId?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
             moods?: {
+                coverContentUrl?: string;
                 created?: string;
                 author?: {
-                    newcoinTicker?: string;
-                    youtube?: string;
                     powered?: number;
-                    displayName?: string;
                     newcoinAccTx?: string;
-                    latitude?: number;
-                    description?: string;
                     newcoinPoolId?: string;
-                    tumblr?: string;
                     aspectRatio?: number;
                     instagram?: string;
-                    medium?: string;
                     newcoinActivePublicKey?: string;
-                    soundcloud?: string;
                     newcoinPublicKey?: string;
                     powering?: number;
-                    snapchat?: string;
-                    apple?: string;
+                    lastUpdated?: string;
                     twitter?: string;
                     newcoinOwnerPublicKey?: string;
                     tiktok?: string;
                     reddit?: string;
-                    youtubeId?: string;
                     id?: string;
-                    newcoinPoolStake?: number;
                     contentType?: string;
                     signal?: string;
                     longitude?: number;
-                    newcoinPublisherPublicKey?: string;
-                    website?: string;
+                    coverContentUrl?: string;
                     created?: string;
-                    spotify?: string;
-                    facebook?: string;
                     facebookId?: string;
-                    fullName?: string;
-                    telegram?: string;
-                    pinterest?: string;
                     verifiedSocialIds?: string[];
                     newcoinPoolTx?: string;
                     license?: string;
-                    contentUrl?: string;
                     discord?: string;
+                    updated?: string;
+                    newcoinTicker?: string;
+                    youtube?: string;
+                    displayName?: string;
+                    latitude?: number;
+                    description?: string;
+                    tumblr?: string;
+                    medium?: string;
+                    soundcloud?: string;
+                    snapchat?: string;
+                    apple?: string;
+                    watts?: number;
+                    youtubeId?: string;
+                    newcoinPoolStake?: number;
+                    ethAddress?: string;
+                    newcoinPublisherPublicKey?: string;
+                    website?: string;
+                    spotify?: string;
+                    facebook?: string;
+                    fullName?: string;
+                    telegram?: string;
+                    pinterest?: string;
+                    label?: "user";
+                    "evm/0x1"?: string;
+                    contentUrl?: string;
+                    deleted?: boolean;
                     blurHash?: string;
                     consentEmail?: string;
-                    updated?: string;
                     username?: string;
                 };
                 latitude?: number;
+                flags?: string;
                 description?: string;
                 aspectRatio?: number;
+                label?: "mood";
+                isPrivate?: boolean;
                 title?: string;
                 content?: string;
                 stakeToAccess?: number;
@@ -183,6 +222,8 @@ export interface MoodPagedListReadPublicResponse {
                     value?: string;
                 }[];
                 contentUrl?: string;
+                deleted?: boolean;
+                defaultView?: string;
                 postsCount?: number;
                 blurHash?: string;
                 id?: string;
@@ -190,8 +231,10 @@ export interface MoodPagedListReadPublicResponse {
                 contentType?: string;
                 longitude?: number;
             }[];
+            rating?: number;
             description?: string;
             aspectRatio?: number;
+            label?: "post";
             title?: string;
             content?: string;
             tags?: {
@@ -207,6 +250,7 @@ export interface MoodPagedListReadPublicResponse {
             }[];
             license?: string;
             contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             newcoinMintTx?: string;
             id?: string;
@@ -229,6 +273,8 @@ export interface MoodPagedListReadPublicResponse {
             value?: string;
         }[];
         contentUrl?: string;
+        deleted?: boolean;
+        defaultView?: string;
         postsCount?: number;
         blurHash?: string;
         id?: string;
@@ -238,73 +284,66 @@ export interface MoodPagedListReadPublicResponse {
     }[];
     done?: boolean;
 }
-export interface UploadRequest {
-    filename: string;
-    targetId: string;
-    targetModel: string;
-    contentType: string;
-}
-export interface UploadRequestGeneric {
-    filename: string;
-    targetId: string;
-    contentType: string;
-}
-export interface UploadResponse {
-    filename?: string;
-    key?: string;
-    url?: string;
-}
 export interface UserReadPublicResponse {
-    newcoinTicker?: string;
-    youtube?: string;
     powered?: number;
-    displayName?: string;
     newcoinAccTx?: string;
-    latitude?: number;
-    description?: string;
     newcoinPoolId?: string;
-    tumblr?: string;
     aspectRatio?: number;
     instagram?: string;
-    medium?: string;
     newcoinActivePublicKey?: string;
-    soundcloud?: string;
     newcoinPublicKey?: string;
     powering?: number;
-    snapchat?: string;
-    apple?: string;
+    lastUpdated?: string;
     twitter?: string;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
-    youtubeId?: string;
     id?: string;
-    newcoinPoolStake?: number;
     contentType?: string;
     signal?: string;
     longitude?: number;
-    newcoinPublisherPublicKey?: string;
-    website?: string;
+    coverContentUrl?: string;
     created?: string;
-    spotify?: string;
-    facebook?: string;
     facebookId?: string;
-    fullName?: string;
-    telegram?: string;
-    pinterest?: string;
     verifiedSocialIds?: string[];
     newcoinPoolTx?: string;
     license?: string;
-    contentUrl?: string;
     discord?: string;
+    updated?: string;
+    newcoinTicker?: string;
+    youtube?: string;
+    displayName?: string;
+    latitude?: number;
+    description?: string;
+    tumblr?: string;
+    medium?: string;
+    soundcloud?: string;
+    snapchat?: string;
+    apple?: string;
+    watts?: number;
+    youtubeId?: string;
+    newcoinPoolStake?: number;
+    ethAddress?: string;
+    newcoinPublisherPublicKey?: string;
+    website?: string;
+    spotify?: string;
+    facebook?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    label?: "user";
+    "evm/0x1"?: string;
+    contentUrl?: string;
+    deleted?: boolean;
     blurHash?: string;
     consentEmail?: string;
-    updated?: string;
     username?: string;
 }
 export interface UserReadPrivateResponse {
     powered?: number;
+    proLevel?: number;
     newcoinAccTx?: string;
+    bio?: string;
     newcoinPoolId?: string;
     aspectRatio?: number;
     instagram?: string;
@@ -313,6 +352,7 @@ export interface UserReadPrivateResponse {
     powering?: number;
     stripeUid?: string;
     twitter?: string;
+    isAgent?: boolean;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
@@ -320,6 +360,7 @@ export interface UserReadPrivateResponse {
     contentType?: string;
     signal?: string;
     longitude?: number;
+    coverContentUrl?: string;
     subscriptionExpiry?: string;
     created?: string;
     availableInvites?: number;
@@ -330,6 +371,7 @@ export interface UserReadPrivateResponse {
     license?: string;
     discord?: string;
     phone?: string;
+    newcoinNCOBalance?: number;
     updated?: string;
     status?: string;
     newcoinTicker?: string;
@@ -346,21 +388,32 @@ export interface UserReadPrivateResponse {
     apple?: string;
     consentTestgroup?: string;
     newcoinPrivateKey?: string;
+    watts?: number;
+    smartDropGeneration?: string;
     subscriptionStatus?: string;
     newcoinPublisherPrivateKey?: string;
     youtubeId?: string;
+    categories?: string[];
     newcoinPoolStake?: number;
+    ethAddress?: string;
     email?: string;
+    isPro?: boolean;
     newcoinPublisherPublicKey?: string;
+    newcoinActivePrivateKey?: string;
     website?: string;
     spotify?: string;
     facebook?: string;
     fullName?: string;
     telegram?: string;
     pinterest?: string;
+    newcoinOwnerPrivateKey?: string;
+    "evm/0x1"?: string;
     contentUrl?: string;
+    deleted?: boolean;
     blurHash?: string;
+    isNetwork?: boolean;
     consentEmail?: string;
+    subwatts?: string;
     username?: string;
 }
 export interface UserStakeRequest {
@@ -371,6 +424,26 @@ export interface UserStakeRequest {
 export interface UserTransferRequest {
     encryptedPayload?: string;
     payload?: string;
+}
+export interface WattsClaimRequest {
+    claims?: object[];
+}
+export interface WattsClaimResponse {
+    failed?: {
+        claim?: {
+            wattType?: string;
+            claim?: number;
+        };
+        error?: {
+            error?: string;
+        };
+    }[];
+    updated?: {
+        claim?: {
+            wattType?: string;
+            claim?: number;
+        };
+    }[];
 }
 export interface UserCreateRequest {
     newcoinTicker?: string;
@@ -388,6 +461,7 @@ export interface UserCreateRequest {
     apple?: string;
     consentTestgroup?: string;
     twitter?: string;
+    inviteHash?: string;
     legacyToken?: string;
     tiktok?: string;
     reddit?: string;
@@ -402,15 +476,16 @@ export interface UserCreateRequest {
     pinterest?: string;
     firstName?: string;
     discord?: string;
-    phone: string;
+    phone?: string;
     consentEmail?: string;
-    /** @pattern ^[a-z0-5\.]{2,9}\.io$ */
+    couponCode?: string;
+    /** @pattern ^[a-z][a-z0-9\.\-]{2,32}$ */
     username?: string;
 }
 export interface UserPreRegisterRequest {
     consentTestgroup?: string;
     consentPrivacyPolicy?: string;
-    phone: string;
+    phone?: string;
     fullName?: string;
     consentEmail?: string;
     email?: string;
@@ -419,7 +494,95 @@ export interface UserAvailabilityResponse {
     offer?: string;
     available?: boolean;
 }
-export interface UserUpdateRequest {
+export declare type UserUpdateRequest = ({
+    fullName: string;
+} | {
+    firstName: string;
+} | {
+    website: string;
+} | {
+    description: string;
+} | {
+    longitude: number;
+} | {
+    latitude: number;
+} | {
+    instagram: string;
+} | {
+    tiktok: string;
+} | {
+    youtube: string;
+} | {
+    twitter: string;
+} | {
+    spotify: string;
+} | {
+    pinterest: string;
+} | {
+    snapchat: string;
+} | {
+    reddit: string;
+} | {
+    discord: string;
+} | {
+    tumblr: string;
+} | {
+    soundcloud: string;
+} | {
+    apple: string;
+} | {
+    telegram: string;
+} | {
+    signal: string;
+} | {
+    medium: string;
+} | {
+    facebook: string;
+} | ({
+    fullName: string;
+} & {
+    firstName: string;
+} & {
+    website: string;
+} & {
+    description: string;
+} & {
+    longitude: number;
+} & {
+    latitude: number;
+} & {
+    instagram: string;
+} & {
+    tiktok: string;
+} & {
+    youtube: string;
+} & {
+    twitter: string;
+} & {
+    spotify: string;
+} & {
+    pinterest: string;
+} & {
+    snapchat: string;
+} & {
+    reddit: string;
+} & {
+    discord: string;
+} & {
+    tumblr: string;
+} & {
+    soundcloud: string;
+} & {
+    apple: string;
+} & {
+    telegram: string;
+} & {
+    signal: string;
+} & {
+    medium: string;
+} & {
+    facebook: string;
+})) & {
     youtube?: string;
     lastName?: string;
     consentPrivacyPolicy?: string;
@@ -427,6 +590,7 @@ export interface UserUpdateRequest {
     latitude?: number;
     newcoinCreateAccount?: string;
     description?: string;
+    bio?: string;
     tumblr?: string;
     instagram?: string;
     medium?: string;
@@ -434,9 +598,11 @@ export interface UserUpdateRequest {
     snapchat?: string;
     apple?: string;
     twitter?: string;
+    isAgent?: string;
     tiktok?: string;
     reddit?: string;
     id: string;
+    categories?: string[];
     signal?: string;
     longitude?: number;
     website?: string;
@@ -448,7 +614,8 @@ export interface UserUpdateRequest {
     firstName?: string;
     discord?: string;
     consentEmail?: string;
-}
+    username?: string;
+};
 export interface SyncContactsRequest {
     contacts?: {
         birthday?: string;
@@ -483,94 +650,85 @@ export interface SyncContactsRequest {
         androidAccountTypeRaw?: string;
     }[];
 }
-export declare type SyncContactsResponse = any;
-export interface UserUploadRequest {
-    filename: string;
-    contentType: string;
-}
+export declare type SyncContactsResponse = object;
 export interface UserPagedListReadPublicResponse {
     value?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     }[];
     done?: boolean;
 }
 export interface UserInvitationPagedListReadPublicResponse {
     value?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
         invitation?: {
             youtube?: string;
@@ -592,55 +750,62 @@ export interface UserInvitationPagedListReadPublicResponse {
             signal?: string;
             hash?: string;
         };
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     }[];
     done?: boolean;
 }
 export interface UserInvitationReadPublicResponse {
-    newcoinTicker?: string;
-    youtube?: string;
     powered?: number;
-    displayName?: string;
     newcoinAccTx?: string;
-    latitude?: number;
-    description?: string;
     newcoinPoolId?: string;
-    tumblr?: string;
     aspectRatio?: number;
     instagram?: string;
-    medium?: string;
     newcoinActivePublicKey?: string;
-    soundcloud?: string;
     newcoinPublicKey?: string;
     powering?: number;
-    snapchat?: string;
-    apple?: string;
+    lastUpdated?: string;
     twitter?: string;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
-    youtubeId?: string;
     id?: string;
-    newcoinPoolStake?: number;
     contentType?: string;
     signal?: string;
     longitude?: number;
-    newcoinPublisherPublicKey?: string;
-    website?: string;
+    coverContentUrl?: string;
     created?: string;
     invitation?: {
         youtube?: string;
@@ -662,23 +827,106 @@ export interface UserInvitationReadPublicResponse {
         signal?: string;
         hash?: string;
     };
-    spotify?: string;
-    facebook?: string;
     facebookId?: string;
-    fullName?: string;
-    telegram?: string;
-    pinterest?: string;
     verifiedSocialIds?: string[];
     newcoinPoolTx?: string;
     license?: string;
-    contentUrl?: string;
     discord?: string;
+    updated?: string;
+    newcoinTicker?: string;
+    youtube?: string;
+    displayName?: string;
+    latitude?: number;
+    description?: string;
+    tumblr?: string;
+    medium?: string;
+    soundcloud?: string;
+    snapchat?: string;
+    apple?: string;
+    watts?: number;
+    youtubeId?: string;
+    newcoinPoolStake?: number;
+    ethAddress?: string;
+    newcoinPublisherPublicKey?: string;
+    website?: string;
+    spotify?: string;
+    facebook?: string;
+    fullName?: string;
+    telegram?: string;
+    pinterest?: string;
+    label?: "user";
+    "evm/0x1"?: string;
+    contentUrl?: string;
+    deleted?: boolean;
     blurHash?: string;
     consentEmail?: string;
-    updated?: string;
     username?: string;
 }
-export interface UserInviteRequest {
+export declare type UserInviteRequest = (object | object | {
+    instagram: string;
+} | {
+    tiktok: string;
+} | {
+    youtube: string;
+} | {
+    twitter: string;
+} | {
+    spotify: string;
+} | {
+    pinterest: string;
+} | {
+    snapchat: string;
+} | {
+    reddit: string;
+} | {
+    discord: string;
+} | {
+    tumblr: string;
+} | {
+    soundcloud: string;
+} | {
+    apple: string;
+} | {
+    telegram: string;
+} | {
+    signal: string;
+} | {
+    medium: string;
+} | {
+    facebook: string;
+} | (object & object & {
+    instagram: string;
+} & {
+    tiktok: string;
+} & {
+    youtube: string;
+} & {
+    twitter: string;
+} & {
+    spotify: string;
+} & {
+    pinterest: string;
+} & {
+    snapchat: string;
+} & {
+    reddit: string;
+} & {
+    discord: string;
+} & {
+    tumblr: string;
+} & {
+    soundcloud: string;
+} & {
+    apple: string;
+} & {
+    telegram: string;
+} & {
+    signal: string;
+} & {
+    medium: string;
+} & {
+    facebook: string;
+})) & {
     youtube?: string;
     spotify?: string;
     facebook?: string;
@@ -693,78 +941,114 @@ export interface UserInviteRequest {
     apple?: string;
     twitter?: string;
     discord?: string;
-    phone: string;
+    phone?: string;
     tiktok?: string;
     reddit?: string;
     signal?: string;
     email?: string;
-}
+};
 export interface UserDeleteRequest {
     phone?: string;
     email?: string;
+}
+export interface UserBadgesListResponseSchema {
+    value?: {
+        body?: {
+            deleted?: boolean;
+            created?: string;
+            name?: string;
+            id?: string;
+            title?: string;
+            type?: string;
+            value?: object;
+            updated?: string;
+        };
+    }[];
+    done?: boolean;
+}
+export interface UserGrantsResponse {
+    value?: {
+        level?: string;
+        target?: {
+            id?: string;
+            label?: string;
+        };
+    }[];
+    done?: boolean;
 }
 export interface RatingUpdateRequest {
     targetId?: string;
     contextType?: string;
     contextValue?: string;
     /**
-     * @min 0
+     * @min -1
      * @max 100
      */
     value: number;
 }
+export interface RatingNegativeRequest {
+    targetId?: string;
+}
 export interface PagedRatedResponseUser {
     value?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
         rating?: {
             created?: string;
+            TxID_mintAsset?: string;
             value?: number;
             updated?: string;
         };
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     }[];
     done?: boolean;
@@ -775,107 +1059,124 @@ export interface PagedRatedResponsePost {
         moodId?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
         moods?: {
+            coverContentUrl?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
+            flags?: string;
             description?: string;
             aspectRatio?: number;
+            label?: "mood";
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -891,6 +1192,8 @@ export interface PagedRatedResponsePost {
                 value?: string;
             }[];
             contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
             postsCount?: number;
             blurHash?: string;
             id?: string;
@@ -900,11 +1203,13 @@ export interface PagedRatedResponsePost {
         }[];
         rating?: {
             created?: string;
+            TxID_mintAsset?: string;
             value?: number;
             updated?: string;
         };
         description?: string;
         aspectRatio?: number;
+        label?: "post";
         title?: string;
         content?: string;
         tags?: {
@@ -920,6 +1225,7 @@ export interface PagedRatedResponsePost {
         }[];
         license?: string;
         contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         newcoinMintTx?: string;
         id?: string;
@@ -932,12 +1238,33 @@ export interface PagedRatedResponsePost {
 }
 export interface RatingUpdateResponse {
     created?: string;
+    TxID_mintAsset?: string;
     /**
      * @min 0
      * @max 100
      */
     value?: number;
     updated?: string;
+}
+export interface UserUploadRequest {
+    filename: string;
+    contentType: string;
+}
+export interface UploadRequest {
+    filename: string;
+    targetId: string;
+    targetModel: string;
+    contentType: string;
+}
+export interface UploadRequestGeneric {
+    filename: string;
+    targetId: string;
+    contentType: string;
+}
+export interface UploadResponse {
+    filename?: string;
+    key?: string;
+    url?: string;
 }
 export interface ReportUpdateRequest {
     reason: string;
@@ -952,107 +1279,124 @@ export interface PostCreateResponse {
     moodId?: string;
     created?: string;
     author?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     };
     latitude?: number;
     moods?: {
+        coverContentUrl?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
+        flags?: string;
         description?: string;
         aspectRatio?: number;
+        label?: "mood";
         title?: string;
         content?: string;
         stakeToAccess?: number;
@@ -1068,6 +1412,8 @@ export interface PostCreateResponse {
             value?: string;
         }[];
         contentUrl?: string;
+        deleted?: boolean;
+        defaultView?: string;
         postsCount?: number;
         blurHash?: string;
         id?: string;
@@ -1075,8 +1421,10 @@ export interface PostCreateResponse {
         contentType?: string;
         longitude?: number;
     }[];
+    rating?: number;
     description?: string;
     aspectRatio?: number;
+    label?: "post";
     title?: string;
     content?: string;
     tags?: {
@@ -1092,6 +1440,7 @@ export interface PostCreateResponse {
     }[];
     license?: string;
     contentUrl?: string;
+    deleted?: boolean;
     blurHash?: string;
     newcoinMintTx?: string;
     id?: string;
@@ -1100,112 +1449,133 @@ export interface PostCreateResponse {
     contentType?: string;
     longitude?: number;
 }
+/**
+ * PostReadResponse Model
+ */
 export interface PostReadResponse {
     coverContentUrl?: string;
     moodId?: string;
     created?: string;
     author?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     };
     latitude?: number;
     moods?: {
+        coverContentUrl?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
+        flags?: string;
         description?: string;
         aspectRatio?: number;
+        label?: "mood";
+        isPrivate?: boolean;
         title?: string;
         content?: string;
         stakeToAccess?: number;
@@ -1221,6 +1591,8 @@ export interface PostReadResponse {
             value?: string;
         }[];
         contentUrl?: string;
+        deleted?: boolean;
+        defaultView?: string;
         postsCount?: number;
         blurHash?: string;
         id?: string;
@@ -1228,8 +1600,10 @@ export interface PostReadResponse {
         contentType?: string;
         longitude?: number;
     }[];
+    rating?: number;
     description?: string;
     aspectRatio?: number;
+    label?: "post";
     title?: string;
     content?: string;
     tags?: {
@@ -1245,6 +1619,7 @@ export interface PostReadResponse {
     }[];
     license?: string;
     contentUrl?: string;
+    deleted?: boolean;
     blurHash?: string;
     newcoinMintTx?: string;
     id?: string;
@@ -1257,12 +1632,37 @@ export interface PostCreateRequest {
     license?: string;
     doMint?: string;
     description?: string;
+    id?: string;
     embed?: string;
     title?: string;
     contentType?: string;
     content?: string;
 }
-export interface PostUpdateRequest {
+export declare type PostUpdateRequest = ({
+    title: string;
+} | {
+    description: string;
+} | {
+    longitude: number;
+} | {
+    latitude: number;
+} | {
+    license?: string;
+} | {
+    doMint: boolean;
+} | ({
+    title: string;
+} & {
+    description: string;
+} & {
+    longitude: number;
+} & {
+    latitude: number;
+} & {
+    license?: string;
+} & {
+    doMint: boolean;
+})) & {
     license?: string;
     latitude?: number;
     doMint?: boolean;
@@ -1270,114 +1670,131 @@ export interface PostUpdateRequest {
     id: string;
     title?: string;
     longitude?: number;
-}
+};
 export interface PostPagedListReadPublicResponse {
     value?: {
         coverContentUrl?: string;
         moodId?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
         moods?: {
+            coverContentUrl?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
+            flags?: string;
             description?: string;
             aspectRatio?: number;
+            label?: "mood";
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -1393,6 +1810,8 @@ export interface PostPagedListReadPublicResponse {
                 value?: string;
             }[];
             contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
             postsCount?: number;
             blurHash?: string;
             id?: string;
@@ -1400,8 +1819,10 @@ export interface PostPagedListReadPublicResponse {
             contentType?: string;
             longitude?: number;
         }[];
+        rating?: number;
         description?: string;
         aspectRatio?: number;
+        label?: "post";
         title?: string;
         content?: string;
         tags?: {
@@ -1417,6 +1838,7 @@ export interface PostPagedListReadPublicResponse {
         }[];
         license?: string;
         contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         newcoinMintTx?: string;
         id?: string;
@@ -1428,7 +1850,7 @@ export interface PostPagedListReadPublicResponse {
     done?: boolean;
 }
 export interface PostTagsSearchPublicResponse {
-    done?: object;
+    done?: boolean;
     value?: {
         created?: string;
         tag?: string;
@@ -1438,166 +1860,198 @@ export interface PostRemoteMetaProxyResponse {
     text?: string;
     status?: number;
 }
+/**
+ * MoodCreateResponse Model
+ */
 export interface MoodCreateResponse {
+    coverContentUrl?: string;
     created?: string;
     author?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     };
     latitude?: number;
+    flags?: string;
     description?: string;
     aspectRatio?: number;
+    label?: "mood";
+    isPrivate?: boolean;
     title?: string;
     posts?: {
         coverContentUrl?: string;
         moodId?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
         moods?: {
+            coverContentUrl?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
+            flags?: string;
             description?: string;
             aspectRatio?: number;
+            label?: "mood";
+            isPrivate?: boolean;
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -1613,6 +2067,8 @@ export interface MoodCreateResponse {
                 value?: string;
             }[];
             contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
             postsCount?: number;
             blurHash?: string;
             id?: string;
@@ -1620,8 +2076,10 @@ export interface MoodCreateResponse {
             contentType?: string;
             longitude?: number;
         }[];
+        rating?: number;
         description?: string;
         aspectRatio?: number;
+        label?: "post";
         title?: string;
         content?: string;
         tags?: {
@@ -1637,6 +2095,7 @@ export interface MoodCreateResponse {
         }[];
         license?: string;
         contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         newcoinMintTx?: string;
         id?: string;
@@ -1659,6 +2118,8 @@ export interface MoodCreateResponse {
         value?: string;
     }[];
     contentUrl?: string;
+    deleted?: boolean;
+    defaultView?: string;
     postsCount?: number;
     blurHash?: string;
     id?: string;
@@ -1666,166 +2127,198 @@ export interface MoodCreateResponse {
     contentType?: string;
     longitude?: number;
 }
+/**
+ * MoodReadResponse Model
+ */
 export interface MoodReadResponse {
+    coverContentUrl?: string;
     created?: string;
     author?: {
-        newcoinTicker?: string;
-        youtube?: string;
         powered?: number;
-        displayName?: string;
         newcoinAccTx?: string;
-        latitude?: number;
-        description?: string;
         newcoinPoolId?: string;
-        tumblr?: string;
         aspectRatio?: number;
         instagram?: string;
-        medium?: string;
         newcoinActivePublicKey?: string;
-        soundcloud?: string;
         newcoinPublicKey?: string;
         powering?: number;
-        snapchat?: string;
-        apple?: string;
+        lastUpdated?: string;
         twitter?: string;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
-        youtubeId?: string;
         id?: string;
-        newcoinPoolStake?: number;
         contentType?: string;
         signal?: string;
         longitude?: number;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
+        coverContentUrl?: string;
         created?: string;
-        spotify?: string;
-        facebook?: string;
         facebookId?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
         verifiedSocialIds?: string[];
         newcoinPoolTx?: string;
         license?: string;
-        contentUrl?: string;
         discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         consentEmail?: string;
-        updated?: string;
         username?: string;
     };
     latitude?: number;
+    flags?: string;
     description?: string;
     aspectRatio?: number;
+    label?: "mood";
+    isPrivate?: boolean;
     title?: string;
     posts?: {
         coverContentUrl?: string;
         moodId?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
         moods?: {
+            coverContentUrl?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
+            flags?: string;
             description?: string;
             aspectRatio?: number;
+            label?: "mood";
+            isPrivate?: boolean;
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -1841,6 +2334,8 @@ export interface MoodReadResponse {
                 value?: string;
             }[];
             contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
             postsCount?: number;
             blurHash?: string;
             id?: string;
@@ -1848,8 +2343,10 @@ export interface MoodReadResponse {
             contentType?: string;
             longitude?: number;
         }[];
+        rating?: number;
         description?: string;
         aspectRatio?: number;
+        label?: "post";
         title?: string;
         content?: string;
         tags?: {
@@ -1865,6 +2362,7 @@ export interface MoodReadResponse {
         }[];
         license?: string;
         contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         newcoinMintTx?: string;
         id?: string;
@@ -1887,6 +2385,8 @@ export interface MoodReadResponse {
         value?: string;
     }[];
     contentUrl?: string;
+    deleted?: boolean;
+    defaultView?: string;
     postsCount?: number;
     blurHash?: string;
     id?: string;
@@ -1894,113 +2394,134 @@ export interface MoodReadResponse {
     contentType?: string;
     longitude?: number;
 }
+/**
+ * MoodListAttachedPostsResponse Model
+ */
 export interface MoodListAttachedPostsResponse {
     value?: {
         coverContentUrl?: string;
         moodId?: string;
         created?: string;
         author?: {
-            newcoinTicker?: string;
-            youtube?: string;
             powered?: number;
-            displayName?: string;
             newcoinAccTx?: string;
-            latitude?: number;
-            description?: string;
             newcoinPoolId?: string;
-            tumblr?: string;
             aspectRatio?: number;
             instagram?: string;
-            medium?: string;
             newcoinActivePublicKey?: string;
-            soundcloud?: string;
             newcoinPublicKey?: string;
             powering?: number;
-            snapchat?: string;
-            apple?: string;
+            lastUpdated?: string;
             twitter?: string;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
-            youtubeId?: string;
             id?: string;
-            newcoinPoolStake?: number;
             contentType?: string;
             signal?: string;
             longitude?: number;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
+            coverContentUrl?: string;
             created?: string;
-            spotify?: string;
-            facebook?: string;
             facebookId?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
             verifiedSocialIds?: string[];
             newcoinPoolTx?: string;
             license?: string;
-            contentUrl?: string;
             discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
             blurHash?: string;
             consentEmail?: string;
-            updated?: string;
             username?: string;
         };
         latitude?: number;
         moods?: {
+            coverContentUrl?: string;
             created?: string;
             author?: {
-                newcoinTicker?: string;
-                youtube?: string;
                 powered?: number;
-                displayName?: string;
                 newcoinAccTx?: string;
-                latitude?: number;
-                description?: string;
                 newcoinPoolId?: string;
-                tumblr?: string;
                 aspectRatio?: number;
                 instagram?: string;
-                medium?: string;
                 newcoinActivePublicKey?: string;
-                soundcloud?: string;
                 newcoinPublicKey?: string;
                 powering?: number;
-                snapchat?: string;
-                apple?: string;
+                lastUpdated?: string;
                 twitter?: string;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
-                youtubeId?: string;
                 id?: string;
-                newcoinPoolStake?: number;
                 contentType?: string;
                 signal?: string;
                 longitude?: number;
-                newcoinPublisherPublicKey?: string;
-                website?: string;
+                coverContentUrl?: string;
                 created?: string;
-                spotify?: string;
-                facebook?: string;
                 facebookId?: string;
-                fullName?: string;
-                telegram?: string;
-                pinterest?: string;
                 verifiedSocialIds?: string[];
                 newcoinPoolTx?: string;
                 license?: string;
-                contentUrl?: string;
                 discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
                 blurHash?: string;
                 consentEmail?: string;
-                updated?: string;
                 username?: string;
             };
             latitude?: number;
+            flags?: string;
             description?: string;
             aspectRatio?: number;
+            label?: "mood";
+            isPrivate?: boolean;
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -2016,6 +2537,8 @@ export interface MoodListAttachedPostsResponse {
                 value?: string;
             }[];
             contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
             postsCount?: number;
             blurHash?: string;
             id?: string;
@@ -2023,8 +2546,10 @@ export interface MoodListAttachedPostsResponse {
             contentType?: string;
             longitude?: number;
         }[];
+        rating?: number;
         description?: string;
         aspectRatio?: number;
+        label?: "post";
         title?: string;
         content?: string;
         tags?: {
@@ -2040,6 +2565,7 @@ export interface MoodListAttachedPostsResponse {
         }[];
         license?: string;
         contentUrl?: string;
+        deleted?: boolean;
         blurHash?: string;
         newcoinMintTx?: string;
         id?: string;
@@ -2050,22 +2576,633 @@ export interface MoodListAttachedPostsResponse {
     }[];
     done?: boolean;
 }
+/**
+ * MoodListAttachedResponse Model
+ */
+export interface MoodListAttachedResponse {
+    value?: ({
+        powered?: number;
+        newcoinAccTx?: string;
+        newcoinPoolId?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        newcoinActivePublicKey?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        lastUpdated?: string;
+        twitter?: string;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        id?: string;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        coverContentUrl?: string;
+        created?: string;
+        facebookId?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
+        blurHash?: string;
+        consentEmail?: string;
+        username?: string;
+    } | {
+        coverContentUrl?: string;
+        moodId?: string;
+        created?: string;
+        author?: {
+            powered?: number;
+            newcoinAccTx?: string;
+            newcoinPoolId?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            newcoinActivePublicKey?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            lastUpdated?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            id?: string;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            coverContentUrl?: string;
+            created?: string;
+            facebookId?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
+            blurHash?: string;
+            consentEmail?: string;
+            username?: string;
+        };
+        latitude?: number;
+        moods?: {
+            coverContentUrl?: string;
+            created?: string;
+            author?: {
+                powered?: number;
+                newcoinAccTx?: string;
+                newcoinPoolId?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                newcoinActivePublicKey?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                lastUpdated?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                id?: string;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                coverContentUrl?: string;
+                created?: string;
+                facebookId?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
+                blurHash?: string;
+                consentEmail?: string;
+                username?: string;
+            };
+            latitude?: number;
+            flags?: string;
+            description?: string;
+            aspectRatio?: number;
+            label?: "mood";
+            isPrivate?: boolean;
+            title?: string;
+            content?: string;
+            stakeToAccess?: number;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            contentUrl?: string;
+            deleted?: boolean;
+            defaultView?: string;
+            postsCount?: number;
+            blurHash?: string;
+            id?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        rating?: number;
+        description?: string;
+        aspectRatio?: number;
+        label?: "post";
+        title?: string;
+        content?: string;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        license?: string;
+        contentUrl?: string;
+        deleted?: boolean;
+        blurHash?: string;
+        newcoinMintTx?: string;
+        id?: string;
+        embed?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    } | {
+        coverContentUrl?: string;
+        created?: string;
+        author?: {
+            powered?: number;
+            newcoinAccTx?: string;
+            newcoinPoolId?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            newcoinActivePublicKey?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            lastUpdated?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            id?: string;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            coverContentUrl?: string;
+            created?: string;
+            facebookId?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
+            blurHash?: string;
+            consentEmail?: string;
+            username?: string;
+        };
+        latitude?: number;
+        flags?: string;
+        description?: string;
+        aspectRatio?: number;
+        label?: "mood";
+        isPrivate?: boolean;
+        title?: string;
+        posts?: {
+            coverContentUrl?: string;
+            moodId?: string;
+            created?: string;
+            author?: {
+                powered?: number;
+                newcoinAccTx?: string;
+                newcoinPoolId?: string;
+                aspectRatio?: number;
+                instagram?: string;
+                newcoinActivePublicKey?: string;
+                newcoinPublicKey?: string;
+                powering?: number;
+                lastUpdated?: string;
+                twitter?: string;
+                newcoinOwnerPublicKey?: string;
+                tiktok?: string;
+                reddit?: string;
+                id?: string;
+                contentType?: string;
+                signal?: string;
+                longitude?: number;
+                coverContentUrl?: string;
+                created?: string;
+                facebookId?: string;
+                verifiedSocialIds?: string[];
+                newcoinPoolTx?: string;
+                license?: string;
+                discord?: string;
+                updated?: string;
+                newcoinTicker?: string;
+                youtube?: string;
+                displayName?: string;
+                latitude?: number;
+                description?: string;
+                tumblr?: string;
+                medium?: string;
+                soundcloud?: string;
+                snapchat?: string;
+                apple?: string;
+                watts?: number;
+                youtubeId?: string;
+                newcoinPoolStake?: number;
+                ethAddress?: string;
+                newcoinPublisherPublicKey?: string;
+                website?: string;
+                spotify?: string;
+                facebook?: string;
+                fullName?: string;
+                telegram?: string;
+                pinterest?: string;
+                label?: "user";
+                "evm/0x1"?: string;
+                contentUrl?: string;
+                deleted?: boolean;
+                blurHash?: string;
+                consentEmail?: string;
+                username?: string;
+            };
+            latitude?: number;
+            moods?: {
+                coverContentUrl?: string;
+                created?: string;
+                author?: {
+                    powered?: number;
+                    newcoinAccTx?: string;
+                    newcoinPoolId?: string;
+                    aspectRatio?: number;
+                    instagram?: string;
+                    newcoinActivePublicKey?: string;
+                    newcoinPublicKey?: string;
+                    powering?: number;
+                    lastUpdated?: string;
+                    twitter?: string;
+                    newcoinOwnerPublicKey?: string;
+                    tiktok?: string;
+                    reddit?: string;
+                    id?: string;
+                    contentType?: string;
+                    signal?: string;
+                    longitude?: number;
+                    coverContentUrl?: string;
+                    created?: string;
+                    facebookId?: string;
+                    verifiedSocialIds?: string[];
+                    newcoinPoolTx?: string;
+                    license?: string;
+                    discord?: string;
+                    updated?: string;
+                    newcoinTicker?: string;
+                    youtube?: string;
+                    displayName?: string;
+                    latitude?: number;
+                    description?: string;
+                    tumblr?: string;
+                    medium?: string;
+                    soundcloud?: string;
+                    snapchat?: string;
+                    apple?: string;
+                    watts?: number;
+                    youtubeId?: string;
+                    newcoinPoolStake?: number;
+                    ethAddress?: string;
+                    newcoinPublisherPublicKey?: string;
+                    website?: string;
+                    spotify?: string;
+                    facebook?: string;
+                    fullName?: string;
+                    telegram?: string;
+                    pinterest?: string;
+                    label?: "user";
+                    "evm/0x1"?: string;
+                    contentUrl?: string;
+                    deleted?: boolean;
+                    blurHash?: string;
+                    consentEmail?: string;
+                    username?: string;
+                };
+                latitude?: number;
+                flags?: string;
+                description?: string;
+                aspectRatio?: number;
+                label?: "mood";
+                isPrivate?: boolean;
+                title?: string;
+                content?: string;
+                stakeToAccess?: number;
+                tags?: {
+                    _rel?: {
+                        displayValue?: string;
+                        score?: number;
+                        polygons?: string;
+                        source?: string;
+                        category?: string;
+                    }[];
+                    id?: string;
+                    value?: string;
+                }[];
+                contentUrl?: string;
+                deleted?: boolean;
+                defaultView?: string;
+                postsCount?: number;
+                blurHash?: string;
+                id?: string;
+                updated?: string;
+                contentType?: string;
+                longitude?: number;
+            }[];
+            rating?: number;
+            description?: string;
+            aspectRatio?: number;
+            label?: "post";
+            title?: string;
+            content?: string;
+            tags?: {
+                _rel?: {
+                    displayValue?: string;
+                    score?: number;
+                    polygons?: string;
+                    source?: string;
+                    category?: string;
+                }[];
+                id?: string;
+                value?: string;
+            }[];
+            license?: string;
+            contentUrl?: string;
+            deleted?: boolean;
+            blurHash?: string;
+            newcoinMintTx?: string;
+            id?: string;
+            embed?: string;
+            updated?: string;
+            contentType?: string;
+            longitude?: number;
+        }[];
+        content?: string;
+        stakeToAccess?: number;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        contentUrl?: string;
+        deleted?: boolean;
+        defaultView?: string;
+        postsCount?: number;
+        blurHash?: string;
+        id?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    })[];
+    done?: boolean;
+}
+/**
+ * MoodCreateRequest Model
+ */
 export interface MoodCreateRequest {
     latitude?: number;
     description: string;
     title: string;
     longitude?: number;
+    tags?: string[];
 }
-export interface MoodUpdateRequest {
+/**
+ * MoodUpdateRequest Model
+ */
+export declare type MoodUpdateRequest = ({
+    title: string;
+} | {
+    description: string;
+} | {
+    longitude: number;
+} | {
+    latitude: number;
+} | ({
+    title: string;
+} & {
+    description: string;
+} & {
+    longitude: number;
+} & {
+    latitude: number;
+})) & {
     latitude?: number;
     description?: string;
     id: string;
     title?: string;
     longitude?: number;
-}
-export interface MoodAttachRequest {
+};
+/**
+ * EntityAttachRequest Model
+ */
+export interface EntityAttachRequest {
     targetId: string;
     id: string;
+}
+/**
+ * MoodGrantAccessRequest Model
+ */
+export interface MoodGrantAccessRequest {
+    targetId?: string;
+    grantee?: {
+        id?: string;
+        username?: string;
+    };
+    policy?: {
+        level?: string;
+    };
+}
+/**
+ * MoodGrantAccessResponse Model
+ */
+export interface MoodGrantAccessResponse {
+    level?: string;
+    grantor?: string;
+    updated?: string;
+}
+/**
+ * MoodListGranteesResponse Model
+ */
+export interface MoodListGranteesResponse {
+    value?: {
+        level?: string;
+        grantee?: {
+            powered?: number;
+            newcoinAccTx?: string;
+            newcoinPoolId?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            newcoinActivePublicKey?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            lastUpdated?: string;
+            twitter?: string;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            id?: string;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            coverContentUrl?: string;
+            created?: string;
+            facebookId?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
+            blurHash?: string;
+            consentEmail?: string;
+            username?: string;
+        };
+        updated?: string;
+    }[];
+    done?: boolean;
 }
 export interface CreativeSearchResponse {
     hits?: {
@@ -2108,144 +3245,24 @@ export interface PaymentStripeWebhookRequest {
 export interface PaymentStripePaymentIntentCreateResponse {
     client_secret?: string;
 }
-/**
- * BcAuthEthRequest Model
- */
-export interface BcAuthEthRequest {
-    encryptedPayload?: string;
-    payload?: string;
+export declare type InstagramVerificationRequest = object;
+export interface InstagramVerificationResponse {
+    isVerified?: boolean;
+    success?: boolean;
 }
-/**
- * BcAuthEthResponse Model
- */
-export interface BcAuthEthResponse {
-    result: boolean;
-    signedAddr?: string;
-    comment?: string;
-    owningAddr?: string;
+export interface EvmVerificationRequest {
+    payload?: {
+        chain?: string;
+        address?: string;
+        wallet?: string;
+        id?: string;
+        username?: string;
+    };
+    signature?: string;
 }
-/**
- * BcKeyPairCreateRequest Model
- */
-export declare type BcKeyPairCreateRequest = any;
-/**
- * BcKeyPairCreateResponse Model
- */
-export interface BcKeyPairCreateResponse {
-    prv_key: string;
-    pub_key: string;
+export interface SessionTokenResponse {
+    jwt?: string;
 }
-/**
- * BcAccCreateRequest Model
- */
-export interface BcAccCreateRequest {
-    newacc_pub_active_key: string;
-    newacc_pub_owner_key: string;
-    payer_prv_key: string;
-    xfer?: boolean;
-    stake_cpu?: string;
-    newUser: string;
-    stake_ram?: number;
-    payer: string;
-    stake_net?: string;
-}
-/**
- * BcCollectionCreateRequest Model
- */
-export interface BcCollectionCreateRequest {
-    mkt_fee?: number;
-    template_name: string;
-    template_fields: {
-        name: string;
-        type: string;
-    }[];
-    xferable?: boolean;
-    max_supply?: number;
-    allow_notify?: boolean;
-    burnable?: boolean;
-    schema_name: string;
-    schema_fields: {
-        name: string;
-        type: string;
-    }[];
-    user: string;
-    user_prv_active_key: string;
-    collection_name: string;
-}
-/**
- * BcPoolCreateRequest Model
- */
-export interface BcPoolCreateRequest {
-    owner: string;
-    owner_prv_active_key?: string;
-    payer?: string;
-}
-/**
- * BcStakeMainDAORequest Model
- */
-export interface BcStakeMainDAORequest {
-    payer_prv_key: string;
-    amt: string;
-    payer: string;
-}
-/**
- * BcStakePoolRequest Model
- */
-export interface BcStakePoolRequest {
-    owner: string;
-    payer_prv_key: string;
-    amt: string;
-    payer: string;
-}
-/**
- * BcMintAssetRequest Model
- */
-export interface BcMintAssetRequest {
-    immutable_data?: {
-        value: string[];
-        key: string;
-    }[];
-    tpl_name?: string;
-    payer_prv_key: string;
-    creator: string;
-    sch_name?: string;
-    mutable_data?: {
-        value: string[];
-        key: string;
-    }[];
-    col_name?: string;
-    payer: string;
-    payer_public_key: string;
-}
-/**
- * BcTxResponse Model
- */
-export interface BcTxResponse {
-    TxID_createTpl?: string;
-    TxID_createPool?: string;
-    TxID_createAcc?: string;
-    TxID_createCol?: string;
-    TxID_createSch?: string;
-    TxID_stakeToPool?: string;
-    TxID_mintAsset?: string;
-}
-/**
- * BcGetAccountInfo Model
- */
-export interface BcGetAccountInfo {
-    owner: string;
-    contract?: string;
-}
-/**
- * BcGetPoolInfo Model
- */
-export interface BcGetPoolInfo {
-    owner: string;
-}
-/**
- * BcGetInfoResp Model
- */
-export declare type BcGetInfoResp = any;
 export declare type QueryParamsType = Record<string | number, any>;
 export declare type ResponseFormat = keyof Omit<Body, "body" | "bodyUsed">;
 export interface FullRequestParams extends Omit<RequestInit, "body"> {
@@ -2304,11 +3321,1080 @@ export declare class HttpClient<SecurityDataType = unknown> {
     request: <T = any, E = any>({ body, secure, path, type, query, format, baseUrl, cancelToken, ...params }: FullRequestParams) => Promise<HttpResponse<T, E>>;
 }
 /**
- * @title newgraph-api-eu-dev
- * @version 2022-09-05T16:40:08Z
- * @baseUrl https://api-eu-dev.newgra.ph
+ * @title newgraph-api-eu-prod
+ * @version 2024-08-23T14:45:18Z
+ * @baseUrl https://api.newgra.ph/{basePath}
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
+    mood: {
+        /**
+         * No description
+         *
+         * @name AccessGrantCreate
+         * @request POST:/mood/access/grant
+         * @secure
+         */
+        accessGrantCreate: (data: MoodGrantAccessRequest, params?: RequestParams) => Promise<HttpResponse<MoodGrantAccessResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood
+         * @request OPTIONS:/mood/access/grant
+         */
+        optionsMood: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AccessGranteesList
+         * @request GET:/mood/access/grantees
+         */
+        accessGranteesList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListGranteesResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood2
+         * @request OPTIONS:/mood/access/grantees
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AttachUserUpdate
+         * @request PUT:/mood/attach/user
+         * @secure
+         */
+        attachUserUpdate: (data: EntityAttachRequest, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood3
+         * @request OPTIONS:/mood/attach/user
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AttachmentsList
+         * @request GET:/mood/attachments
+         * @secure
+         */
+        attachmentsList: (query?: {
+            page?: string | undefined;
+            sortBy?: string | undefined;
+            order?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListAttachedResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood4
+         * @request OPTIONS:/mood/attachments
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RateCreate
+         * @request POST:/mood/rate
+         * @secure
+         */
+        rateCreate: (data: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood5
+         * @request OPTIONS:/mood/rate
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AttachPostUpdate
+         * @request PUT:/mood/attach/post
+         * @secure
+         */
+        attachPostUpdate: (data: EntityAttachRequest, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood6
+         * @request OPTIONS:/mood/attach/post
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListTopList
+         * @request GET:/mood/list/top
+         */
+        listTopList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood7
+         * @request OPTIONS:/mood/list/top
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name PostsList
+         * @request GET:/mood/posts
+         */
+        postsList: (query?: {
+            page?: string | undefined;
+            sortBy?: string | undefined;
+            order?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListAttachedPostsResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood8
+         * @request OPTIONS:/mood/posts
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UploadCreate
+         * @request POST:/mood/upload
+         * @secure
+         */
+        uploadCreate: (data: UploadRequestGeneric, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood9
+         * @request OPTIONS:/mood/upload
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListPublicList
+         * @request GET:/mood/list/public
+         */
+        listPublicList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood10
+         * @request OPTIONS:/mood/list/public
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AttachMoodUpdate
+         * @request PUT:/mood/attach/mood
+         * @secure
+         */
+        attachMoodUpdate: (data: EntityAttachRequest, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood11
+         * @request OPTIONS:/mood/attach/mood
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AttachmentsPublicList
+         * @request GET:/mood/attachmentsPublic
+         */
+        attachmentsPublicList: (query?: {
+            page?: string | undefined;
+            sortBy?: string | undefined;
+            order?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListAttachedResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood12
+         * @request OPTIONS:/mood/attachmentsPublic
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name MoodList
+         * @request GET:/mood
+         */
+        moodList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name MoodUpdate
+         * @request PUT:/mood
+         * @secure
+         */
+        moodUpdate: (data: MoodUpdateRequest, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name MoodCreate
+         * @request POST:/mood
+         * @secure
+         */
+        moodCreate: (data: MoodCreateRequest, params?: RequestParams) => Promise<HttpResponse<MoodCreateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood13
+         * @request OPTIONS:/mood
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
+    infoAuth: {
+        /**
+         * No description
+         *
+         * @name InfoAuthList
+         * @request GET:/info-auth
+         * @secure
+         */
+        infoAuthList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsInfoAuth
+         * @request OPTIONS:/info-auth
+         */
+        optionsInfoAuth: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
+    post: {
+        /**
+         * No description
+         *
+         * @name PostList
+         * @request GET:/post
+         */
+        postList: (query?: {
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name PostUpdate
+         * @request PUT:/post
+         * @secure
+         */
+        postUpdate: (data: PostUpdateRequest, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name PostCreate
+         * @request POST:/post
+         * @secure
+         */
+        postCreate: (data: PostCreateRequest, params?: RequestParams) => Promise<HttpResponse<PostCreateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name PostDelete
+         * @request DELETE:/post
+         * @secure
+         */
+        postDelete: (data: NodeRequestPost, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost
+         * @request OPTIONS:/post
+         */
+        optionsPost: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RateCreate
+         * @request POST:/post/rate
+         * @secure
+         */
+        rateCreate: (data: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost2
+         * @request OPTIONS:/post/rate
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListSearchList
+         * @request GET:/post/list/search
+         * @secure
+         */
+        listSearchList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+            q?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost3
+         * @request OPTIONS:/post/list/search
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListTagsSearchList
+         * @request GET:/post/list/tags-search
+         * @secure
+         */
+        listTagsSearchList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+            q?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostTagsSearchPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost4
+         * @request OPTIONS:/post/list/tags-search
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListPublicList
+         * @request GET:/post/list/public
+         */
+        listPublicList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost5
+         * @request OPTIONS:/post/list/public
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UtilsRemoteMetaProxyList
+         * @request GET:/post/utils/remote-meta-proxy
+         * @secure
+         */
+        utilsRemoteMetaProxyList: (query?: {
+            url?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostRemoteMetaProxyResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost6
+         * @request OPTIONS:/post/utils/remote-meta-proxy
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ReportCreate
+         * @request POST:/post/report
+         * @secure
+         */
+        reportCreate: (data: ReportUpdateRequest, params?: RequestParams) => Promise<HttpResponse<ReportUpdateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost7
+         * @request OPTIONS:/post/report
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UploadCreate
+         * @request POST:/post/upload
+         * @secure
+         */
+        uploadCreate: (data: UploadRequestGeneric, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost8
+         * @request OPTIONS:/post/upload
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListTopList
+         * @request GET:/post/list/top
+         */
+        listTopList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPost9
+         * @request OPTIONS:/post/list/top
+         * @originalName optionsPost
+         * @duplicate
+         */
+        optionsPost9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
+    user: {
+        /**
+         * No description
+         *
+         * @name UserUploadAvatarCreate
+         * @request POST:/user/userUpload/avatar
+         * @secure
+         */
+        userUploadAvatarCreate: (data: UserUploadRequest, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser
+         * @request OPTIONS:/user/userUpload/avatar
+         */
+        optionsUser: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name CurrentList
+         * @request GET:/user/current
+         * @secure
+         */
+        currentList: (params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser2
+         * @request OPTIONS:/user/current
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name MoodsList
+         * @request GET:/user/moods
+         * @secure
+         */
+        moodsList: (query?: {
+            flags?: string | undefined;
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser3
+         * @request OPTIONS:/user/moods
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RatedOutUsersRequestsList
+         * @request GET:/user/rated/out/users/requests
+         * @secure
+         */
+        ratedOutUsersRequestsList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponseUser, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser4
+         * @request OPTIONS:/user/rated/out/users/requests
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RatedInList
+         * @request GET:/user/rated/in
+         * @secure
+         */
+        ratedInList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponseUser, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser5
+         * @request OPTIONS:/user/rated/in
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InviteCreate
+         * @request POST:/user/invite
+         * @secure
+         */
+        inviteCreate: (data: UserInviteRequest, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser6
+         * @request OPTIONS:/user/invite
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name GetSpecialFolderList
+         * @request GET:/user/getSpecialFolder
+         * @secure
+         */
+        getSpecialFolderList: (query?: {
+            redirect?: string | undefined;
+            id?: string | undefined;
+            flag?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<ValueResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser7
+         * @request OPTIONS:/user/getSpecialFolder
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListSearchList
+         * @request GET:/user/list/search
+         */
+        listSearchList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+            q?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser8
+         * @request OPTIONS:/user/list/search
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InviteHashList
+         * @request GET:/user/invite/hash
+         */
+        inviteHashList: (query?: {
+            hash?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser9
+         * @request OPTIONS:/user/invite/hash
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name SearchexternalList
+         * @request GET:/user/searchexternal
+         * @secure
+         */
+        searchexternalList: (query?: {
+            username?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser10
+         * @request OPTIONS:/user/searchexternal
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name PreregisterCreate
+         * @request POST:/user/preregister
+         * @secure
+         */
+        preregisterCreate: (data: UserPreRegisterRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser11
+         * @request OPTIONS:/user/preregister
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InvitorList
+         * @request GET:/user/invitor
+         * @secure
+         */
+        invitorList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser12
+         * @request OPTIONS:/user/invitor
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name AvailabilityList
+         * @request GET:/user/availability
+         */
+        availabilityList: (query?: {
+            username?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserAvailabilityResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser13
+         * @request OPTIONS:/user/availability
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UserList
+         * @request GET:/user
+         */
+        userList: (query?: {
+            username?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name UserUpdate
+         * @request PUT:/user
+         * @secure
+         */
+        userUpdate: (data: UserUpdateRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name UserCreate
+         * @request POST:/user
+         * @secure
+         */
+        userCreate: (data: UserCreateRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name UserDelete
+         * @request DELETE:/user
+         * @secure
+         */
+        userDelete: (data: UserDeleteRequest, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser14
+         * @request OPTIONS:/user
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ClaimWattsCreate
+         * @request POST:/user/claimWatts
+         * @secure
+         */
+        claimWattsCreate: (data: WattsClaimRequest, params?: RequestParams) => Promise<HttpResponse<WattsClaimResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser15
+         * @request OPTIONS:/user/claimWatts
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StakeCreate
+         * @request POST:/user/stake
+         * @secure
+         */
+        stakeCreate: (data: UserStakeRequest, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser16
+         * @request OPTIONS:/user/stake
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UserRateCreate
+         * @request POST:/user/userRate
+         * @secure
+         */
+        userRateCreate: (data: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser17
+         * @request OPTIONS:/user/userRate
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ActivityStreamList
+         * @request GET:/user/activityStream
+         * @secure
+         */
+        activityStreamList: (query?: {
+            after?: string | undefined;
+            limit?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser18
+         * @request OPTIONS:/user/activityStream
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name SyncContactsCreate
+         * @request POST:/user/syncContacts
+         * @secure
+         */
+        syncContactsCreate: (data: SyncContactsRequest, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser19
+         * @request OPTIONS:/user/syncContacts
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListTopList
+         * @request GET:/user/list/top
+         * @secure
+         */
+        listTopList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser20
+         * @request OPTIONS:/user/list/top
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name PrecreateList
+         * @request GET:/user/precreate
+         */
+        precreateList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser21
+         * @request OPTIONS:/user/precreate
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UserRateRequestCreate
+         * @request POST:/user/userRate/request
+         * @secure
+         */
+        userRateRequestCreate: (data: RatingNegativeRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser22
+         * @request OPTIONS:/user/userRate/request
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name TransferCreate
+         * @request POST:/user/transfer
+         * @secure
+         */
+        transferCreate: (data: UserTransferRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser23
+         * @request OPTIONS:/user/transfer
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RatedOutPostsList
+         * @request GET:/user/rated/out/posts
+         * @secure
+         */
+        ratedOutPostsList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponsePost, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser24
+         * @request OPTIONS:/user/rated/out/posts
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser24: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name UserUploadCoverCreate
+         * @request POST:/user/userUpload/cover
+         * @secure
+         */
+        userUploadCoverCreate: (data: UserUploadRequest, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser25
+         * @request OPTIONS:/user/userUpload/cover
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser25: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name GrantsListList
+         * @request GET:/user/grants/list
+         * @secure
+         */
+        grantsListList: (query?: {
+            done?: string | undefined;
+            value?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserGrantsResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser26
+         * @request OPTIONS:/user/grants/list
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser26: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InviteesList
+         * @request GET:/user/invitees
+         * @secure
+         */
+        inviteesList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser27
+         * @request OPTIONS:/user/invitees
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser27: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name HistoryList
+         * @request GET:/user/history
+         */
+        historyList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser28
+         * @request OPTIONS:/user/history
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser28: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name RatedOutUsersList
+         * @request GET:/user/rated/out/users
+         * @secure
+         */
+        ratedOutUsersList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponseUser, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser29
+         * @request OPTIONS:/user/rated/out/users
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser29: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name BadgeListList
+         * @request GET:/user/badge/list
+         */
+        badgeListList: (query?: {
+            username?: string | undefined;
+            id?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserBadgesListResponseSchema, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser30
+         * @request OPTIONS:/user/badge/list
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser30: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
     auth: {
         /**
          * No description
@@ -2340,25 +4426,155 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @duplicate
          */
         optionsAuth2: (path: string, params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    folder: {
         /**
          * No description
          *
-         * @name FolderList
-         * @request GET:/folder
+         * @name InviteesList
+         * @request GET:/auth/invitees
+         */
+        inviteesList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsAuth3
+         * @request OPTIONS:/auth/invitees
+         * @originalName optionsAuth
+         * @duplicate
+         */
+        optionsAuth3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name EvmGenerateTokenCreate
+         * @request POST:/auth/evm/generateToken
+         */
+        evmGenerateTokenCreate: (data: EvmVerificationRequest, params?: RequestParams) => Promise<HttpResponse<SessionTokenResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsAuth4
+         * @request OPTIONS:/auth/evm/generateToken
+         * @originalName optionsAuth
+         * @duplicate
+         */
+        optionsAuth4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name EstimateList
+         * @request GET:/auth/estimate
+         */
+        estimateList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsAuth5
+         * @request OPTIONS:/auth/estimate
+         * @originalName optionsAuth
+         * @duplicate
+         */
+        optionsAuth5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name InstagramCreate
+         * @request POST:/auth/instagram
          * @secure
          */
-        folderList: (query?: {
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        instagramCreate: (data: InstagramVerificationRequest, params?: RequestParams) => Promise<HttpResponse<InstagramVerificationResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsFolder
-         * @request OPTIONS:/folder
+         * @name OptionsAuth6
+         * @request OPTIONS:/auth/instagram
+         * @originalName optionsAuth
+         * @duplicate
          */
-        optionsFolder: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsAuth6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name EvmVerifyAccountCreate
+         * @request POST:/auth/evm/verifyAccount
+         * @secure
+         */
+        evmVerifyAccountCreate: (data: EvmVerificationRequest, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsAuth7
+         * @request OPTIONS:/auth/evm/verifyAccount
+         * @originalName optionsAuth
+         * @duplicate
+         */
+        optionsAuth7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name OnesignalList
+         * @request GET:/auth/onesignal
+         * @secure
+         */
+        onesignalList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsAuth8
+         * @request OPTIONS:/auth/onesignal
+         * @originalName optionsAuth
+         * @duplicate
+         */
+        optionsAuth8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
+    payment: {
+        /**
+         * No description
+         *
+         * @name StripeWebhookCreate
+         * @request POST:/payment/stripe/webhook
+         */
+        stripeWebhookCreate: (data: PaymentStripeWebhookRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment
+         * @request OPTIONS:/payment/stripe/webhook
+         */
+        optionsPayment: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StripeIntentCreate
+         * @request POST:/payment/stripe/intent
+         * @secure
+         */
+        stripeIntentCreate: (data: PaymentStripePaymentIntentCreateRequest, params?: RequestParams) => Promise<HttpResponse<PaymentStripePaymentIntentCreateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment2
+         * @request OPTIONS:/payment/stripe/intent
+         * @originalName optionsPayment
+         * @duplicate
+         */
+        optionsPayment2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StripeSubscriptionPaymentCreate
+         * @request POST:/payment/stripe/subscription/payment
+         * @secure
+         */
+        stripeSubscriptionPaymentCreate: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment3
+         * @request OPTIONS:/payment/stripe/subscription/payment
+         * @originalName optionsPayment
+         * @duplicate
+         */
+        optionsPayment3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     info: {
         /**
@@ -2376,578 +4592,119 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          */
         optionsInfo: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
-    infoAuth: {
+    activation: {
         /**
          * No description
          *
-         * @name InfoAuthList
-         * @request GET:/info-auth
+         * @name AddressBadgesOracleList
+         * @request GET:/activation/address-badges/oracle
+         */
+        addressBadgesOracleList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsActivation
+         * @request OPTIONS:/activation/address-badges/oracle
+         */
+        optionsActivation: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name EvmCheckBalanceCreate
+         * @request POST:/activation/evm/checkBalance
          * @secure
          */
-        infoAuthList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        evmCheckBalanceCreate: (data: ChainAddressRequest, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsInfoAuth
-         * @request OPTIONS:/info-auth
+         * @name OptionsActivation2
+         * @request OPTIONS:/activation/evm/checkBalance
+         * @originalName optionsActivation
+         * @duplicate
          */
-        optionsInfoAuth: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsActivation2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name EstimateWattsList
+         * @request GET:/activation/estimate/watts
+         */
+        estimateWattsList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsActivation3
+         * @request OPTIONS:/activation/estimate/watts
+         * @originalName optionsActivation
+         * @duplicate
+         */
+        optionsActivation3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name TokenHolderOrderOracleList
+         * @request GET:/activation/token-holder-order/oracle
+         */
+        tokenHolderOrderOracleList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsActivation4
+         * @request OPTIONS:/activation/token-holder-order/oracle
+         * @originalName optionsActivation
+         * @duplicate
+         */
+        optionsActivation4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
-    mood: {
+    upload: {
         /**
          * No description
          *
-         * @name MoodList
-         * @request GET:/mood
+         * @name NodeCreate
+         * @request POST:/upload/node
          * @secure
          */
-        moodList: (query?: {
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        nodeCreate: (data: UploadRequest, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name MoodCreate
-         * @request POST:/mood
-         * @secure
+         * @name OptionsUpload
+         * @request OPTIONS:/upload/node
          */
-        moodCreate: (MoodCreateRequest: MoodCreateRequest, params?: RequestParams) => Promise<HttpResponse<MoodCreateResponse, ErrorResponse>>;
+        optionsUpload: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
-         * @name MoodUpdate
-         * @request PUT:/mood
-         * @secure
+         * @name GetUpload
+         * @request GET:/upload/url
          */
-        moodUpdate: (MoodUpdateRequest: MoodUpdateRequest, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
+        getUpload: (params?: RequestParams) => Promise<HttpResponse<any, any>>;
         /**
          * No description
          *
-         * @name OptionsMood
-         * @request OPTIONS:/mood
-         */
-        optionsMood: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name AttachPostUpdate
-         * @request PUT:/mood/attach/post
-         * @secure
-         */
-        attachPostUpdate: (MoodAttachRequest: MoodAttachRequest, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsMood2
-         * @request OPTIONS:/mood/attach/post
-         * @originalName optionsMood
+         * @name GetUpload2
+         * @request GET:/upload/zip
+         * @originalName getUpload
          * @duplicate
          */
-        optionsMood2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListTopList
-         * @request GET:/mood/list/top
-         * @secure
-         */
-        listTopList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsMood3
-         * @request OPTIONS:/mood/list/top
-         * @originalName optionsMood
-         * @duplicate
-         */
-        optionsMood3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name PostsList
-         * @request GET:/mood/posts
-         * @secure
-         */
-        postsList: (query?: {
-            id?: string | undefined;
-            page?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListAttachedPostsResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsMood4
-         * @request OPTIONS:/mood/posts
-         * @originalName optionsMood
-         * @duplicate
-         */
-        optionsMood4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name RateCreate
-         * @request POST:/mood/rate
-         * @secure
-         */
-        rateCreate: (RatingUpdateRequest: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsMood5
-         * @request OPTIONS:/mood/rate
-         * @originalName optionsMood
-         * @duplicate
-         */
-        optionsMood5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name UploadCreate
-         * @request POST:/mood/upload
-         * @secure
-         */
-        uploadCreate: (UploadRequestGeneric: UploadRequestGeneric, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsMood6
-         * @request OPTIONS:/mood/upload
-         * @originalName optionsMood
-         * @duplicate
-         */
-        optionsMood6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    newcoin: {
-        /**
-         * No description
-         *
-         * @name BcaccopenCreate
-         * @request POST:/newcoin/bcaccopen
-         * @secure
-         */
-        bcaccopenCreate: (BcAccCreateRequest: BcAccCreateRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin
-         * @request OPTIONS:/newcoin/bcaccopen
-         */
-        optionsNewcoin: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcauthethCreate
-         * @request POST:/newcoin/bcautheth
-         */
-        bcauthethCreate: (BcAuthEthRequest: BcAuthEthRequest, params?: RequestParams) => Promise<HttpResponse<BcAuthEthResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin2
-         * @request OPTIONS:/newcoin/bcautheth
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BccolcreateCreate
-         * @request POST:/newcoin/bccolcreate
-         * @secure
-         */
-        bccolcreateCreate: (BcCollectionCreateRequest: BcCollectionCreateRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin3
-         * @request OPTIONS:/newcoin/bccolcreate
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcgetaccCreate
-         * @request POST:/newcoin/bcgetacc
-         * @secure
-         */
-        bcgetaccCreate: (BcGetAccountInfo: BcGetAccountInfo, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin4
-         * @request OPTIONS:/newcoin/bcgetacc
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcgetpoolCreate
-         * @request POST:/newcoin/bcgetpool
-         * @secure
-         */
-        bcgetpoolCreate: (BcGetPoolInfo: BcGetPoolInfo, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin5
-         * @request OPTIONS:/newcoin/bcgetpool
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BckeypairCreate
-         * @request POST:/newcoin/bckeypair
-         * @secure
-         */
-        bckeypairCreate: (BcKeyPairCreateRequest: any, params?: RequestParams) => Promise<HttpResponse<BcKeyPairCreateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin6
-         * @request OPTIONS:/newcoin/bckeypair
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcmaindaodldunstakeCreate
-         * @request POST:/newcoin/bcmaindaodldunstake
-         * @secure
-         */
-        bcmaindaodldunstakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin7
-         * @request OPTIONS:/newcoin/bcmaindaodldunstake
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcmaindaoinstunstakeCreate
-         * @request POST:/newcoin/bcmaindaoinstunstake
-         * @secure
-         */
-        bcmaindaoinstunstakeCreate: (BcStakePoolRequest: BcStakePoolRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin8
-         * @request OPTIONS:/newcoin/bcmaindaoinstunstake
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcmaindaostakeCreate
-         * @request POST:/newcoin/bcmaindaostake
-         * @secure
-         */
-        bcmaindaostakeCreate: (BcStakeMainDAORequest: BcStakeMainDAORequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin9
-         * @request OPTIONS:/newcoin/bcmaindaostake
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcmintassetCreate
-         * @request POST:/newcoin/bcmintasset
-         * @secure
-         */
-        bcmintassetCreate: (BcMintAssetRequest: BcMintAssetRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin10
-         * @request OPTIONS:/newcoin/bcmintasset
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcpoolcreateCreate
-         * @request POST:/newcoin/bcpoolcreate
-         * @secure
-         */
-        bcpoolcreateCreate: (BcPoolCreateRequest: BcPoolCreateRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin11
-         * @request OPTIONS:/newcoin/bcpoolcreate
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name BcpoolstakeCreate
-         * @request POST:/newcoin/bcpoolstake
-         * @secure
-         */
-        bcpoolstakeCreate: (BcStakePoolRequest: BcStakePoolRequest, params?: RequestParams) => Promise<HttpResponse<BcTxResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsNewcoin12
-         * @request OPTIONS:/newcoin/bcpoolstake
-         * @originalName optionsNewcoin
-         * @duplicate
-         */
-        optionsNewcoin12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    payment: {
-        /**
-         * No description
-         *
-         * @name StripeIntentCreate
-         * @request POST:/payment/stripe/intent
-         * @secure
-         */
-        stripeIntentCreate: (PaymentStripePaymentIntentCreateRequest: PaymentStripePaymentIntentCreateRequest, params?: RequestParams) => Promise<HttpResponse<PaymentStripePaymentIntentCreateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment
-         * @request OPTIONS:/payment/stripe/intent
-         */
-        optionsPayment: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name StripeSubscriptionPaymentCreate
-         * @request POST:/payment/stripe/subscription/payment
-         * @secure
-         */
-        stripeSubscriptionPaymentCreate: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment2
-         * @request OPTIONS:/payment/stripe/subscription/payment
-         * @originalName optionsPayment
-         * @duplicate
-         */
-        optionsPayment2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name StripeWebhookCreate
-         * @request POST:/payment/stripe/webhook
-         */
-        stripeWebhookCreate: (PaymentStripeWebhookRequest: PaymentStripeWebhookRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment3
-         * @request OPTIONS:/payment/stripe/webhook
-         * @originalName optionsPayment
-         * @duplicate
-         */
-        optionsPayment3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    post: {
-        /**
-         * No description
-         *
-         * @name PostList
-         * @request GET:/post
-         * @secure
-         */
-        postList: (query?: {
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name PostCreate
-         * @request POST:/post
-         * @secure
-         */
-        postCreate: (PostCreateRequest: PostCreateRequest, params?: RequestParams) => Promise<HttpResponse<PostCreateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name PostUpdate
-         * @request PUT:/post
-         * @secure
-         */
-        postUpdate: (PostUpdateRequest: PostUpdateRequest, params?: RequestParams) => Promise<HttpResponse<PostReadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost
-         * @request OPTIONS:/post
-         */
-        optionsPost: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListSearchList
-         * @request GET:/post/list/search
-         * @secure
-         */
-        listSearchList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-            q?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost2
-         * @request OPTIONS:/post/list/search
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListTagsSearchList
-         * @request GET:/post/list/tags-search
-         * @secure
-         */
-        listTagsSearchList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-            q?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostTagsSearchPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost3
-         * @request OPTIONS:/post/list/tags-search
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListTopList
-         * @request GET:/post/list/top
-         * @secure
-         */
-        listTopList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost4
-         * @request OPTIONS:/post/list/top
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name RateCreate
-         * @request POST:/post/rate
-         * @secure
-         */
-        rateCreate: (RatingUpdateRequest: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost5
-         * @request OPTIONS:/post/rate
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ReportCreate
-         * @request POST:/post/report
-         * @secure
-         */
-        reportCreate: (ReportUpdateRequest: ReportUpdateRequest, params?: RequestParams) => Promise<HttpResponse<ReportUpdateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost6
-         * @request OPTIONS:/post/report
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name UploadCreate
-         * @request POST:/post/upload
-         * @secure
-         */
-        uploadCreate: (UploadRequestGeneric: UploadRequestGeneric, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost7
-         * @request OPTIONS:/post/upload
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name UtilsRemoteMetaProxyList
-         * @request GET:/post/utils/remote-meta-proxy
-         * @secure
-         */
-        utilsRemoteMetaProxyList: (query?: {
-            url?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PostRemoteMetaProxyResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPost8
-         * @request OPTIONS:/post/utils/remote-meta-proxy
-         * @originalName optionsPost
-         * @duplicate
-         */
-        optionsPost8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        getUpload2: (params?: RequestParams) => Promise<HttpResponse<any, any>>;
     };
     search: {
+        /**
+         * No description
+         *
+         * @name SemanticList
+         * @request GET:/search/semantic
+         */
+        semanticList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsSearch
+         * @request OPTIONS:/search/semantic
+         */
+        optionsSearch: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -2963,432 +4720,31 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsSearch
+         * @name OptionsSearch2
          * @request OPTIONS:/search/creative
+         * @originalName optionsSearch
+         * @duplicate
          */
-        optionsSearch: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsSearch2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
-    upload: {
+    folder: {
         /**
          * No description
          *
-         * @name NodeCreate
-         * @request POST:/upload/node
-         * @secure
+         * @name FolderList
+         * @request GET:/folder
          */
-        nodeCreate: (UploadRequest: UploadRequest, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUpload
-         * @request OPTIONS:/upload/node
-         */
-        optionsUpload: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    user: {
-        /**
-         * No description
-         *
-         * @name UserList
-         * @request GET:/user
-         * @secure
-         */
-        userList: (query?: {
-            username?: string | undefined;
-            id?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name UserCreate
-         * @request POST:/user
-         * @secure
-         */
-        userCreate: (UserCreateRequest: UserCreateRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name UserUpdate
-         * @request PUT:/user
-         * @secure
-         */
-        userUpdate: (UserUpdateRequest: UserUpdateRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name UserDelete
-         * @request DELETE:/user
-         * @secure
-         */
-        userDelete: (UserDeleteRequest: UserDeleteRequest, params?: RequestParams) => Promise<HttpResponse<OkResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser
-         * @request OPTIONS:/user
-         */
-        optionsUser: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ActivityStreamList
-         * @request GET:/user/activityStream
-         * @secure
-         */
-        activityStreamList: (query?: {
-            after?: string | undefined;
-            limit?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser2
-         * @request OPTIONS:/user/activityStream
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name AvailabilityList
-         * @request GET:/user/availability
-         */
-        availabilityList: (query?: {
-            username?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserAvailabilityResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser3
-         * @request OPTIONS:/user/availability
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name CurrentList
-         * @request GET:/user/current
-         * @secure
-         */
-        currentList: (params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser4
-         * @request OPTIONS:/user/current
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name InviteCreate
-         * @request POST:/user/invite
-         * @secure
-         */
-        inviteCreate: (UserInviteRequest: UserInviteRequest, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser5
-         * @request OPTIONS:/user/invite
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name InviteHashList
-         * @request GET:/user/invite/hash
-         */
-        inviteHashList: (query?: {
-            hash?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser6
-         * @request OPTIONS:/user/invite/hash
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name InviteesList
-         * @request GET:/user/invitees
-         * @secure
-         */
-        inviteesList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser7
-         * @request OPTIONS:/user/invitees
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name InvitorList
-         * @request GET:/user/invitor
-         * @secure
-         */
-        invitorList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserInvitationPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser8
-         * @request OPTIONS:/user/invitor
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListSearchList
-         * @request GET:/user/list/search
-         * @secure
-         */
-        listSearchList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-            q?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser9
-         * @request OPTIONS:/user/list/search
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListTopList
-         * @request GET:/user/list/top
-         * @secure
-         */
-        listTopList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<UserPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser10
-         * @request OPTIONS:/user/list/top
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name MoodsList
-         * @request GET:/user/moods
-         * @secure
-         */
-        moodsList: (query?: {
+        folderList: (query?: {
             id?: string | undefined;
             page?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodReadResponse, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsUser11
-         * @request OPTIONS:/user/moods
-         * @originalName optionsUser
-         * @duplicate
+         * @name OptionsFolder
+         * @request OPTIONS:/folder
          */
-        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name PreregisterCreate
-         * @request POST:/user/preregister
-         * @secure
-         */
-        preregisterCreate: (UserPreRegisterRequest: UserPreRegisterRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser12
-         * @request OPTIONS:/user/preregister
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name RatedInList
-         * @request GET:/user/rated/in
-         * @secure
-         */
-        ratedInList: (query?: {
-            id?: string | undefined;
-            page?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponseUser, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser13
-         * @request OPTIONS:/user/rated/in
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name RatedOutPostsList
-         * @request GET:/user/rated/out/posts
-         * @secure
-         */
-        ratedOutPostsList: (query?: {
-            id?: string | undefined;
-            page?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponsePost, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser14
-         * @request OPTIONS:/user/rated/out/posts
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name RatedOutUsersList
-         * @request GET:/user/rated/out/users
-         * @secure
-         */
-        ratedOutUsersList: (query?: {
-            id?: string | undefined;
-            page?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<PagedRatedResponseUser, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser15
-         * @request OPTIONS:/user/rated/out/users
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name StakeCreate
-         * @request POST:/user/stake
-         * @secure
-         */
-        stakeCreate: (UserStakeRequest: UserStakeRequest, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser16
-         * @request OPTIONS:/user/stake
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name SyncContactsCreate
-         * @request POST:/user/syncContacts
-         * @secure
-         */
-        syncContactsCreate: (SyncContactsRequest: SyncContactsRequest, params?: RequestParams) => Promise<HttpResponse<any, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser17
-         * @request OPTIONS:/user/syncContacts
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name TransferCreate
-         * @request POST:/user/transfer
-         * @secure
-         */
-        transferCreate: (UserTransferRequest: UserTransferRequest, params?: RequestParams) => Promise<HttpResponse<UserReadPrivateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser18
-         * @request OPTIONS:/user/transfer
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name UploadCreate
-         * @request POST:/user/upload
-         * @secure
-         */
-        uploadCreate: (UserUploadRequest: UserUploadRequest, params?: RequestParams) => Promise<HttpResponse<UploadResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser19
-         * @request OPTIONS:/user/upload
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name UserRateCreate
-         * @request POST:/user/userRate
-         * @secure
-         */
-        userRateCreate: (RatingUpdateRequest: RatingUpdateRequest, params?: RequestParams) => Promise<HttpResponse<RatingUpdateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsUser20
-         * @request OPTIONS:/user/userRate
-         * @originalName optionsUser
-         * @duplicate
-         */
-        optionsUser20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsFolder: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
 }
 export {};
