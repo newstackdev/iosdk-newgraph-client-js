@@ -3,7 +3,10 @@
 
 import WebSocket from 'ws'; 
 
-import { Api as NewgraphApi } from "..";
+/*
+    see README.md on how to get the token
+*/
+
 const API_URL = "https://wsapi.newgra.ph/v1";
 const JWT = "<see above>";
 

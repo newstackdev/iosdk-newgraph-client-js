@@ -5,18 +5,7 @@ import { Api as NewgraphApi } from "..";
 const API_URL = "https://api.newgra.ph/v1";
 
 /*
-    Temporary solution to get the token:
-
-    0. sign up (duh)
-    1. sign in to your newcoin os account
-    2. open developer tools (cmd/ctrl + shift + i)
-    3. navigate to developer tools -> local storage -> newsafe-auth-token
-
-    The token eventually get invalidated and replaced with api keys
-
-    Remember to install the client:
-
-    npm i --save @newstackdev/iosdk-newgraph-client-js
+    see readme on how to get the token
 */
 const JWT = "<see above>";
 
