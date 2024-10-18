@@ -1,4 +1,5 @@
-import { Api as NewgraphApi } from "@newstackdev/iosdk-newgraph-client-js";
+import { Api as NewgraphApi } from "..";
+// import { Api as NewgraphApi } from "@newstackdev/iosdk-newgraph-client-js";
 
 const API_URL = "https://api.newgra.ph/v1";
 
