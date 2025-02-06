@@ -247,13 +247,36 @@ var HttpClient = /** @class */ (function () {
 exports.HttpClient = HttpClient;
 /**
  * @title newgraph-api-eu-prod
- * @version 2024-08-23T14:45:18Z
+ * @version 2025-01-16T16:16:47Z
  * @baseUrl https://api.newgra.ph/{basePath}
  */
 var Api = /** @class */ (function (_super) {
     __extends(Api, _super);
     function Api() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.infoAuth = {
+            /**
+             * No description
+             *
+             * @name InfoAuthList
+             * @request GET:/info-auth
+             * @secure
+             */
+            infoAuthList: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/info-auth", method: "GET", secure: true }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsInfoAuth
+             * @request OPTIONS:/info-auth
+             */
+            optionsInfoAuth: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/info-auth", method: "OPTIONS" }, params));
+            },
+        };
         _this.mood = {
             /**
              * No description
@@ -301,6 +324,29 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name AccessSubscribeCreate
+             * @request POST:/mood/access/subscribe
+             * @secure
+             */
+            accessSubscribeCreate: function (data, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/access/subscribe", method: "POST", body: data, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsMood3
+             * @request OPTIONS:/mood/access/subscribe
+             * @originalName optionsMood
+             * @duplicate
+             */
+            optionsMood3: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/access/subscribe", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
              * @name AttachUserUpdate
              * @request PUT:/mood/attach/user
              * @secure
@@ -312,12 +358,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood3
+             * @name OptionsMood4
              * @request OPTIONS:/mood/attach/user
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood3: function (params) {
+            optionsMood4: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/attach/user", method: "OPTIONS" }, params));
             },
@@ -335,12 +381,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood4
+             * @name OptionsMood5
              * @request OPTIONS:/mood/attachments
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood4: function (params) {
+            optionsMood5: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/attachments", method: "OPTIONS" }, params));
             },
@@ -358,12 +404,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood5
+             * @name OptionsMood6
              * @request OPTIONS:/mood/rate
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood5: function (params) {
+            optionsMood6: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/rate", method: "OPTIONS" }, params));
             },
@@ -381,36 +427,14 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood6
-             * @request OPTIONS:/mood/attach/post
-             * @originalName optionsMood
-             * @duplicate
-             */
-            optionsMood6: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/mood/attach/post", method: "OPTIONS" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name ListTopList
-             * @request GET:/mood/list/top
-             */
-            listTopList: function (query, params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/mood/list/top", method: "GET", query: query, format: "json" }, params));
-            },
-            /**
-             * No description
-             *
              * @name OptionsMood7
-             * @request OPTIONS:/mood/list/top
+             * @request OPTIONS:/mood/attach/post
              * @originalName optionsMood
              * @duplicate
              */
             optionsMood7: function (params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/mood/list/top", method: "OPTIONS" }, params));
+                return _this.request(__assign({ path: "/mood/attach/post", method: "OPTIONS" }, params));
             },
             /**
              * No description
@@ -437,6 +461,28 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name ListTopList
+             * @request GET:/mood/list/top
+             */
+            listTopList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/list/top", method: "GET", query: query, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsMood9
+             * @request OPTIONS:/mood/list/top
+             * @originalName optionsMood
+             * @duplicate
+             */
+            optionsMood9: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/list/top", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
              * @name UploadCreate
              * @request POST:/mood/upload
              * @secure
@@ -448,14 +494,36 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood9
+             * @name OptionsMood10
              * @request OPTIONS:/mood/upload
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood9: function (params) {
+            optionsMood10: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/upload", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name ListSearchList
+             * @request GET:/mood/list/search
+             */
+            listSearchList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/list/search", method: "GET", query: query, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsMood11
+             * @request OPTIONS:/mood/list/search
+             * @originalName optionsMood
+             * @duplicate
+             */
+            optionsMood11: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/list/search", method: "OPTIONS" }, params));
             },
             /**
              * No description
@@ -470,14 +538,37 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood10
+             * @name OptionsMood12
              * @request OPTIONS:/mood/list/public
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood10: function (params) {
+            optionsMood12: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/list/public", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OneononeList
+             * @request GET:/mood/oneonone
+             * @secure
+             */
+            oneononeList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/oneonone", method: "GET", query: query, secure: true, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsMood13
+             * @request OPTIONS:/mood/oneonone
+             * @originalName optionsMood
+             * @duplicate
+             */
+            optionsMood13: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/mood/oneonone", method: "OPTIONS" }, params));
             },
             /**
              * No description
@@ -493,12 +584,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood11
+             * @name OptionsMood14
              * @request OPTIONS:/mood/attach/mood
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood11: function (params) {
+            optionsMood14: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/attach/mood", method: "OPTIONS" }, params));
             },
@@ -515,12 +606,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood12
+             * @name OptionsMood15
              * @request OPTIONS:/mood/attachmentsPublic
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood12: function (params) {
+            optionsMood15: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood/attachmentsPublic", method: "OPTIONS" }, params));
             },
@@ -559,37 +650,14 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsMood13
+             * @name OptionsMood16
              * @request OPTIONS:/mood
              * @originalName optionsMood
              * @duplicate
              */
-            optionsMood13: function (params) {
+            optionsMood16: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/mood", method: "OPTIONS" }, params));
-            },
-        };
-        _this.infoAuth = {
-            /**
-             * No description
-             *
-             * @name InfoAuthList
-             * @request GET:/info-auth
-             * @secure
-             */
-            infoAuthList: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/info-auth", method: "GET", secure: true }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsInfoAuth
-             * @request OPTIONS:/info-auth
-             */
-            optionsInfoAuth: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/info-auth", method: "OPTIONS" }, params));
             },
         };
         _this.post = {
@@ -833,6 +901,27 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
+             * @name ActivityManifestList
+             * @request GET:/user/activityManifest
+             * @secure
+             */
+            activityManifestList: function (query, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/activityManifest", method: "GET", query: query, secure: true, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser
+             * @request OPTIONS:/user/activityManifest
+             */
+            optionsUser: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/activityManifest", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
              * @name UserUploadAvatarCreate
              * @request POST:/user/userUpload/avatar
              * @secure
@@ -844,10 +933,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser
+             * @name OptionsUser2
              * @request OPTIONS:/user/userUpload/avatar
+             * @originalName optionsUser
+             * @duplicate
              */
-            optionsUser: function (params) {
+            optionsUser2: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/userUpload/avatar", method: "OPTIONS" }, params));
             },
@@ -865,12 +956,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser2
+             * @name OptionsUser3
              * @request OPTIONS:/user/current
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser2: function (params) {
+            optionsUser3: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/current", method: "OPTIONS" }, params));
             },
@@ -879,21 +970,20 @@ var Api = /** @class */ (function (_super) {
              *
              * @name MoodsList
              * @request GET:/user/moods
-             * @secure
              */
             moodsList: function (query, params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/user/moods", method: "GET", query: query, secure: true, format: "json" }, params));
+                return _this.request(__assign({ path: "/user/moods", method: "GET", query: query, format: "json" }, params));
             },
             /**
              * No description
              *
-             * @name OptionsUser3
+             * @name OptionsUser4
              * @request OPTIONS:/user/moods
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser3: function (params) {
+            optionsUser4: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/moods", method: "OPTIONS" }, params));
             },
@@ -911,12 +1001,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser4
+             * @name OptionsUser5
              * @request OPTIONS:/user/rated/out/users/requests
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser4: function (params) {
+            optionsUser5: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/out/users/requests", method: "OPTIONS" }, params));
             },
@@ -934,14 +1024,36 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser5
+             * @name OptionsUser6
              * @request OPTIONS:/user/rated/in
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser5: function (params) {
+            optionsUser6: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/in", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name PreupdateList
+             * @request GET:/user/preupdate
+             */
+            preupdateList: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/preupdate", method: "GET" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser7
+             * @request OPTIONS:/user/preupdate
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser7: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/preupdate", method: "OPTIONS" }, params));
             },
             /**
              * No description
@@ -957,12 +1069,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser6
+             * @name OptionsUser8
              * @request OPTIONS:/user/invite
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser6: function (params) {
+            optionsUser8: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/invite", method: "OPTIONS" }, params));
             },
@@ -980,12 +1092,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser7
+             * @name OptionsUser9
              * @request OPTIONS:/user/getSpecialFolder
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser7: function (params) {
+            optionsUser9: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/getSpecialFolder", method: "OPTIONS" }, params));
             },
@@ -1002,12 +1114,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser8
+             * @name OptionsUser10
              * @request OPTIONS:/user/list/search
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser8: function (params) {
+            optionsUser10: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/list/search", method: "OPTIONS" }, params));
             },
@@ -1024,12 +1136,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser9
+             * @name OptionsUser11
              * @request OPTIONS:/user/invite/hash
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser9: function (params) {
+            optionsUser11: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/invite/hash", method: "OPTIONS" }, params));
             },
@@ -1047,12 +1159,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser10
+             * @name OptionsUser12
              * @request OPTIONS:/user/searchexternal
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser10: function (params) {
+            optionsUser12: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/searchexternal", method: "OPTIONS" }, params));
             },
@@ -1070,12 +1182,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser11
+             * @name OptionsUser13
              * @request OPTIONS:/user/preregister
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser11: function (params) {
+            optionsUser13: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/preregister", method: "OPTIONS" }, params));
             },
@@ -1093,12 +1205,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser12
+             * @name OptionsUser14
              * @request OPTIONS:/user/invitor
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser12: function (params) {
+            optionsUser14: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/invitor", method: "OPTIONS" }, params));
             },
@@ -1115,12 +1227,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser13
+             * @name OptionsUser15
              * @request OPTIONS:/user/availability
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser13: function (params) {
+            optionsUser15: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/availability", method: "OPTIONS" }, params));
             },
@@ -1170,12 +1282,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser14
+             * @name OptionsUser16
              * @request OPTIONS:/user
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser14: function (params) {
+            optionsUser16: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user", method: "OPTIONS" }, params));
             },
@@ -1193,12 +1305,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser15
+             * @name OptionsUser17
              * @request OPTIONS:/user/claimWatts
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser15: function (params) {
+            optionsUser17: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/claimWatts", method: "OPTIONS" }, params));
             },
@@ -1216,12 +1328,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser16
+             * @name OptionsUser18
              * @request OPTIONS:/user/stake
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser16: function (params) {
+            optionsUser18: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/stake", method: "OPTIONS" }, params));
             },
@@ -1239,12 +1351,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser17
+             * @name OptionsUser19
              * @request OPTIONS:/user/userRate
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser17: function (params) {
+            optionsUser19: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/userRate", method: "OPTIONS" }, params));
             },
@@ -1262,12 +1374,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser18
+             * @name OptionsUser20
              * @request OPTIONS:/user/activityStream
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser18: function (params) {
+            optionsUser20: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/activityStream", method: "OPTIONS" }, params));
             },
@@ -1285,12 +1397,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser19
+             * @name OptionsUser21
              * @request OPTIONS:/user/syncContacts
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser19: function (params) {
+            optionsUser21: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/syncContacts", method: "OPTIONS" }, params));
             },
@@ -1308,34 +1420,34 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser20
+             * @name OptionsUser22
              * @request OPTIONS:/user/list/top
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser20: function (params) {
+            optionsUser22: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/list/top", method: "OPTIONS" }, params));
             },
             /**
              * No description
              *
-             * @name PrecreateList
-             * @request GET:/user/precreate
+             * @name PrecreateCreate
+             * @request POST:/user/precreate
              */
-            precreateList: function (params) {
+            precreateCreate: function (params) {
                 if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/user/precreate", method: "GET" }, params));
+                return _this.request(__assign({ path: "/user/precreate", method: "POST" }, params));
             },
             /**
              * No description
              *
-             * @name OptionsUser21
+             * @name OptionsUser23
              * @request OPTIONS:/user/precreate
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser21: function (params) {
+            optionsUser23: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/precreate", method: "OPTIONS" }, params));
             },
@@ -1353,12 +1465,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser22
+             * @name OptionsUser24
              * @request OPTIONS:/user/userRate/request
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser22: function (params) {
+            optionsUser24: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/userRate/request", method: "OPTIONS" }, params));
             },
@@ -1376,12 +1488,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser23
+             * @name OptionsUser25
              * @request OPTIONS:/user/transfer
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser23: function (params) {
+            optionsUser25: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/transfer", method: "OPTIONS" }, params));
             },
@@ -1399,12 +1511,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser24
+             * @name OptionsUser26
              * @request OPTIONS:/user/rated/out/posts
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser24: function (params) {
+            optionsUser26: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/out/posts", method: "OPTIONS" }, params));
             },
@@ -1422,12 +1534,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser25
+             * @name OptionsUser27
              * @request OPTIONS:/user/userUpload/cover
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser25: function (params) {
+            optionsUser27: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/userUpload/cover", method: "OPTIONS" }, params));
             },
@@ -1445,12 +1557,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser26
+             * @name OptionsUser28
              * @request OPTIONS:/user/grants/list
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser26: function (params) {
+            optionsUser28: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/grants/list", method: "OPTIONS" }, params));
             },
@@ -1468,14 +1580,36 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser27
+             * @name OptionsUser29
              * @request OPTIONS:/user/invitees
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser27: function (params) {
+            optionsUser29: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/invitees", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name ClaimWattsAllList
+             * @request GET:/user/claimWattsAll
+             */
+            claimWattsAllList: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/claimWattsAll", method: "GET" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsUser30
+             * @request OPTIONS:/user/claimWattsAll
+             * @originalName optionsUser
+             * @duplicate
+             */
+            optionsUser30: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/user/claimWattsAll", method: "OPTIONS" }, params));
             },
             /**
              * No description
@@ -1490,12 +1624,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser28
+             * @name OptionsUser31
              * @request OPTIONS:/user/history
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser28: function (params) {
+            optionsUser31: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/history", method: "OPTIONS" }, params));
             },
@@ -1513,12 +1647,12 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser29
+             * @name OptionsUser32
              * @request OPTIONS:/user/rated/out/users
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser29: function (params) {
+            optionsUser32: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/rated/out/users", method: "OPTIONS" }, params));
             },
@@ -1535,14 +1669,105 @@ var Api = /** @class */ (function (_super) {
             /**
              * No description
              *
-             * @name OptionsUser30
+             * @name OptionsUser33
              * @request OPTIONS:/user/badge/list
              * @originalName optionsUser
              * @duplicate
              */
-            optionsUser30: function (params) {
+            optionsUser33: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/user/badge/list", method: "OPTIONS" }, params));
+            },
+        };
+        _this.payment = {
+            /**
+             * No description
+             *
+             * @name StripeCheckoutSessionCreate
+             * @request POST:/payment/stripe/checkoutSession
+             * @secure
+             */
+            stripeCheckoutSessionCreate: function (data, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/checkoutSession", method: "POST", body: data, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsPayment
+             * @request OPTIONS:/payment/stripe/checkoutSession
+             */
+            optionsPayment: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/checkoutSession", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name StripeWebhookCreate
+             * @request POST:/payment/stripe/webhook
+             */
+            stripeWebhookCreate: function (data, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/webhook", method: "POST", body: data, type: ContentType.Json }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsPayment2
+             * @request OPTIONS:/payment/stripe/webhook
+             * @originalName optionsPayment
+             * @duplicate
+             */
+            optionsPayment2: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/webhook", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name StripeIntentCreate
+             * @request POST:/payment/stripe/intent
+             * @secure
+             */
+            stripeIntentCreate: function (data, params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/intent", method: "POST", body: data, secure: true, type: ContentType.Json, format: "json" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsPayment3
+             * @request OPTIONS:/payment/stripe/intent
+             * @originalName optionsPayment
+             * @duplicate
+             */
+            optionsPayment3: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/intent", method: "OPTIONS" }, params));
+            },
+            /**
+             * No description
+             *
+             * @name StripeSubscriptionPaymentCreate
+             * @request POST:/payment/stripe/subscription/payment
+             * @secure
+             */
+            stripeSubscriptionPaymentCreate: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/subscription/payment", method: "POST", secure: true }, params));
+            },
+            /**
+             * No description
+             *
+             * @name OptionsPayment4
+             * @request OPTIONS:/payment/stripe/subscription/payment
+             * @originalName optionsPayment
+             * @duplicate
+             */
+            optionsPayment4: function (params) {
+                if (params === void 0) { params = {}; }
+                return _this.request(__assign({ path: "/payment/stripe/subscription/payment", method: "OPTIONS" }, params));
             },
         };
         _this.auth = {
@@ -1722,74 +1947,6 @@ var Api = /** @class */ (function (_super) {
             optionsAuth8: function (params) {
                 if (params === void 0) { params = {}; }
                 return _this.request(__assign({ path: "/auth/onesignal", method: "OPTIONS" }, params));
-            },
-        };
-        _this.payment = {
-            /**
-             * No description
-             *
-             * @name StripeWebhookCreate
-             * @request POST:/payment/stripe/webhook
-             */
-            stripeWebhookCreate: function (data, params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/webhook", method: "POST", body: data, type: ContentType.Json }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsPayment
-             * @request OPTIONS:/payment/stripe/webhook
-             */
-            optionsPayment: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/webhook", method: "OPTIONS" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name StripeIntentCreate
-             * @request POST:/payment/stripe/intent
-             * @secure
-             */
-            stripeIntentCreate: function (data, params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/intent", method: "POST", body: data, secure: true, type: ContentType.Json, format: "json" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsPayment2
-             * @request OPTIONS:/payment/stripe/intent
-             * @originalName optionsPayment
-             * @duplicate
-             */
-            optionsPayment2: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/intent", method: "OPTIONS" }, params));
-            },
-            /**
-             * No description
-             *
-             * @name StripeSubscriptionPaymentCreate
-             * @request POST:/payment/stripe/subscription/payment
-             * @secure
-             */
-            stripeSubscriptionPaymentCreate: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/subscription/payment", method: "POST", secure: true }, params));
-            },
-            /**
-             * No description
-             *
-             * @name OptionsPayment3
-             * @request OPTIONS:/payment/stripe/subscription/payment
-             * @originalName optionsPayment
-             * @duplicate
-             */
-            optionsPayment3: function (params) {
-                if (params === void 0) { params = {}; }
-                return _this.request(__assign({ path: "/payment/stripe/subscription/payment", method: "OPTIONS" }, params));
             },
         };
         _this.info = {

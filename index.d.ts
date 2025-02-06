@@ -32,6 +32,7 @@ export interface MoodPagedListReadPublicResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -49,6 +50,7 @@ export interface MoodPagedListReadPublicResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -59,6 +61,7 @@ export interface MoodPagedListReadPublicResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -98,6 +101,7 @@ export interface MoodPagedListReadPublicResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -115,6 +119,7 @@ export interface MoodPagedListReadPublicResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -125,6 +130,7 @@ export interface MoodPagedListReadPublicResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -157,6 +163,7 @@ export interface MoodPagedListReadPublicResponse {
                     powering?: number;
                     lastUpdated?: string;
                     twitter?: string;
+                    isAgent?: boolean;
                     newcoinOwnerPublicKey?: string;
                     tiktok?: string;
                     reddit?: string;
@@ -174,6 +181,7 @@ export interface MoodPagedListReadPublicResponse {
                     updated?: string;
                     newcoinTicker?: string;
                     youtube?: string;
+                    lastActive?: string;
                     displayName?: string;
                     latitude?: number;
                     description?: string;
@@ -184,6 +192,7 @@ export interface MoodPagedListReadPublicResponse {
                     apple?: string;
                     watts?: number;
                     youtubeId?: string;
+                    categories?: string[];
                     newcoinPoolStake?: number;
                     ethAddress?: string;
                     newcoinPublisherPublicKey?: string;
@@ -221,6 +230,7 @@ export interface MoodPagedListReadPublicResponse {
                     id?: string;
                     value?: string;
                 }[];
+                licenseType?: string;
                 contentUrl?: string;
                 deleted?: boolean;
                 defaultView?: string;
@@ -272,6 +282,7 @@ export interface MoodPagedListReadPublicResponse {
             id?: string;
             value?: string;
         }[];
+        licenseType?: string;
         contentUrl?: string;
         deleted?: boolean;
         defaultView?: string;
@@ -295,6 +306,7 @@ export interface UserReadPublicResponse {
     powering?: number;
     lastUpdated?: string;
     twitter?: string;
+    isAgent?: boolean;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
@@ -312,6 +324,7 @@ export interface UserReadPublicResponse {
     updated?: string;
     newcoinTicker?: string;
     youtube?: string;
+    lastActive?: string;
     displayName?: string;
     latitude?: number;
     description?: string;
@@ -322,6 +335,7 @@ export interface UserReadPublicResponse {
     apple?: string;
     watts?: number;
     youtubeId?: string;
+    categories?: string[];
     newcoinPoolStake?: number;
     ethAddress?: string;
     newcoinPublisherPublicKey?: string;
@@ -365,6 +379,7 @@ export interface UserReadPrivateResponse {
     created?: string;
     availableInvites?: number;
     facebookId?: string;
+    tags?: string[];
     newcoinPoolTx?: string;
     verifiedSocialIds?: string[];
     firstName?: string;
@@ -384,6 +399,7 @@ export interface UserReadPrivateResponse {
     tumblr?: string;
     medium?: string;
     soundcloud?: string;
+    agentMode?: string;
     snapchat?: string;
     apple?: string;
     consentTestgroup?: string;
@@ -410,6 +426,7 @@ export interface UserReadPrivateResponse {
     "evm/0x1"?: string;
     contentUrl?: string;
     deleted?: boolean;
+    subscriptionLevel?: string;
     blurHash?: string;
     isNetwork?: boolean;
     consentEmail?: string;
@@ -479,7 +496,7 @@ export interface UserCreateRequest {
     phone?: string;
     consentEmail?: string;
     couponCode?: string;
-    /** @pattern ^[a-z][a-z0-9\.\-]{2,32}$ */
+    /** @pattern ^[a-z][a-z0-9\.\-_]{2,32}$ */
     username?: string;
 }
 export interface UserPreRegisterRequest {
@@ -595,10 +612,11 @@ export declare type UserUpdateRequest = ({
     instagram?: string;
     medium?: string;
     soundcloud?: string;
+    agentMode?: string;
     snapchat?: string;
     apple?: string;
     twitter?: string;
-    isAgent?: string;
+    isAgent?: boolean;
     tiktok?: string;
     reddit?: string;
     id: string;
@@ -611,6 +629,7 @@ export declare type UserUpdateRequest = ({
     fullName?: string;
     telegram?: string;
     pinterest?: string;
+    tags?: string[];
     firstName?: string;
     discord?: string;
     consentEmail?: string;
@@ -663,6 +682,7 @@ export interface UserPagedListReadPublicResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -680,6 +700,7 @@ export interface UserPagedListReadPublicResponse {
         updated?: string;
         newcoinTicker?: string;
         youtube?: string;
+        lastActive?: string;
         displayName?: string;
         latitude?: number;
         description?: string;
@@ -690,6 +711,7 @@ export interface UserPagedListReadPublicResponse {
         apple?: string;
         watts?: number;
         youtubeId?: string;
+        categories?: string[];
         newcoinPoolStake?: number;
         ethAddress?: string;
         newcoinPublisherPublicKey?: string;
@@ -721,6 +743,7 @@ export interface UserInvitationPagedListReadPublicResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -758,6 +781,7 @@ export interface UserInvitationPagedListReadPublicResponse {
         updated?: string;
         newcoinTicker?: string;
         youtube?: string;
+        lastActive?: string;
         displayName?: string;
         latitude?: number;
         description?: string;
@@ -768,6 +792,7 @@ export interface UserInvitationPagedListReadPublicResponse {
         apple?: string;
         watts?: number;
         youtubeId?: string;
+        categories?: string[];
         newcoinPoolStake?: number;
         ethAddress?: string;
         newcoinPublisherPublicKey?: string;
@@ -798,6 +823,7 @@ export interface UserInvitationReadPublicResponse {
     powering?: number;
     lastUpdated?: string;
     twitter?: string;
+    isAgent?: boolean;
     newcoinOwnerPublicKey?: string;
     tiktok?: string;
     reddit?: string;
@@ -835,6 +861,7 @@ export interface UserInvitationReadPublicResponse {
     updated?: string;
     newcoinTicker?: string;
     youtube?: string;
+    lastActive?: string;
     displayName?: string;
     latitude?: number;
     description?: string;
@@ -845,6 +872,7 @@ export interface UserInvitationReadPublicResponse {
     apple?: string;
     watts?: number;
     youtubeId?: string;
+    categories?: string[];
     newcoinPoolStake?: number;
     ethAddress?: string;
     newcoinPublisherPublicKey?: string;
@@ -1289,6 +1317,7 @@ export interface PostCreateResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -1348,184 +1377,7 @@ export interface PostCreateResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
-            newcoinOwnerPublicKey?: string;
-            tiktok?: string;
-            reddit?: string;
-            id?: string;
-            contentType?: string;
-            signal?: string;
-            longitude?: number;
-            coverContentUrl?: string;
-            created?: string;
-            facebookId?: string;
-            verifiedSocialIds?: string[];
-            newcoinPoolTx?: string;
-            license?: string;
-            discord?: string;
-            updated?: string;
-            newcoinTicker?: string;
-            youtube?: string;
-            displayName?: string;
-            latitude?: number;
-            description?: string;
-            tumblr?: string;
-            medium?: string;
-            soundcloud?: string;
-            snapchat?: string;
-            apple?: string;
-            watts?: number;
-            youtubeId?: string;
-            newcoinPoolStake?: number;
-            ethAddress?: string;
-            newcoinPublisherPublicKey?: string;
-            website?: string;
-            spotify?: string;
-            facebook?: string;
-            fullName?: string;
-            telegram?: string;
-            pinterest?: string;
-            label?: "user";
-            "evm/0x1"?: string;
-            contentUrl?: string;
-            deleted?: boolean;
-            blurHash?: string;
-            consentEmail?: string;
-            username?: string;
-        };
-        latitude?: number;
-        flags?: string;
-        description?: string;
-        aspectRatio?: number;
-        label?: "mood";
-        title?: string;
-        content?: string;
-        stakeToAccess?: number;
-        tags?: {
-            _rel?: {
-                displayValue?: string;
-                score?: number;
-                polygons?: string;
-                source?: string;
-                category?: string;
-            }[];
-            id?: string;
-            value?: string;
-        }[];
-        contentUrl?: string;
-        deleted?: boolean;
-        defaultView?: string;
-        postsCount?: number;
-        blurHash?: string;
-        id?: string;
-        updated?: string;
-        contentType?: string;
-        longitude?: number;
-    }[];
-    rating?: number;
-    description?: string;
-    aspectRatio?: number;
-    label?: "post";
-    title?: string;
-    content?: string;
-    tags?: {
-        _rel?: {
-            displayValue?: string;
-            score?: number;
-            polygons?: string;
-            source?: string;
-            category?: string;
-        }[];
-        id?: string;
-        value?: string;
-    }[];
-    license?: string;
-    contentUrl?: string;
-    deleted?: boolean;
-    blurHash?: string;
-    newcoinMintTx?: string;
-    id?: string;
-    embed?: string;
-    updated?: string;
-    contentType?: string;
-    longitude?: number;
-}
-/**
- * PostReadResponse Model
- */
-export interface PostReadResponse {
-    coverContentUrl?: string;
-    moodId?: string;
-    created?: string;
-    author?: {
-        powered?: number;
-        newcoinAccTx?: string;
-        newcoinPoolId?: string;
-        aspectRatio?: number;
-        instagram?: string;
-        newcoinActivePublicKey?: string;
-        newcoinPublicKey?: string;
-        powering?: number;
-        lastUpdated?: string;
-        twitter?: string;
-        newcoinOwnerPublicKey?: string;
-        tiktok?: string;
-        reddit?: string;
-        id?: string;
-        contentType?: string;
-        signal?: string;
-        longitude?: number;
-        coverContentUrl?: string;
-        created?: string;
-        facebookId?: string;
-        verifiedSocialIds?: string[];
-        newcoinPoolTx?: string;
-        license?: string;
-        discord?: string;
-        updated?: string;
-        newcoinTicker?: string;
-        youtube?: string;
-        displayName?: string;
-        latitude?: number;
-        description?: string;
-        tumblr?: string;
-        medium?: string;
-        soundcloud?: string;
-        snapchat?: string;
-        apple?: string;
-        watts?: number;
-        youtubeId?: string;
-        newcoinPoolStake?: number;
-        ethAddress?: string;
-        newcoinPublisherPublicKey?: string;
-        website?: string;
-        spotify?: string;
-        facebook?: string;
-        fullName?: string;
-        telegram?: string;
-        pinterest?: string;
-        label?: "user";
-        "evm/0x1"?: string;
-        contentUrl?: string;
-        deleted?: boolean;
-        blurHash?: string;
-        consentEmail?: string;
-        username?: string;
-    };
-    latitude?: number;
-    moods?: {
-        coverContentUrl?: string;
-        created?: string;
-        author?: {
-            powered?: number;
-            newcoinAccTx?: string;
-            newcoinPoolId?: string;
-            aspectRatio?: number;
-            instagram?: string;
-            newcoinActivePublicKey?: string;
-            newcoinPublicKey?: string;
-            powering?: number;
-            lastUpdated?: string;
-            twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -1590,6 +1442,193 @@ export interface PostReadResponse {
             id?: string;
             value?: string;
         }[];
+        licenseType?: string;
+        contentUrl?: string;
+        deleted?: boolean;
+        defaultView?: string;
+        postsCount?: number;
+        blurHash?: string;
+        id?: string;
+        updated?: string;
+        contentType?: string;
+        longitude?: number;
+    }[];
+    rating?: number;
+    description?: string;
+    aspectRatio?: number;
+    label?: "post";
+    title?: string;
+    content?: string;
+    tags?: {
+        _rel?: {
+            displayValue?: string;
+            score?: number;
+            polygons?: string;
+            source?: string;
+            category?: string;
+        }[];
+        id?: string;
+        value?: string;
+    }[];
+    license?: string;
+    contentUrl?: string;
+    deleted?: boolean;
+    blurHash?: string;
+    newcoinMintTx?: string;
+    id?: string;
+    embed?: string;
+    updated?: string;
+    contentType?: string;
+    longitude?: number;
+}
+/**
+ * PostReadResponse Model
+ */
+export interface PostReadResponse {
+    coverContentUrl?: string;
+    moodId?: string;
+    created?: string;
+    author?: {
+        powered?: number;
+        newcoinAccTx?: string;
+        newcoinPoolId?: string;
+        aspectRatio?: number;
+        instagram?: string;
+        newcoinActivePublicKey?: string;
+        newcoinPublicKey?: string;
+        powering?: number;
+        lastUpdated?: string;
+        twitter?: string;
+        isAgent?: boolean;
+        newcoinOwnerPublicKey?: string;
+        tiktok?: string;
+        reddit?: string;
+        id?: string;
+        contentType?: string;
+        signal?: string;
+        longitude?: number;
+        coverContentUrl?: string;
+        created?: string;
+        facebookId?: string;
+        verifiedSocialIds?: string[];
+        newcoinPoolTx?: string;
+        license?: string;
+        discord?: string;
+        updated?: string;
+        newcoinTicker?: string;
+        youtube?: string;
+        lastActive?: string;
+        displayName?: string;
+        latitude?: number;
+        description?: string;
+        tumblr?: string;
+        medium?: string;
+        soundcloud?: string;
+        snapchat?: string;
+        apple?: string;
+        watts?: number;
+        youtubeId?: string;
+        categories?: string[];
+        newcoinPoolStake?: number;
+        ethAddress?: string;
+        newcoinPublisherPublicKey?: string;
+        website?: string;
+        spotify?: string;
+        facebook?: string;
+        fullName?: string;
+        telegram?: string;
+        pinterest?: string;
+        label?: "user";
+        "evm/0x1"?: string;
+        contentUrl?: string;
+        deleted?: boolean;
+        blurHash?: string;
+        consentEmail?: string;
+        username?: string;
+    };
+    latitude?: number;
+    moods?: {
+        coverContentUrl?: string;
+        created?: string;
+        author?: {
+            powered?: number;
+            newcoinAccTx?: string;
+            newcoinPoolId?: string;
+            aspectRatio?: number;
+            instagram?: string;
+            newcoinActivePublicKey?: string;
+            newcoinPublicKey?: string;
+            powering?: number;
+            lastUpdated?: string;
+            twitter?: string;
+            isAgent?: boolean;
+            newcoinOwnerPublicKey?: string;
+            tiktok?: string;
+            reddit?: string;
+            id?: string;
+            contentType?: string;
+            signal?: string;
+            longitude?: number;
+            coverContentUrl?: string;
+            created?: string;
+            facebookId?: string;
+            verifiedSocialIds?: string[];
+            newcoinPoolTx?: string;
+            license?: string;
+            discord?: string;
+            updated?: string;
+            newcoinTicker?: string;
+            youtube?: string;
+            lastActive?: string;
+            displayName?: string;
+            latitude?: number;
+            description?: string;
+            tumblr?: string;
+            medium?: string;
+            soundcloud?: string;
+            snapchat?: string;
+            apple?: string;
+            watts?: number;
+            youtubeId?: string;
+            categories?: string[];
+            newcoinPoolStake?: number;
+            ethAddress?: string;
+            newcoinPublisherPublicKey?: string;
+            website?: string;
+            spotify?: string;
+            facebook?: string;
+            fullName?: string;
+            telegram?: string;
+            pinterest?: string;
+            label?: "user";
+            "evm/0x1"?: string;
+            contentUrl?: string;
+            deleted?: boolean;
+            blurHash?: string;
+            consentEmail?: string;
+            username?: string;
+        };
+        latitude?: number;
+        flags?: string;
+        description?: string;
+        aspectRatio?: number;
+        label?: "mood";
+        isPrivate?: boolean;
+        title?: string;
+        content?: string;
+        stakeToAccess?: number;
+        tags?: {
+            _rel?: {
+                displayValue?: string;
+                score?: number;
+                polygons?: string;
+                source?: string;
+                category?: string;
+            }[];
+            id?: string;
+            value?: string;
+        }[];
+        licenseType?: string;
         contentUrl?: string;
         deleted?: boolean;
         defaultView?: string;
@@ -1630,6 +1669,8 @@ export interface PostReadResponse {
 }
 export interface PostCreateRequest {
     license?: string;
+    moodId?: string;
+    created?: string;
     doMint?: string;
     description?: string;
     id?: string;
@@ -1687,6 +1728,7 @@ export interface PostPagedListReadPublicResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -1746,6 +1788,7 @@ export interface PostPagedListReadPublicResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -1795,6 +1838,7 @@ export interface PostPagedListReadPublicResponse {
             description?: string;
             aspectRatio?: number;
             label?: "mood";
+            isPrivate?: boolean;
             title?: string;
             content?: string;
             stakeToAccess?: number;
@@ -1809,6 +1853,7 @@ export interface PostPagedListReadPublicResponse {
                 id?: string;
                 value?: string;
             }[];
+            licenseType?: string;
             contentUrl?: string;
             deleted?: boolean;
             defaultView?: string;
@@ -1877,6 +1922,7 @@ export interface MoodCreateResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -1894,6 +1940,7 @@ export interface MoodCreateResponse {
         updated?: string;
         newcoinTicker?: string;
         youtube?: string;
+        lastActive?: string;
         displayName?: string;
         latitude?: number;
         description?: string;
@@ -1904,6 +1951,7 @@ export interface MoodCreateResponse {
         apple?: string;
         watts?: number;
         youtubeId?: string;
+        categories?: string[];
         newcoinPoolStake?: number;
         ethAddress?: string;
         newcoinPublisherPublicKey?: string;
@@ -1943,6 +1991,7 @@ export interface MoodCreateResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -1960,6 +2009,7 @@ export interface MoodCreateResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -1970,6 +2020,7 @@ export interface MoodCreateResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -2002,6 +2053,7 @@ export interface MoodCreateResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -2019,6 +2071,7 @@ export interface MoodCreateResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -2029,6 +2082,7 @@ export interface MoodCreateResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -2066,6 +2120,7 @@ export interface MoodCreateResponse {
                 id?: string;
                 value?: string;
             }[];
+            licenseType?: string;
             contentUrl?: string;
             deleted?: boolean;
             defaultView?: string;
@@ -2117,6 +2172,7 @@ export interface MoodCreateResponse {
         id?: string;
         value?: string;
     }[];
+    licenseType?: string;
     contentUrl?: string;
     deleted?: boolean;
     defaultView?: string;
@@ -2144,6 +2200,7 @@ export interface MoodReadResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -2161,6 +2218,7 @@ export interface MoodReadResponse {
         updated?: string;
         newcoinTicker?: string;
         youtube?: string;
+        lastActive?: string;
         displayName?: string;
         latitude?: number;
         description?: string;
@@ -2171,6 +2229,7 @@ export interface MoodReadResponse {
         apple?: string;
         watts?: number;
         youtubeId?: string;
+        categories?: string[];
         newcoinPoolStake?: number;
         ethAddress?: string;
         newcoinPublisherPublicKey?: string;
@@ -2210,6 +2269,7 @@ export interface MoodReadResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -2227,6 +2287,7 @@ export interface MoodReadResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -2237,6 +2298,7 @@ export interface MoodReadResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -2269,6 +2331,7 @@ export interface MoodReadResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -2286,6 +2349,7 @@ export interface MoodReadResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -2296,6 +2360,7 @@ export interface MoodReadResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -2333,6 +2398,7 @@ export interface MoodReadResponse {
                 id?: string;
                 value?: string;
             }[];
+            licenseType?: string;
             contentUrl?: string;
             deleted?: boolean;
             defaultView?: string;
@@ -2384,6 +2450,7 @@ export interface MoodReadResponse {
         id?: string;
         value?: string;
     }[];
+    licenseType?: string;
     contentUrl?: string;
     deleted?: boolean;
     defaultView?: string;
@@ -2413,6 +2480,7 @@ export interface MoodListAttachedPostsResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -2430,6 +2498,7 @@ export interface MoodListAttachedPostsResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -2440,6 +2509,7 @@ export interface MoodListAttachedPostsResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -2472,6 +2542,7 @@ export interface MoodListAttachedPostsResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -2489,6 +2560,7 @@ export interface MoodListAttachedPostsResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -2499,6 +2571,7 @@ export interface MoodListAttachedPostsResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -2536,6 +2609,7 @@ export interface MoodListAttachedPostsResponse {
                 id?: string;
                 value?: string;
             }[];
+            licenseType?: string;
             contentUrl?: string;
             deleted?: boolean;
             defaultView?: string;
@@ -2591,6 +2665,7 @@ export interface MoodListAttachedResponse {
         powering?: number;
         lastUpdated?: string;
         twitter?: string;
+        isAgent?: boolean;
         newcoinOwnerPublicKey?: string;
         tiktok?: string;
         reddit?: string;
@@ -2608,6 +2683,7 @@ export interface MoodListAttachedResponse {
         updated?: string;
         newcoinTicker?: string;
         youtube?: string;
+        lastActive?: string;
         displayName?: string;
         latitude?: number;
         description?: string;
@@ -2618,6 +2694,7 @@ export interface MoodListAttachedResponse {
         apple?: string;
         watts?: number;
         youtubeId?: string;
+        categories?: string[];
         newcoinPoolStake?: number;
         ethAddress?: string;
         newcoinPublisherPublicKey?: string;
@@ -2649,6 +2726,7 @@ export interface MoodListAttachedResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -2666,6 +2744,7 @@ export interface MoodListAttachedResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -2676,6 +2755,7 @@ export interface MoodListAttachedResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -2708,6 +2788,7 @@ export interface MoodListAttachedResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -2725,6 +2806,7 @@ export interface MoodListAttachedResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -2735,6 +2817,7 @@ export interface MoodListAttachedResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -2772,6 +2855,7 @@ export interface MoodListAttachedResponse {
                 id?: string;
                 value?: string;
             }[];
+            licenseType?: string;
             contentUrl?: string;
             deleted?: boolean;
             defaultView?: string;
@@ -2823,6 +2907,7 @@ export interface MoodListAttachedResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -2840,6 +2925,7 @@ export interface MoodListAttachedResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -2850,6 +2936,7 @@ export interface MoodListAttachedResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -2889,6 +2976,7 @@ export interface MoodListAttachedResponse {
                 powering?: number;
                 lastUpdated?: string;
                 twitter?: string;
+                isAgent?: boolean;
                 newcoinOwnerPublicKey?: string;
                 tiktok?: string;
                 reddit?: string;
@@ -2906,6 +2994,7 @@ export interface MoodListAttachedResponse {
                 updated?: string;
                 newcoinTicker?: string;
                 youtube?: string;
+                lastActive?: string;
                 displayName?: string;
                 latitude?: number;
                 description?: string;
@@ -2916,6 +3005,7 @@ export interface MoodListAttachedResponse {
                 apple?: string;
                 watts?: number;
                 youtubeId?: string;
+                categories?: string[];
                 newcoinPoolStake?: number;
                 ethAddress?: string;
                 newcoinPublisherPublicKey?: string;
@@ -2948,6 +3038,7 @@ export interface MoodListAttachedResponse {
                     powering?: number;
                     lastUpdated?: string;
                     twitter?: string;
+                    isAgent?: boolean;
                     newcoinOwnerPublicKey?: string;
                     tiktok?: string;
                     reddit?: string;
@@ -2965,6 +3056,7 @@ export interface MoodListAttachedResponse {
                     updated?: string;
                     newcoinTicker?: string;
                     youtube?: string;
+                    lastActive?: string;
                     displayName?: string;
                     latitude?: number;
                     description?: string;
@@ -2975,6 +3067,7 @@ export interface MoodListAttachedResponse {
                     apple?: string;
                     watts?: number;
                     youtubeId?: string;
+                    categories?: string[];
                     newcoinPoolStake?: number;
                     ethAddress?: string;
                     newcoinPublisherPublicKey?: string;
@@ -3012,6 +3105,7 @@ export interface MoodListAttachedResponse {
                     id?: string;
                     value?: string;
                 }[];
+                licenseType?: string;
                 contentUrl?: string;
                 deleted?: boolean;
                 defaultView?: string;
@@ -3063,6 +3157,7 @@ export interface MoodListAttachedResponse {
             id?: string;
             value?: string;
         }[];
+        licenseType?: string;
         contentUrl?: string;
         deleted?: boolean;
         defaultView?: string;
@@ -3079,9 +3174,13 @@ export interface MoodListAttachedResponse {
  * MoodCreateRequest Model
  */
 export interface MoodCreateRequest {
+    licenseType?: string;
+    defaultView?: string;
     latitude?: number;
-    description: string;
-    title: string;
+    description?: string;
+    id?: string;
+    isPrivate?: boolean;
+    title?: string;
     longitude?: number;
     tags?: string[];
 }
@@ -3105,6 +3204,7 @@ export declare type MoodUpdateRequest = ({
 } & {
     latitude: number;
 })) & {
+    licenseType?: string;
     latitude?: number;
     description?: string;
     id: string;
@@ -3156,6 +3256,7 @@ export interface MoodListGranteesResponse {
             powering?: number;
             lastUpdated?: string;
             twitter?: string;
+            isAgent?: boolean;
             newcoinOwnerPublicKey?: string;
             tiktok?: string;
             reddit?: string;
@@ -3173,6 +3274,7 @@ export interface MoodListGranteesResponse {
             updated?: string;
             newcoinTicker?: string;
             youtube?: string;
+            lastActive?: string;
             displayName?: string;
             latitude?: number;
             description?: string;
@@ -3183,6 +3285,7 @@ export interface MoodListGranteesResponse {
             apple?: string;
             watts?: number;
             youtubeId?: string;
+            categories?: string[];
             newcoinPoolStake?: number;
             ethAddress?: string;
             newcoinPublisherPublicKey?: string;
@@ -3244,6 +3347,13 @@ export interface PaymentStripeWebhookRequest {
 }
 export interface PaymentStripePaymentIntentCreateResponse {
     client_secret?: string;
+}
+export interface StripeCheckoutSessionCreateRequest {
+    priceId?: string;
+}
+export interface StripeCheckoutSessionCreateResponse {
+    subscriptionStatus?: string;
+    url?: string;
 }
 export declare type InstagramVerificationRequest = object;
 export interface InstagramVerificationResponse {
@@ -3322,10 +3432,27 @@ export declare class HttpClient<SecurityDataType = unknown> {
 }
 /**
  * @title newgraph-api-eu-prod
- * @version 2024-08-23T14:45:18Z
+ * @version 2025-01-16T16:16:47Z
  * @baseUrl https://api.newgra.ph/{basePath}
  */
 export declare class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
+    infoAuth: {
+        /**
+         * No description
+         *
+         * @name InfoAuthList
+         * @request GET:/info-auth
+         * @secure
+         */
+        infoAuthList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsInfoAuth
+         * @request OPTIONS:/info-auth
+         */
+        optionsInfoAuth: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
     mood: {
         /**
          * No description
@@ -3364,6 +3491,23 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name AccessSubscribeCreate
+         * @request POST:/mood/access/subscribe
+         * @secure
+         */
+        accessSubscribeCreate: (data: MoodGrantAccessRequest, params?: RequestParams) => Promise<HttpResponse<MoodGrantAccessResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood3
+         * @request OPTIONS:/mood/access/subscribe
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name AttachUserUpdate
          * @request PUT:/mood/attach/user
          * @secure
@@ -3372,12 +3516,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood3
+         * @name OptionsMood4
          * @request OPTIONS:/mood/attach/user
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3394,12 +3538,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood4
+         * @name OptionsMood5
          * @request OPTIONS:/mood/attachments
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3411,12 +3555,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood5
+         * @name OptionsMood6
          * @request OPTIONS:/mood/rate
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3428,29 +3572,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood6
-         * @request OPTIONS:/mood/attach/post
-         * @originalName optionsMood
-         * @duplicate
-         */
-        optionsMood6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name ListTopList
-         * @request GET:/mood/list/top
-         */
-        listTopList: (query?: {
-            direction?: string | undefined;
-            contentType?: string | undefined;
-            page?: string | undefined;
-            orderBy?: string | undefined;
-        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
          * @name OptionsMood7
-         * @request OPTIONS:/mood/list/top
+         * @request OPTIONS:/mood/attach/post
          * @originalName optionsMood
          * @duplicate
          */
@@ -3479,6 +3602,27 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name ListTopList
+         * @request GET:/mood/list/top
+         */
+        listTopList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood9
+         * @request OPTIONS:/mood/list/top
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name UploadCreate
          * @request POST:/mood/upload
          * @secure
@@ -3487,12 +3631,33 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood9
+         * @name OptionsMood10
          * @request OPTIONS:/mood/upload
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ListSearchList
+         * @request GET:/mood/list/search
+         */
+        listSearchList: (query?: {
+            direction?: string | undefined;
+            contentType?: string | undefined;
+            page?: string | undefined;
+            orderBy?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodPagedListReadPublicResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood11
+         * @request OPTIONS:/mood/list/search
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3508,12 +3673,32 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood10
+         * @name OptionsMood12
          * @request OPTIONS:/mood/list/public
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name OneononeList
+         * @request GET:/mood/oneonone
+         * @secure
+         */
+        oneononeList: (query?: {
+            id?: string | undefined;
+            page?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<MoodListGranteesResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsMood13
+         * @request OPTIONS:/mood/oneonone
+         * @originalName optionsMood
+         * @duplicate
+         */
+        optionsMood13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3525,12 +3710,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood11
+         * @name OptionsMood14
          * @request OPTIONS:/mood/attach/mood
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3546,12 +3731,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood12
+         * @name OptionsMood15
          * @request OPTIONS:/mood/attachmentsPublic
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3581,29 +3766,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsMood13
+         * @name OptionsMood16
          * @request OPTIONS:/mood
          * @originalName optionsMood
          * @duplicate
          */
-        optionsMood13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    infoAuth: {
-        /**
-         * No description
-         *
-         * @name InfoAuthList
-         * @request GET:/info-auth
-         * @secure
-         */
-        infoAuthList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsInfoAuth
-         * @request OPTIONS:/info-auth
-         */
-        optionsInfoAuth: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsMood16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     post: {
         /**
@@ -3809,6 +3977,23 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
+         * @name ActivityManifestList
+         * @request GET:/user/activityManifest
+         * @secure
+         */
+        activityManifestList: (query?: {
+            since?: string | undefined;
+        } | undefined, params?: RequestParams) => Promise<HttpResponse<object, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser
+         * @request OPTIONS:/user/activityManifest
+         */
+        optionsUser: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
          * @name UserUploadAvatarCreate
          * @request POST:/user/userUpload/avatar
          * @secure
@@ -3817,10 +4002,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser
+         * @name OptionsUser2
          * @request OPTIONS:/user/userUpload/avatar
+         * @originalName optionsUser
+         * @duplicate
          */
-        optionsUser: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3832,18 +4019,17 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser2
+         * @name OptionsUser3
          * @request OPTIONS:/user/current
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
          * @name MoodsList
          * @request GET:/user/moods
-         * @secure
          */
         moodsList: (query?: {
             flags?: string | undefined;
@@ -3853,12 +4039,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser3
+         * @name OptionsUser4
          * @request OPTIONS:/user/moods
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3873,12 +4059,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser4
+         * @name OptionsUser5
          * @request OPTIONS:/user/rated/out/users/requests
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3893,12 +4079,28 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser5
+         * @name OptionsUser6
          * @request OPTIONS:/user/rated/in
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser5: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name PreupdateList
+         * @request GET:/user/preupdate
+         */
+        preupdateList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser7
+         * @request OPTIONS:/user/preupdate
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3910,12 +4112,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser6
+         * @name OptionsUser8
          * @request OPTIONS:/user/invite
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser6: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3931,12 +4133,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser7
+         * @name OptionsUser9
          * @request OPTIONS:/user/getSpecialFolder
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser7: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3953,12 +4155,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser8
+         * @name OptionsUser10
          * @request OPTIONS:/user/list/search
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3971,12 +4173,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser9
+         * @name OptionsUser11
          * @request OPTIONS:/user/invite/hash
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser9: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -3991,12 +4193,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser10
+         * @name OptionsUser12
          * @request OPTIONS:/user/searchexternal
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser10: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4008,12 +4210,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser11
+         * @name OptionsUser13
          * @request OPTIONS:/user/preregister
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser11: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4030,12 +4232,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser12
+         * @name OptionsUser14
          * @request OPTIONS:/user/invitor
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser12: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4048,12 +4250,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser13
+         * @name OptionsUser15
          * @request OPTIONS:/user/availability
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser13: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4091,12 +4293,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser14
+         * @name OptionsUser16
          * @request OPTIONS:/user
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser14: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4108,12 +4310,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser15
+         * @name OptionsUser17
          * @request OPTIONS:/user/claimWatts
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser15: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4125,12 +4327,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser16
+         * @name OptionsUser18
          * @request OPTIONS:/user/stake
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser16: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4142,12 +4344,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser17
+         * @name OptionsUser19
          * @request OPTIONS:/user/userRate
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser17: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4162,12 +4364,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser18
+         * @name OptionsUser20
          * @request OPTIONS:/user/activityStream
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser18: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4179,12 +4381,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser19
+         * @name OptionsUser21
          * @request OPTIONS:/user/syncContacts
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser19: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4201,28 +4403,28 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser20
+         * @name OptionsUser22
          * @request OPTIONS:/user/list/top
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser20: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
-         * @name PrecreateList
-         * @request GET:/user/precreate
+         * @name PrecreateCreate
+         * @request POST:/user/precreate
          */
-        precreateList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        precreateCreate: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
         /**
          * No description
          *
-         * @name OptionsUser21
+         * @name OptionsUser23
          * @request OPTIONS:/user/precreate
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser21: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4234,12 +4436,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser22
+         * @name OptionsUser24
          * @request OPTIONS:/user/userRate/request
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser22: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser24: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4251,12 +4453,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser23
+         * @name OptionsUser25
          * @request OPTIONS:/user/transfer
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser23: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser25: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4271,12 +4473,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser24
+         * @name OptionsUser26
          * @request OPTIONS:/user/rated/out/posts
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser24: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser26: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4288,12 +4490,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser25
+         * @name OptionsUser27
          * @request OPTIONS:/user/userUpload/cover
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser25: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser27: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4308,12 +4510,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser26
+         * @name OptionsUser28
          * @request OPTIONS:/user/grants/list
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser26: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser28: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4330,12 +4532,28 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser27
+         * @name OptionsUser29
          * @request OPTIONS:/user/invitees
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser27: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser29: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name ClaimWattsAllList
+         * @request GET:/user/claimWattsAll
+         */
+        claimWattsAllList: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsUser30
+         * @request OPTIONS:/user/claimWattsAll
+         * @originalName optionsUser
+         * @duplicate
+         */
+        optionsUser30: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4349,12 +4567,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser28
+         * @name OptionsUser31
          * @request OPTIONS:/user/history
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser28: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser31: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4369,12 +4587,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser29
+         * @name OptionsUser32
          * @request OPTIONS:/user/rated/out/users
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser29: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser32: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
         /**
          * No description
          *
@@ -4388,12 +4606,79 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
         /**
          * No description
          *
-         * @name OptionsUser30
+         * @name OptionsUser33
          * @request OPTIONS:/user/badge/list
          * @originalName optionsUser
          * @duplicate
          */
-        optionsUser30: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        optionsUser33: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+    };
+    payment: {
+        /**
+         * No description
+         *
+         * @name StripeCheckoutSessionCreate
+         * @request POST:/payment/stripe/checkoutSession
+         * @secure
+         */
+        stripeCheckoutSessionCreate: (data: StripeCheckoutSessionCreateRequest, params?: RequestParams) => Promise<HttpResponse<StripeCheckoutSessionCreateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment
+         * @request OPTIONS:/payment/stripe/checkoutSession
+         */
+        optionsPayment: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StripeWebhookCreate
+         * @request POST:/payment/stripe/webhook
+         */
+        stripeWebhookCreate: (data: PaymentStripeWebhookRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment2
+         * @request OPTIONS:/payment/stripe/webhook
+         * @originalName optionsPayment
+         * @duplicate
+         */
+        optionsPayment2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StripeIntentCreate
+         * @request POST:/payment/stripe/intent
+         * @secure
+         */
+        stripeIntentCreate: (data: PaymentStripePaymentIntentCreateRequest, params?: RequestParams) => Promise<HttpResponse<PaymentStripePaymentIntentCreateResponse, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment3
+         * @request OPTIONS:/payment/stripe/intent
+         * @originalName optionsPayment
+         * @duplicate
+         */
+        optionsPayment3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
+        /**
+         * No description
+         *
+         * @name StripeSubscriptionPaymentCreate
+         * @request POST:/payment/stripe/subscription/payment
+         * @secure
+         */
+        stripeSubscriptionPaymentCreate: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
+        /**
+         * No description
+         *
+         * @name OptionsPayment4
+         * @request OPTIONS:/payment/stripe/subscription/payment
+         * @originalName optionsPayment
+         * @duplicate
+         */
+        optionsPayment4: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     auth: {
         /**
@@ -4525,56 +4810,6 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
          * @duplicate
          */
         optionsAuth8: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-    };
-    payment: {
-        /**
-         * No description
-         *
-         * @name StripeWebhookCreate
-         * @request POST:/payment/stripe/webhook
-         */
-        stripeWebhookCreate: (data: PaymentStripeWebhookRequest, params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment
-         * @request OPTIONS:/payment/stripe/webhook
-         */
-        optionsPayment: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name StripeIntentCreate
-         * @request POST:/payment/stripe/intent
-         * @secure
-         */
-        stripeIntentCreate: (data: PaymentStripePaymentIntentCreateRequest, params?: RequestParams) => Promise<HttpResponse<PaymentStripePaymentIntentCreateResponse, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment2
-         * @request OPTIONS:/payment/stripe/intent
-         * @originalName optionsPayment
-         * @duplicate
-         */
-        optionsPayment2: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
-        /**
-         * No description
-         *
-         * @name StripeSubscriptionPaymentCreate
-         * @request POST:/payment/stripe/subscription/payment
-         * @secure
-         */
-        stripeSubscriptionPaymentCreate: (params?: RequestParams) => Promise<HttpResponse<void, ErrorResponse>>;
-        /**
-         * No description
-         *
-         * @name OptionsPayment3
-         * @request OPTIONS:/payment/stripe/subscription/payment
-         * @originalName optionsPayment
-         * @duplicate
-         */
-        optionsPayment3: (params?: RequestParams) => Promise<HttpResponse<void, any>>;
     };
     info: {
         /**

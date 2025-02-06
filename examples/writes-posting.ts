@@ -5,7 +5,7 @@ import { Api as NewgraphApi } from "..";
 const API_URL = "https://api.newgra.ph/v1";
 
 /*
-    see readme on how to get the token
+    see README.md on how to get the token
 */
 const JWT = "<see above>";
 
